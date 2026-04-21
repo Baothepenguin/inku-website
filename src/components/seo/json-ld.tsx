@@ -1,17 +1,16 @@
 /**
  * Server-rendered JSON-LD. The content is produced server-side (no user
  * input) and React 19 supports rendering string children inside a
- * <script type="application/ld+json"> tag. This is the recommended
- * pattern for App Router because the structured data lands in the
- * initial HTML, so crawlers that do not execute JavaScript (notably the
- * AI citation crawlers like GPTBot, ClaudeBot, and PerplexityBot, and
- * Google's older indexer passes) can see it.
+ * <script type="application/ld+json"> tag. The script gets written to
+ * the initial HTML so crawlers that do not execute JavaScript (notably
+ * the AI citation crawlers like GPTBot, ClaudeBot, and PerplexityBot)
+ * can see the structured data.
  */
 
 type JsonLdObject = Record<string, unknown>;
 
 function serialize(block: JsonLdObject): string {
-  // Escape closing script tags and the unicode line separators that can
+  // Escape closing script tags and unicode line separators that can
   // break out of a <script> block. JSON.stringify is otherwise safe for
   // our server-controlled payloads.
   return JSON.stringify(block)
@@ -32,19 +31,19 @@ export function JsonLd({
   const blocks = Array.isArray(data) ? data : [data];
   return (
     <>
-      {blocks.map((block, i) => {
-        const payload = serialize(block);
-        const props = {
-          type: "application/ld+json",
-          key: `${id}-${i}`,
-          // Using the object-style dangerouslySetInnerHTML is the only
-          // React API that renders arbitrary text into a <script>. Safe
-          // here because `payload` comes from JSON.stringify on server-
-          // controlled objects, with special characters escaped.
-          dangerouslySetInnerHTML: { __html: payload },
-        };
-        return <script {...props} />;
-      })}
+      {blocks.map((block, i) => (
+        <script
+          key={`${id}-${i}`}
+          type="application/ld+json"
+          // suppressHydrationWarning lets React emit the script server-
+          // side but skip re-rendering its children during hydration,
+          // which avoids the "Failed to execute appendChild" error that
+          // React 19 otherwise throws on scripts with text children.
+          suppressHydrationWarning
+        >
+          {serialize(block)}
+        </script>
+      ))}
     </>
   );
 }

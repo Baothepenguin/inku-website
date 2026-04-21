@@ -27,13 +27,14 @@ export function pageMetadata({
   noIndex = false,
 }: PageMetadataInput): Metadata {
   const url = `${SITE.url}${path}`;
-  const fullTitle = path === "/" ? title : `${title} | ${SITE.name}`;
+  // Root layout's metadata.title.template already appends " | Inku".
+  // Return the raw title so we do not double up.
   const og =
     ogImage ??
     `${SITE.url}/api/og?title=${encodeURIComponent(title)}&type=${ogType}`;
 
   return {
-    title: fullTitle,
+    title,
     description,
     keywords: keywords?.join(", "),
     authors: authors?.map((name) => ({ name })),
@@ -43,7 +44,7 @@ export function pageMetadata({
       ? { index: false, follow: false }
       : { index: true, follow: true },
     openGraph: {
-      title: fullTitle,
+      title: `${title} | ${SITE.name}`,
       description,
       url,
       siteName: SITE.name,
@@ -56,7 +57,7 @@ export function pageMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: fullTitle,
+      title: `${title} | ${SITE.name}`,
       description,
       images: [og],
       creator: SITE.social.twitter,
