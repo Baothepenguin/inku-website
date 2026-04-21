@@ -10,3 +10,11 @@ next-env.d.ts
 *.log
 coverage
 .turbo
+
+# TypeScript incremental build cache
+tsconfig.tsbuildinfo
+
+# next-sitemap output (regenerated on every build)
+public/sitemap.xml
+public/sitemap-0.xml
+public/robots.txt
