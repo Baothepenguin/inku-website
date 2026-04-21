@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { fraunces, satoshi, klee } from "@/lib/fonts";
+import { fraunces, instrumentSerif, satoshi, klee } from "@/lib/fonts";
 import { SITE } from "@/lib/site";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
@@ -62,7 +62,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${satoshi.variable} ${klee.variable}`}
+      className={`${instrumentSerif.variable} ${fraunces.variable} ${satoshi.variable} ${klee.variable}`}
     >
       <body className="min-h-screen antialiased">
         <JsonLd

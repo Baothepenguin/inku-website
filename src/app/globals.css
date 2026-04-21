@@ -8,18 +8,21 @@
   }
 
   html {
-    /* Scale typography with user preference, respect Dynamic Type parallel */
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
   body {
-    @apply bg-cream text-ink font-serif;
+    /* Reading body uses Fraunces (font-body). Display headings use
+       Instrument Serif via the h1-h4 rules below. */
+    @apply bg-cream text-ink font-body;
     background-image:
       radial-gradient(1200px 600px at 12% -10%, rgba(45, 134, 89, 0.06), transparent 60%),
       radial-gradient(1000px 500px at 96% 10%, rgba(232, 92, 95, 0.04), transparent 60%);
     background-attachment: fixed;
+    overflow-x: hidden;
   }
 
   ::selection {
@@ -27,7 +30,7 @@
     color: #1a1a1a;
   }
 
-  /* The washi paper grain: SVG noise filter, 8% opacity, fixed */
+  /* Washi paper grain */
   body::before {
     content: "";
     position: fixed;
@@ -48,16 +51,32 @@
     z-index: 1;
   }
 
+  /* Display headings use Instrument Serif, tighter line-height than
+     Fraunces at large sizes. overflow-wrap lets long words break rather
+     than push the container. */
   h1,
   h2,
   h3,
   h4 {
-    font-family: var(--font-fraunces), ui-serif, Georgia, serif;
-    font-feature-settings: "ss01", "onum";
+    font-family: var(--font-display), ui-serif, Georgia, serif;
+    overflow-wrap: break-word;
+    text-wrap: balance;
+    font-feature-settings: "liga", "dlig";
   }
 
-  .serif {
-    font-family: var(--font-fraunces), ui-serif, Georgia, serif;
+  /* Body paragraphs and inline text use Fraunces */
+  p {
+    overflow-wrap: break-word;
+    text-wrap: pretty;
+  }
+
+  .serif,
+  .font-serif {
+    font-family: var(--font-display), ui-serif, Georgia, serif;
+  }
+
+  .font-body {
+    font-family: var(--font-body-serif), ui-serif, Georgia, serif;
   }
 
   .sans {
@@ -65,8 +84,8 @@
   }
 
   .jp {
-    font-family: var(--font-klee), var(--font-fraunces), "Hiragino Mincho ProN",
-      serif;
+    font-family: var(--font-klee), var(--font-body-serif),
+      "Hiragino Mincho ProN", serif;
     font-feature-settings: normal;
   }
 
@@ -84,23 +103,42 @@
     outline-offset: 3px;
     border-radius: 4px;
   }
+
+  /* Prevent text from breaking out of its container on any element */
+  img,
+  svg {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 @layer components {
   .prose-inku {
-    @apply max-w-[68ch] text-ink leading-relaxed;
+    /* body-size reading: Fraunces, generous line-height, tight
+       max-width for scan-length. */
+    font-family: var(--font-body-serif), ui-serif, Georgia, serif;
+    @apply max-w-[68ch] text-ink;
+    line-height: 1.7;
+    overflow-wrap: break-word;
   }
   .prose-inku h1 {
-    @apply font-serif text-display-md mt-0 mb-5 tracking-tight;
+    font-family: var(--font-display), ui-serif, Georgia, serif;
+    @apply text-display-md mt-0 mb-5 tracking-tight;
+    text-wrap: balance;
   }
   .prose-inku h2 {
-    @apply font-serif text-[1.85rem] leading-tight mt-14 mb-4 tracking-tight;
+    font-family: var(--font-display), ui-serif, Georgia, serif;
+    @apply text-[1.75rem] md:text-[1.95rem] leading-tight mt-14 mb-4 tracking-tight;
+    text-wrap: balance;
   }
   .prose-inku h3 {
-    @apply font-serif text-[1.4rem] leading-snug mt-10 mb-3 tracking-tight;
+    font-family: var(--font-display), ui-serif, Georgia, serif;
+    @apply text-[1.3rem] md:text-[1.45rem] leading-snug mt-10 mb-3 tracking-tight;
+    text-wrap: balance;
   }
   .prose-inku p {
-    @apply text-[1.08rem] leading-[1.75] my-5;
+    @apply text-[1.05rem] leading-[1.7] my-5;
+    text-wrap: pretty;
   }
   .prose-inku ul {
     @apply my-5 pl-6 list-disc marker:text-matcha space-y-2;
@@ -109,25 +147,29 @@
     @apply my-5 pl-6 list-decimal marker:text-matcha space-y-2;
   }
   .prose-inku li {
-    @apply text-[1.06rem] leading-[1.7];
+    @apply text-[1.04rem] leading-[1.7];
+    text-wrap: pretty;
   }
   .prose-inku a {
     @apply text-matcha underline underline-offset-[3px] decoration-matcha/40 hover:decoration-matcha transition-colors;
+    overflow-wrap: anywhere;
   }
   .prose-inku blockquote {
-    @apply my-8 border-l-2 border-matcha/60 pl-6 italic text-ink/80 font-serif;
+    font-family: var(--font-body-serif), ui-serif, Georgia, serif;
+    @apply my-8 border-l-2 border-matcha/60 pl-6 italic text-ink/80;
   }
   .prose-inku hr {
     @apply my-10 border-none h-[1px] bg-border;
   }
   .prose-inku code {
     @apply px-1.5 py-0.5 rounded bg-cream-deep text-ink font-mono text-[0.95em];
+    overflow-wrap: anywhere;
   }
   .prose-inku strong {
     @apply text-ink font-semibold;
   }
   .prose-inku table {
-    @apply my-8 w-full border-collapse text-[0.98rem];
+    @apply my-8 w-full border-collapse text-[0.96rem];
   }
   .prose-inku thead {
     @apply bg-cream-deep text-left;
@@ -137,19 +179,23 @@
     @apply border-b border-border px-4 py-3 align-top;
   }
   .prose-inku th {
-    @apply font-sans font-medium uppercase tracking-breath text-xs text-ink-muted;
+    font-family: var(--font-satoshi), ui-sans-serif, system-ui, sans-serif;
+    @apply font-medium uppercase tracking-breath text-xs text-ink-muted;
   }
 
   .label-eyebrow {
-    @apply font-sans text-[0.72rem] uppercase tracking-whisper text-ink-muted;
+    font-family: var(--font-satoshi), ui-sans-serif, system-ui, sans-serif;
+    @apply text-[0.72rem] uppercase tracking-whisper text-ink-muted;
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-md bg-matcha px-5 py-3 font-sans text-[0.95rem] font-medium text-cream shadow-paper transition-all hover:bg-matcha-deep active:translate-y-px disabled:opacity-60 disabled:pointer-events-none;
+    font-family: var(--font-satoshi), ui-sans-serif, system-ui, sans-serif;
+    @apply inline-flex items-center justify-center gap-2 rounded-md bg-matcha px-5 py-3 text-[0.95rem] font-medium text-cream shadow-paper transition-all hover:bg-matcha-deep active:translate-y-px disabled:opacity-60 disabled:pointer-events-none;
   }
 
   .btn-ghost {
-    @apply inline-flex items-center justify-center gap-2 rounded-md border border-border bg-cream/70 px-5 py-3 font-sans text-[0.95rem] font-medium text-ink transition-colors hover:bg-cream-deep hover:text-matcha;
+    font-family: var(--font-satoshi), ui-sans-serif, system-ui, sans-serif;
+    @apply inline-flex items-center justify-center gap-2 rounded-md border border-border bg-cream/70 px-5 py-3 text-[0.95rem] font-medium text-ink transition-colors hover:bg-cream-deep hover:text-matcha;
   }
 
   .card-surface {
@@ -169,14 +215,11 @@
     text-wrap: pretty;
   }
 
-  /* Japanese reading utilities */
   .hangul-off {
-    /* prevent Western kerning on Japanese text */
     font-kerning: none;
     letter-spacing: 0;
   }
 
-  /* subtle ink-wash gradient */
   .ink-wash {
     background: linear-gradient(
       180deg,
@@ -191,12 +234,26 @@
   .no-scrollbar {
     scrollbar-width: none;
   }
+
+  /* Long URLs and unbreakable strings break on character boundaries */
+  .break-anywhere {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
 }
 
-/* Heading anchor links (rehype-autolink-headings) */
 .prose-inku .heading-anchor {
   @apply text-inherit no-underline;
 }
 .prose-inku .heading-anchor:hover {
   @apply text-matcha;
+}
+
+/* Scrollable tables on mobile without visible overflow */
+@media (max-width: 640px) {
+  .prose-inku table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
 }

@@ -129,18 +129,20 @@ function TestimonialCard({ t, span }: { t: Testimonial; span: string }) {
             "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='2' seed='3'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>\")",
         }}
       />
-      <div className="relative flex h-full min-h-[220px] flex-col justify-between p-6 text-cream">
-        <p className="font-serif text-[1.05rem] italic leading-snug md:text-[1.15rem]">
+      <div className="relative flex h-full min-h-[240px] flex-col justify-between gap-6 p-6 text-cream">
+        <p className="font-body text-[1rem] italic leading-[1.45] md:text-[1.1rem] md:leading-[1.4] text-pretty">
           &ldquo;{t.quote}&rdquo;
         </p>
-        <div className="mt-6 flex items-end justify-between gap-3">
-          <div>
-            <p className="font-sans text-sm font-medium">{t.author}</p>
+        <div className="flex items-end justify-between gap-3">
+          <div className="min-w-0">
+            <p className="truncate font-sans text-sm font-medium">{t.author}</p>
             {t.handle && (
-              <p className="font-sans text-xs opacity-80">{t.handle}</p>
+              <p className="truncate font-sans text-xs opacity-80">
+                {t.handle}
+              </p>
             )}
           </div>
-          <span className="inline-flex items-center gap-1 rounded-full bg-cream/20 px-2.5 py-1 font-sans text-[0.7rem] uppercase tracking-breath backdrop-blur">
+          <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-cream/20 px-2.5 py-1 font-sans text-[0.68rem] uppercase tracking-breath backdrop-blur">
             {t.platform}
             <ExternalLink className="h-3 w-3" aria-hidden="true" />
           </span>

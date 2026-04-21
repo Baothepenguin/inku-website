@@ -82,7 +82,7 @@ export function WhatYouLearn() {
                   </span>
                 </div>
                 <h3 className="mt-6 font-serif text-xl text-ink">{t.title}</h3>
-                <p className="mt-2 font-serif text-[1rem] leading-relaxed text-ink-muted">
+                <p className="mt-2 font-body text-[0.98rem] leading-relaxed text-ink-muted text-pretty">
                   {t.description}
                 </p>
                 <span className="mt-auto pt-5 font-sans text-sm text-matcha opacity-0 transition-opacity group-hover:opacity-100">

@@ -70,12 +70,12 @@ export function LongFormLayout({
 
           {eyebrow && <p className="label-eyebrow mb-4 text-matcha">{eyebrow}</p>}
 
-          <h1 className="max-w-4xl font-serif text-display-lg font-semibold tracking-tight text-balance text-ink">
+          <h1 className="max-w-3xl font-serif text-display-lg tracking-tight text-balance text-ink md:max-w-4xl">
             {title}
           </h1>
 
           {subtitle && (
-            <p className="mt-5 max-w-3xl font-serif text-xl leading-relaxed text-ink-muted">
+            <p className="mt-5 max-w-2xl font-body text-lg leading-relaxed text-ink-muted md:max-w-3xl md:text-xl text-pretty">
               {subtitle}
             </p>
           )}

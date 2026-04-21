@@ -28,25 +28,25 @@ export function Pricing() {
         </div>
 
         <div className="mx-auto mt-14 grid max-w-5xl gap-6 md:grid-cols-2">
-          <div className="relative overflow-hidden rounded-lg border-2 border-matcha bg-cream-raised p-10 shadow-card">
+          <div className="relative overflow-hidden rounded-lg border-2 border-matcha bg-cream-raised p-8 shadow-card md:p-10">
             <SumiBrush
               variant="comma"
               className="pointer-events-none absolute -right-4 -top-4 h-24 w-24 rotate-12 opacity-[0.08]"
             />
-            <div className="mb-1 flex items-center gap-3">
+            <div className="mb-2 flex flex-wrap items-center gap-3">
               <p className="label-eyebrow text-matcha">Best value</p>
               <span className="rounded-full bg-matcha px-2.5 py-1 font-sans text-[0.68rem] font-semibold uppercase tracking-breath text-cream">
                 Save 50%
               </span>
             </div>
-            <h3 className="font-serif text-3xl text-ink">Yearly</h3>
-            <p className="mt-3 font-serif text-5xl font-semibold text-ink">
-              $29.99
-              <span className="font-sans text-base font-normal text-ink-muted">
-                {" "}/year
+            <h3 className="font-serif text-[1.85rem] text-ink md:text-3xl">Yearly</h3>
+            <p className="mt-3 flex items-baseline font-serif text-[2.75rem] leading-none text-ink md:text-5xl">
+              <span className="tabular-nums">$29.99</span>
+              <span className="ml-1 font-sans text-base font-normal text-ink-muted">
+                / year
               </span>
             </p>
-            <p className="mt-2 font-sans text-sm text-ink-muted">
+            <p className="mt-3 font-body text-sm text-ink-muted">
               That is $2.50 a month, billed once a year.
             </p>
             <p className="mt-1 font-sans text-sm text-matcha">
@@ -59,16 +59,16 @@ export function Pricing() {
             />
           </div>
 
-          <div className="rounded-lg border border-border bg-cream-raised p-10">
-            <p className="label-eyebrow mb-1">Flexible</p>
-            <h3 className="font-serif text-3xl text-ink">Monthly</h3>
-            <p className="mt-3 font-serif text-5xl font-semibold text-ink">
-              $4.99
-              <span className="font-sans text-base font-normal text-ink-muted">
-                {" "}/month
+          <div className="rounded-lg border border-border bg-cream-raised p-8 md:p-10">
+            <p className="label-eyebrow mb-2">Flexible</p>
+            <h3 className="font-serif text-[1.85rem] text-ink md:text-3xl">Monthly</h3>
+            <p className="mt-3 flex items-baseline font-serif text-[2.75rem] leading-none text-ink md:text-5xl">
+              <span className="tabular-nums">$4.99</span>
+              <span className="ml-1 font-sans text-base font-normal text-ink-muted">
+                / month
               </span>
             </p>
-            <p className="mt-2 font-sans text-sm text-ink-muted">
+            <p className="mt-3 font-body text-sm text-ink-muted">
               Cancel any billing cycle. No long commitment.
             </p>
             <p className="mt-1 font-sans text-sm text-ink-subtle">

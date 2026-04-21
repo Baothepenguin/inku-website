@@ -24,7 +24,7 @@ export function QuoteBlock({
         className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rotate-[18deg] opacity-[0.06]"
       />
       <p className="label-eyebrow mb-6">{eyebrow}</p>
-      <blockquote className="font-serif text-2xl italic leading-snug tracking-tight text-ink md:text-[1.75rem]">
+      <blockquote className="font-body text-[1.3rem] italic leading-[1.4] text-ink md:text-[1.65rem] md:leading-[1.35] text-pretty">
         &ldquo;{quote}&rdquo;
       </blockquote>
       <figcaption className="mt-6 font-sans text-sm text-ink-muted">

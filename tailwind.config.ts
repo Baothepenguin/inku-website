@@ -60,7 +60,17 @@ const config: Config = {
         easy: "#6BA3D6",
       },
       fontFamily: {
-        serif: ["var(--font-fraunces)", "ui-serif", "Georgia", "serif"],
+        // Display face for headlines, hero titles, section headings.
+        // Instrument Serif has a cleaner J and more conventional capital
+        // shapes than Fraunces at display sizes.
+        serif: ["var(--font-display)", "ui-serif", "Georgia", "serif"],
+        // Body reading face for paragraphs and long-form prose.
+        body: [
+          "var(--font-body-serif)",
+          "ui-serif",
+          "Georgia",
+          "serif",
+        ],
         sans: [
           "var(--font-satoshi)",
           "ui-sans-serif",
@@ -70,17 +80,32 @@ const config: Config = {
         ],
         japanese: [
           "var(--font-klee)",
-          "var(--font-fraunces)",
+          "var(--font-body-serif)",
           "Hiragino Mincho ProN",
           "Yu Mincho",
           "serif",
         ],
       },
       fontSize: {
-        "display-xl": ["clamp(3rem, 7vw + 1rem, 6rem)", { lineHeight: "1.02", letterSpacing: "-0.02em" }],
-        "display-lg": ["clamp(2.5rem, 5vw + 1rem, 4.5rem)", { lineHeight: "1.05", letterSpacing: "-0.02em" }],
-        "display-md": ["clamp(2rem, 3.5vw + 1rem, 3.25rem)", { lineHeight: "1.08", letterSpacing: "-0.015em" }],
-        "display-sm": ["clamp(1.75rem, 2vw + 1rem, 2.25rem)", { lineHeight: "1.15", letterSpacing: "-0.01em" }],
+        // Tightened top-end clamps to avoid giant headline overflow on
+        // ultrawide screens. Instrument Serif prefers slightly tighter
+        // tracking than Fraunces.
+        "display-xl": [
+          "clamp(2.75rem, 5.5vw + 1rem, 5rem)",
+          { lineHeight: "1.04", letterSpacing: "-0.015em" },
+        ],
+        "display-lg": [
+          "clamp(2.25rem, 4vw + 1rem, 3.75rem)",
+          { lineHeight: "1.06", letterSpacing: "-0.012em" },
+        ],
+        "display-md": [
+          "clamp(1.875rem, 2.8vw + 1rem, 2.875rem)",
+          { lineHeight: "1.1", letterSpacing: "-0.01em" },
+        ],
+        "display-sm": [
+          "clamp(1.625rem, 1.6vw + 1rem, 2.125rem)",
+          { lineHeight: "1.18", letterSpacing: "-0.005em" },
+        ],
       },
       letterSpacing: {
         whisper: "0.16em",
