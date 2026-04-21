@@ -88,8 +88,8 @@ export function SiteFooter() {
 
         <div className="mt-6 flex flex-col gap-2 text-[0.82rem] text-ink-subtle md:flex-row md:items-center md:justify-between">
           <p>
-            &copy; {new Date().getFullYear()} {SITE.operator.legalName}, sole proprietor.
-            Operated from Calgary, Alberta, Canada.
+            &copy; 2026 {SITE.operator.legalName}, sole proprietor. Operated
+            from Calgary, Alberta, Canada.
           </p>
           <p>
             Inku is not affiliated with Duolingo, Anki, WaniKani, Bunpo, or any
