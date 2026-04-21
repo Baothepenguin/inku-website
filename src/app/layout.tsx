@@ -40,6 +40,12 @@ export const metadata: Metadata = {
     "apple-itunes-app": `app-id=${SITE.appStore.id}`,
     "format-detection": "telephone=no",
   },
+  verification: {
+    ...(SITE.verification.google ? { google: SITE.verification.google } : {}),
+    ...(SITE.verification.bing
+      ? { other: { "msvalidate.01": SITE.verification.bing } }
+      : {}),
+  },
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },

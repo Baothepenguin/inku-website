@@ -29,6 +29,10 @@ export const SITE = {
   analytics: {
     gaId: process.env.NEXT_PUBLIC_GA_ID || "",
   },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "",
+    bing: process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION || "",
+  },
   pricing: {
     yearly: "$29.99 / year",
     monthly: "$4.99 / month",
