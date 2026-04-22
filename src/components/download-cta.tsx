@@ -42,7 +42,7 @@ export function DownloadCTA({
   const href = appStoreUrl(campaign);
 
   if (variant === "badge") {
-    // Apple official App Store badge look
+    // Official Apple App Store badge SVG served from /public.
     return (
       <Link
         href={device === "desktop" ? "#" : href}
@@ -53,27 +53,19 @@ export function DownloadCTA({
           }
         }}
         className={cn(
-          "group inline-flex items-center gap-3 rounded-lg bg-ink px-5 py-3 text-cream shadow-paper transition-transform hover:-translate-y-0.5",
+          "group inline-flex items-center transition-transform hover:-translate-y-0.5",
           className,
         )}
         aria-label="Download Inku on the App Store"
       >
-        <svg
-          viewBox="0 0 24 24"
-          className="h-7 w-7"
-          fill="currentColor"
-          aria-hidden="true"
-        >
-          <path d="M16.365 1.43c0 1.14-.46 2.23-1.21 3-1.3 1.33-2.73 1.38-3.04 1.38-.04-1.16.47-2.28 1.2-3.04C14.27 1.43 15.82.47 17 .47c.04.32.07.65.07.96-.03 0-.5.04-.7 0Zm4.32 17.17c-.31.73-.68 1.4-1.11 2.02-.59.85-1.07 1.44-1.44 1.77-.58.54-1.2.81-1.87.83-.48 0-1.05-.14-1.72-.42-.67-.28-1.28-.42-1.84-.42-.59 0-1.22.14-1.89.42-.68.28-1.22.43-1.64.44-.64.03-1.28-.25-1.91-.83-.4-.36-.9-.97-1.5-1.84-.64-.93-1.17-2.02-1.58-3.26-.44-1.34-.67-2.64-.67-3.89 0-1.43.31-2.67.93-3.7.48-.83 1.13-1.49 1.94-1.97.8-.48 1.67-.73 2.6-.75.51 0 1.18.16 2.01.48.83.32 1.36.48 1.6.48.18 0 .78-.19 1.79-.56.96-.35 1.77-.49 2.43-.43 1.79.15 3.13.88 4.02 2.19-1.6.97-2.39 2.33-2.37 4.08.02 1.36.51 2.49 1.47 3.38.44.42.93.74 1.47.98-.12.33-.24.65-.37.96Z" />
-        </svg>
-        <span className="flex flex-col leading-tight">
-          <span className="text-[0.62rem] uppercase tracking-whisper opacity-80">
-            Download on the
-          </span>
-          <span className="font-sans text-lg font-semibold tracking-tight">
-            App Store
-          </span>
-        </span>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/app-store-badge.svg"
+          alt="Download on the App Store"
+          width={180}
+          height={60}
+          className="h-14 w-auto"
+        />
       </Link>
     );
   }

@@ -7,6 +7,20 @@ import { HomeScreen, FlashcardScreen, VocabScreen } from "@/components/sample-sc
 export function Hero() {
   return (
     <section className="relative overflow-hidden pb-20 pt-16 md:pb-28 md:pt-24">
+      {/* Subtle grid texture — same move as Khrona. Cream-toned to keep
+          the washi feel. SVG inlined as data URI so no request. */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 opacity-[0.35]"
+        style={{
+          backgroundImage:
+            "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80'><path d='M80 0H0v80' fill='none' stroke='rgb(45 134 89 / 0.08)' stroke-width='1'/></svg>\")",
+          backgroundSize: "80px 80px",
+          maskImage:
+            "radial-gradient(ellipse at center top, black 0%, black 45%, transparent 75%)",
+        }}
+      />
+
       <SumiBrush
         variant="sweep"
         className="pointer-events-none absolute -top-10 left-1/2 h-32 w-[110%] -translate-x-1/2 opacity-[0.08]"
@@ -51,29 +65,52 @@ export function Hero() {
           </p>
         </div>
 
-        {/* Mockups row. On narrow screens only the center mockup shows; on
-            tablet+ the side mockups fan out slightly. */}
-        <div className="relative mt-20 flex items-end justify-center gap-0 lg:gap-8">
-          <IPhoneMockup
-            className="hidden lg:block lg:w-[230px] -rotate-[6deg] translate-y-4 opacity-95"
-            ariaLabel="Inku home screen"
-          >
-            <HomeScreen />
-          </IPhoneMockup>
+        {/* Mockups row. Khrona-style ink blot behind the phones so they
+            look suspended in a drop of sumi. On narrow screens only the
+            center mockup shows; on lg+ the side mockups fan out. */}
+        <div className="relative mt-20">
+          {/* Sumi ink blot — big charcoal circle behind the mockups. */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute left-1/2 top-1/2 -z-0 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-ink opacity-90 md:h-[620px] md:w-[620px]"
+            style={{
+              maskImage:
+                "radial-gradient(circle, black 62%, transparent 72%)",
+              filter: "blur(1px)",
+            }}
+          />
+          {/* Soft outer glow to ease the edge into cream */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute left-1/2 top-1/2 h-[640px] w-[640px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-70 md:h-[760px] md:w-[760px]"
+            style={{
+              background:
+                "radial-gradient(circle, rgba(26,26,26,0.18) 0%, rgba(26,26,26,0.05) 40%, transparent 65%)",
+            }}
+          />
 
-          <IPhoneMockup
-            className="relative z-10 w-[260px] md:w-[300px]"
-            ariaLabel="Inku flashcard review session"
-          >
-            <FlashcardScreen />
-          </IPhoneMockup>
+          <div className="relative flex items-end justify-center gap-0 lg:gap-8">
+            <IPhoneMockup
+              className="hidden lg:block lg:w-[230px] -rotate-[8deg] translate-y-6 opacity-95"
+              ariaLabel="Inku home screen"
+            >
+              <HomeScreen />
+            </IPhoneMockup>
 
-          <IPhoneMockup
-            className="hidden lg:block lg:w-[230px] rotate-[6deg] translate-y-4 opacity-95"
-            ariaLabel="Inku vocabulary library"
-          >
-            <VocabScreen />
-          </IPhoneMockup>
+            <IPhoneMockup
+              className="relative z-10 w-[260px] md:w-[300px]"
+              ariaLabel="Inku flashcard review session"
+            >
+              <FlashcardScreen />
+            </IPhoneMockup>
+
+            <IPhoneMockup
+              className="hidden lg:block lg:w-[230px] rotate-[8deg] translate-y-6 opacity-95"
+              ariaLabel="Inku vocabulary library"
+            >
+              <VocabScreen />
+            </IPhoneMockup>
+          </div>
         </div>
 
         <div className="mt-16 flex flex-wrap items-center justify-center gap-x-8 gap-y-5 text-ink-subtle md:gap-x-12">
