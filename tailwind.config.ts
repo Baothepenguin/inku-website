@@ -60,30 +60,36 @@ const config: Config = {
         easy: "#6BA3D6",
       },
       fontFamily: {
-        // Display face for headlines, hero titles, section headings.
-        // Instrument Serif has a cleaner J and more conventional capital
-        // shapes than Fraunces at display sizes.
-        serif: ["var(--font-display)", "ui-serif", "Georgia", "serif"],
-        // Body reading face for paragraphs and long-form prose.
+        // Outfit is the single English face for the whole site. The
+        // existing font-serif / font-body / font-sans utility names are
+        // kept so JSX does not need to change; they all point to Outfit.
+        serif: [
+          "var(--font-outfit)",
+          "ui-sans-serif",
+          "system-ui",
+          "-apple-system",
+          "sans-serif",
+        ],
         body: [
-          "var(--font-body-serif)",
-          "ui-serif",
-          "Georgia",
-          "serif",
+          "var(--font-outfit)",
+          "ui-sans-serif",
+          "system-ui",
+          "-apple-system",
+          "sans-serif",
         ],
         sans: [
-          "var(--font-satoshi)",
+          "var(--font-outfit)",
           "ui-sans-serif",
           "system-ui",
           "-apple-system",
           "sans-serif",
         ],
         japanese: [
-          "var(--font-klee)",
-          "var(--font-body-serif)",
-          "Hiragino Mincho ProN",
-          "Yu Mincho",
-          "serif",
+          "var(--font-jp)",
+          "Hiragino Sans",
+          "Yu Gothic",
+          "Meiryo",
+          "sans-serif",
         ],
       },
       fontSize: {

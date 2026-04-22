@@ -15,9 +15,9 @@
   }
 
   body {
-    /* Reading body uses Fraunces (font-body). Display headings use
-       Instrument Serif via the h1-h4 rules below. */
-    @apply bg-cream text-ink font-body;
+    /* Outfit is the sole English face. Noto Sans JP is loaded as a
+       fallback via .jp class. */
+    @apply bg-cream text-ink font-sans;
     background-image:
       radial-gradient(1200px 600px at 12% -10%, rgba(45, 134, 89, 0.06), transparent 60%),
       radial-gradient(1000px 500px at 96% 10%, rgba(232, 92, 95, 0.04), transparent 60%);
@@ -51,41 +51,34 @@
     z-index: 1;
   }
 
-  /* Display headings use Instrument Serif, tighter line-height than
-     Fraunces at large sizes. overflow-wrap lets long words break rather
-     than push the container. */
+  /* Headings use Outfit. Slightly tighter letter-spacing looks better on
+     geometric sans at large sizes. */
   h1,
   h2,
   h3,
   h4 {
-    font-family: var(--font-display), ui-serif, Georgia, serif;
+    font-family: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+    font-weight: 600;
     overflow-wrap: break-word;
     text-wrap: balance;
-    font-feature-settings: "liga", "dlig";
+    letter-spacing: -0.01em;
   }
 
-  /* Body paragraphs and inline text use Fraunces */
   p {
     overflow-wrap: break-word;
     text-wrap: pretty;
   }
 
   .serif,
-  .font-serif {
-    font-family: var(--font-display), ui-serif, Georgia, serif;
-  }
-
-  .font-body {
-    font-family: var(--font-body-serif), ui-serif, Georgia, serif;
-  }
-
+  .font-serif,
+  .font-body,
   .sans {
-    font-family: var(--font-satoshi), ui-sans-serif, system-ui, sans-serif;
+    font-family: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
   }
 
   .jp {
-    font-family: var(--font-klee), var(--font-body-serif),
-      "Hiragino Mincho ProN", serif;
+    font-family: var(--font-jp), "Hiragino Sans", "Yu Gothic", Meiryo,
+      sans-serif;
     font-feature-settings: normal;
   }
 
@@ -104,7 +97,6 @@
     border-radius: 4px;
   }
 
-  /* Prevent text from breaking out of its container on any element */
   img,
   svg {
     max-width: 100%;
@@ -114,30 +106,28 @@
 
 @layer components {
   .prose-inku {
-    /* body-size reading: Fraunces, generous line-height, tight
-       max-width for scan-length. */
-    font-family: var(--font-body-serif), ui-serif, Georgia, serif;
+    font-family: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
     @apply max-w-[68ch] text-ink;
-    line-height: 1.7;
+    line-height: 1.65;
     overflow-wrap: break-word;
   }
   .prose-inku h1 {
-    font-family: var(--font-display), ui-serif, Georgia, serif;
     @apply text-display-md mt-0 mb-5 tracking-tight;
+    font-weight: 600;
     text-wrap: balance;
   }
   .prose-inku h2 {
-    font-family: var(--font-display), ui-serif, Georgia, serif;
-    @apply text-[1.75rem] md:text-[1.95rem] leading-tight mt-14 mb-4 tracking-tight;
+    @apply text-[1.65rem] md:text-[1.85rem] leading-tight mt-14 mb-4 tracking-tight;
+    font-weight: 600;
     text-wrap: balance;
   }
   .prose-inku h3 {
-    font-family: var(--font-display), ui-serif, Georgia, serif;
-    @apply text-[1.3rem] md:text-[1.45rem] leading-snug mt-10 mb-3 tracking-tight;
+    @apply text-[1.25rem] md:text-[1.4rem] leading-snug mt-10 mb-3 tracking-tight;
+    font-weight: 600;
     text-wrap: balance;
   }
   .prose-inku p {
-    @apply text-[1.05rem] leading-[1.7] my-5;
+    @apply text-[1.02rem] leading-[1.65] my-5;
     text-wrap: pretty;
   }
   .prose-inku ul {
@@ -147,7 +137,7 @@
     @apply my-5 pl-6 list-decimal marker:text-matcha space-y-2;
   }
   .prose-inku li {
-    @apply text-[1.04rem] leading-[1.7];
+    @apply text-[1rem] leading-[1.65];
     text-wrap: pretty;
   }
   .prose-inku a {
@@ -155,7 +145,6 @@
     overflow-wrap: anywhere;
   }
   .prose-inku blockquote {
-    font-family: var(--font-body-serif), ui-serif, Georgia, serif;
     @apply my-8 border-l-2 border-matcha/60 pl-6 italic text-ink/80;
   }
   .prose-inku hr {
@@ -179,22 +168,18 @@
     @apply border-b border-border px-4 py-3 align-top;
   }
   .prose-inku th {
-    font-family: var(--font-satoshi), ui-sans-serif, system-ui, sans-serif;
     @apply font-medium uppercase tracking-breath text-xs text-ink-muted;
   }
 
   .label-eyebrow {
-    font-family: var(--font-satoshi), ui-sans-serif, system-ui, sans-serif;
-    @apply text-[0.72rem] uppercase tracking-whisper text-ink-muted;
+    @apply text-[0.72rem] uppercase tracking-whisper text-ink-muted font-medium;
   }
 
   .btn-primary {
-    font-family: var(--font-satoshi), ui-sans-serif, system-ui, sans-serif;
     @apply inline-flex items-center justify-center gap-2 rounded-md bg-matcha px-5 py-3 text-[0.95rem] font-medium text-cream shadow-paper transition-all hover:bg-matcha-deep active:translate-y-px disabled:opacity-60 disabled:pointer-events-none;
   }
 
   .btn-ghost {
-    font-family: var(--font-satoshi), ui-sans-serif, system-ui, sans-serif;
     @apply inline-flex items-center justify-center gap-2 rounded-md border border-border bg-cream/70 px-5 py-3 text-[0.95rem] font-medium text-ink transition-colors hover:bg-cream-deep hover:text-matcha;
   }
 
@@ -235,7 +220,6 @@
     scrollbar-width: none;
   }
 
-  /* Long URLs and unbreakable strings break on character boundaries */
   .break-anywhere {
     overflow-wrap: anywhere;
     word-break: break-word;
@@ -249,7 +233,6 @@
   @apply text-matcha;
 }
 
-/* Scrollable tables on mobile without visible overflow */
 @media (max-width: 640px) {
   .prose-inku table {
     display: block;
