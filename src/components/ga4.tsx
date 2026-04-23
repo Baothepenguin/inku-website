@@ -13,9 +13,9 @@ export function GA4() {
     <>
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${id}`}
-        strategy="afterInteractive"
+        strategy="lazyOnload"
       />
-      <Script id="ga4-init" strategy="afterInteractive">
+      <Script id="ga4-init" strategy="lazyOnload">
         {`
           if (navigator.doNotTrack !== "1" && window.doNotTrack !== "1") {
             window.dataLayer = window.dataLayer || [];
