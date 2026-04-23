@@ -64,6 +64,7 @@ export function DownloadCTA({
           alt="Download on the App Store"
           width={180}
           height={60}
+          loading="lazy"
           className="h-14 w-auto"
         />
       </Link>
