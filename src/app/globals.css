@@ -11,7 +11,7 @@
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
+    text-rendering: auto;
   }
 
   body {
@@ -21,7 +21,7 @@
     background-image:
       radial-gradient(1200px 600px at 12% -10%, rgba(45, 134, 89, 0.06), transparent 60%),
       radial-gradient(1000px 500px at 96% 10%, rgba(232, 92, 95, 0.04), transparent 60%);
-    background-attachment: fixed;
+    background-attachment: scroll;
     overflow-x: hidden;
   }
 
@@ -37,10 +37,25 @@
     inset: 0;
     pointer-events: none;
     z-index: 0;
+    display: none;
     opacity: 0.08;
     mix-blend-mode: multiply;
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='340' height='340'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' seed='7'/><feColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.1 0 0 0 0 0.1 0 0 0 0.9 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
     background-size: 340px 340px;
+  }
+
+  @media (min-width: 768px) {
+    html {
+      text-rendering: optimizeLegibility;
+    }
+
+    body {
+      background-attachment: fixed;
+    }
+
+    body::before {
+      display: block;
+    }
   }
 
   main,
