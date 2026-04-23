@@ -14,9 +14,8 @@ export const outfit = Outfit({
 });
 
 /**
- * Noto Sans JP for every Japanese character on the site. Google's pan-
- * CJK family, designed specifically for screen rendering. Google Fonts
- * subsets this to just the Japanese + latin glyphs we actually use.
+ * Noto Sans JP for Japanese UI. The first screen uses a small local
+ * subset so Japanese glyphs do not block the hero paint.
  */
 export const notoSansJp = localFont({
   src: [
