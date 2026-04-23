@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { DownloadCTA } from "@/components/download-cta";
+import { LogoMark } from "@/components/logo-mark";
 
 const NAV = [
   { href: "/guides", label: "Guides" },
@@ -12,6 +13,7 @@ const NAV = [
   { href: "/vs", label: "Compare" },
   { href: "/jlpt", label: "JLPT" },
   { href: "/tools/hiragana-chart", label: "Tools" },
+  { href: "/about", label: "About" },
 ];
 
 export function SiteHeader() {
@@ -43,7 +45,7 @@ export function SiteHeader() {
           className="flex items-center gap-2 font-serif text-xl tracking-tight text-ink hover:text-matcha"
           aria-label="Inku home"
         >
-          <span className="jp text-[1.35rem] leading-none text-matcha">墨</span>
+          <LogoMark className="bg-matcha text-cream" />
           <span className="font-semibold">Inku</span>
         </Link>
 
@@ -60,15 +62,9 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <Link
-            href="/about"
-            className="hidden font-sans text-sm text-ink-muted hover:text-ink md:inline-block"
-          >
-            About
-          </Link>
           <DownloadCTA
             campaign="header"
-            label="Download"
+            label="Download now"
             className="px-3 py-2 text-sm sm:px-4"
           />
           <button
@@ -105,12 +101,6 @@ export function SiteHeader() {
               {item.label}
             </Link>
           ))}
-          <Link
-            href="/about"
-            className="rounded-md px-3 py-3 font-sans text-base font-medium text-ink-muted transition-colors hover:bg-cream-deep hover:text-ink"
-          >
-            About
-          </Link>
         </div>
       </nav>
     </header>

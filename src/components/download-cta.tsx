@@ -106,17 +106,8 @@ export function DownloadCTA({
           className,
         )}
       >
-        {label ?? "Get Inku on iPhone"}
-        <svg
-          className="h-4 w-4"
-          viewBox="0 0 20 20"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          aria-hidden="true"
-        >
-          <path d="M5 10h10m0 0-4-4m4 4-4 4" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
+        <AppleIcon />
+        {label ?? "Download now"}
       </Link>
 
       {showQR && (
@@ -152,5 +143,13 @@ export function DownloadCTA({
         </div>
       )}
     </>
+  );
+}
+
+function AppleIcon() {
+  return (
+    <svg className="h-4 w-4" viewBox="0 0 18 22" fill="currentColor" aria-hidden="true">
+      <path d="M14.3 11.6c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-2-.9-3.2-.8-1.7 0-3.2 1-4.1 2.5-1.8 3.2-.5 7.8 1.3 10.4.9 1.3 1.9 2.7 3.3 2.6 1.3-.1 1.8-.8 3.4-.8 1.6 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.2-2.6 1-1.5 1.4-2.9 1.4-3-.1 0-2.8-1.1-2.8-4.4ZM12 4.4c.7-.9 1.2-2.1 1.1-3.4-1.1 0-2.3.7-3.1 1.6-.7.8-1.2 2-1.1 3.2 1.2.1 2.4-.6 3.1-1.4Z" />
+    </svg>
   );
 }

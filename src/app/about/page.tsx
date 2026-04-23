@@ -141,8 +141,8 @@ export default function AboutPage() {
           </li>
           <li>
             It is not free. I chose to charge for it so I could build it
-            without selling data or running ads. The yearly plan is $29.99 with
-            a 7-day trial. The monthly plan is $4.99.
+            without selling data or running ads. The yearly plan is $70.99 with
+            a 7-day trial. The monthly plan is $12.99.
           </li>
         </ul>
 

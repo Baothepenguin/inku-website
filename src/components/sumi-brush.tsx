@@ -67,7 +67,7 @@ export function SumiBrush({
       </svg>
     );
   }
-  // enso — open circle
+  // Open enso circle.
   return (
     <svg
       viewBox="0 0 220 220"

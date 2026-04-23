@@ -21,19 +21,21 @@ export function FeatureRow({
   return (
     <div
       className={cn(
-        "grid items-center gap-10 md:grid-cols-2 md:gap-20",
+        "mx-auto grid w-full max-w-6xl items-center gap-10 md:grid-cols-[minmax(0,1fr)_minmax(320px,420px)] md:gap-16",
         reverse && "md:[&>*:first-child]:order-2",
         className,
       )}
     >
-      <div className="max-w-[42ch]">
+      <div className="max-w-[44ch]">
         {eyebrow && <p className="label-eyebrow mb-4">{eyebrow}</p>}
         <h2 className="font-serif text-display-md tracking-tight text-balance">
           {title}
         </h2>
         <div className="prose-inku mt-5 max-w-none">{body}</div>
       </div>
-      <div className="flex items-center justify-center">{children}</div>
+      <div className="flex w-full items-center justify-center md:min-h-[560px]">
+        {children}
+      </div>
     </div>
   );
 }

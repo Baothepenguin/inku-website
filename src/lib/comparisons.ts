@@ -84,7 +84,7 @@ export const COMPARISONS: Record<string, ComparisonRecord> = {
     ],
     features: [
       { feature: "Free tier", inku: "7-day trial only", competitor: "Free with ads", winner: "competitor" },
-      { feature: "Native voice acting", inku: "Yes, actor-recorded", competitor: "TTS only", winner: "inku" },
+      { feature: "Pronunciation audio", inku: "Yes, on every card", competitor: "TTS only", winner: "inku" },
       { feature: "Spaced repetition", inku: "FSRS algorithm", competitor: "Basic interval", winner: "inku" },
       { feature: "Hiragana + katakana", inku: "Full guide + drill", competitor: "Covered in early lessons", winner: "inku" },
       { feature: "Offline mode", inku: "Always (all on-device)", competitor: "Limited (Super only)", winner: "inku" },
@@ -92,12 +92,12 @@ export const COMPARISONS: Record<string, ComparisonRecord> = {
       { feature: "Languages supported", inku: "Japanese", competitor: "40+", winner: "competitor" },
       { feature: "Gamification", inku: "None", competitor: "Heavy", winner: "tie" },
       { feature: "Ads", inku: "None", competitor: "Yes (free tier)", winner: "inku" },
-      { feature: "Pricing", inku: "$29.99/yr or $4.99/mo", competitor: "$84/yr Super", winner: "inku" },
+      { feature: "Pricing", inku: "$70.99/yr or $12.99/mo", competitor: "$84/yr Super", winner: "inku" },
     ],
     honestTake:
       "Duolingo is not a bad app. It is a good app built for mass-market retention, and that retention comes from gamification. If you thrive on streaks and leaderboards, it can be a genuinely fun way to spend 10 minutes a day. If you find those things exhausting (or, like many people, shame-inducing), you are the exact person Inku was built for.",
     verdict:
-      "Use Duolingo if: you want free, multiple languages, and enjoy gamification. Use Inku if: you are a serious adult learner who wants to actually produce Japanese and is willing to pay $30 a year for a calmer experience.",
+      "Use Duolingo if: you want free, multiple languages, and enjoy gamification. Use Inku if: you are a serious adult learner who wants to actually produce Japanese and is willing to pay for a calmer experience.",
     recommendation:
       "If you have tried Duolingo for Japanese and are not happy with how much (or little) you've learned, Inku is worth a 7-day trial. Most of our users were Duolingo users for 100+ days first.",
     faqs: [
@@ -143,7 +143,7 @@ export const COMPARISONS: Record<string, ComparisonRecord> = {
       {
         scenario: "You want audio on every card",
         explanation:
-          "Every Inku card has actor-recorded audio bundled into the app. Anki decks typically use TTS or no audio at all.",
+          "Every Inku card has pronunciation audio bundled into the app. Anki decks typically use TTS or no audio at all.",
       },
       {
         scenario: "You want to start today, not set up for a week",
@@ -180,7 +180,7 @@ export const COMPARISONS: Record<string, ComparisonRecord> = {
       { feature: "Customization", inku: "Limited", competitor: "Total", winner: "competitor" },
       { feature: "SRS algorithm", inku: "FSRS", competitor: "FSRS (2024+) or SM-2", winner: "tie" },
       { feature: "iOS app", inku: "Native SwiftUI", competitor: "AnkiMobile, $25", winner: "inku" },
-      { feature: "Price (iOS)", inku: "$29.99/yr", competitor: "$25 one-time", winner: "competitor" },
+      { feature: "Price (iOS)", inku: "$70.99/yr", competitor: "$25 one-time", winner: "competitor" },
       { feature: "Sync across devices", inku: "Local only", competitor: "AnkiWeb", winner: "competitor" },
       { feature: "Multi-language/domain support", inku: "Japanese only", competitor: "Anything", winner: "competitor" },
       { feature: "UI polish", inku: "High", competitor: "Utilitarian", winner: "inku" },
@@ -234,7 +234,7 @@ export const COMPARISONS: Record<string, ComparisonRecord> = {
       {
         scenario: "You want native audio on every card",
         explanation:
-          "Inku has actor-recorded audio. WaniKani uses a single native speaker for audio on vocabulary, but not on kanji readings individually.",
+          "Inku has pronunciation audio on every card. WaniKani uses a single native speaker for audio on vocabulary, but not on kanji readings individually.",
       },
       {
         scenario: "You want a shorter daily commitment",
@@ -263,10 +263,10 @@ export const COMPARISONS: Record<string, ComparisonRecord> = {
       { feature: "Hiragana/katakana coverage", inku: "Full guide + drill", competitor: "Assumed known", winner: "inku" },
       { feature: "Kanji count", inku: "Minimal (starts in N4)", competitor: "2,000+", winner: "competitor" },
       { feature: "Vocabulary count", inku: "600+", competitor: "6,000+ (through 60 levels)", winner: "competitor" },
-      { feature: "Audio quality", inku: "Actor-recorded, every card", competitor: "Native speaker, vocab only", winner: "inku" },
+      { feature: "Audio quality", inku: "Clear audio on every card", competitor: "Native speaker, vocab only", winner: "inku" },
       { feature: "SRS algorithm", inku: "FSRS", competitor: "Custom interval", winner: "inku" },
       { feature: "Mobile experience", inku: "Native iPhone app", competitor: "Web or third-party apps", winner: "inku" },
-      { feature: "Price per year", inku: "$29.99", competitor: "$89 or $299 lifetime", winner: "inku" },
+      { feature: "Price per year", inku: "$70.99", competitor: "$89 or $299 lifetime", winner: "inku" },
       { feature: "Time to first kanji", inku: "~2 months in", competitor: "Day 1", winner: "competitor" },
       { feature: "Community", inku: "Small, email only", competitor: "Large forum", winner: "competitor" },
     ],
@@ -314,7 +314,7 @@ export const COMPARISONS: Record<string, ComparisonRecord> = {
       {
         scenario: "You want vocabulary with authentic pronunciation",
         explanation:
-          "Inku's actor-recorded audio is on every card. Bunpo focuses on grammar patterns; pronunciation is secondary.",
+          "Inku's pronunciation audio is on every card. Bunpo focuses on grammar patterns; pronunciation is secondary.",
       },
       {
         scenario: "You want a calm, un-gamified experience",
@@ -341,11 +341,11 @@ export const COMPARISONS: Record<string, ComparisonRecord> = {
     ],
     features: [
       { feature: "Focus", inku: "Vocabulary + kana", competitor: "Grammar", winner: "tie" },
-      { feature: "Native audio", inku: "Actor-recorded", competitor: "Limited TTS", winner: "inku" },
+      { feature: "Native audio", inku: "Clear audio", competitor: "Limited TTS", winner: "inku" },
       { feature: "Grammar drills", inku: "None", competitor: "Extensive, by JLPT level", winner: "competitor" },
       { feature: "Spaced repetition", inku: "FSRS", competitor: "Built-in but lighter", winner: "inku" },
       { feature: "JLPT alignment", inku: "N5 complete, N4 partial", competitor: "N5-N1", winner: "competitor" },
-      { feature: "Pricing", inku: "$29.99/yr", competitor: "$69/yr", winner: "inku" },
+      { feature: "Pricing", inku: "$70.99/yr", competitor: "$69/yr", winner: "competitor" },
       { feature: "Platform", inku: "iPhone only", competitor: "iOS + Android", winner: "competitor" },
       { feature: "Beginner-friendly", inku: "Yes, from zero", competitor: "Assumes kana", winner: "inku" },
     ],
@@ -389,7 +389,7 @@ export const COMPARISONS: Record<string, ComparisonRecord> = {
       {
         scenario: "You want native voice acting",
         explanation:
-          "Inku's audio is actor-recorded. LingoDeer uses TTS for most content.",
+          "Inku's audio is bundled with each card. LingoDeer uses TTS for most content.",
       },
       {
         scenario: "You want a calmer interface",
@@ -411,11 +411,11 @@ export const COMPARISONS: Record<string, ComparisonRecord> = {
     ],
     features: [
       { feature: "Format", inku: "Flashcards", competitor: "Lesson-based", winner: "tie" },
-      { feature: "Native audio", inku: "Actor-recorded, every card", competitor: "Mixed TTS", winner: "inku" },
+      { feature: "Native audio", inku: "Clear audio on every card", competitor: "Mixed TTS", winner: "inku" },
       { feature: "Grammar lessons", inku: "None", competitor: "Full course", winner: "competitor" },
       { feature: "Vocabulary breadth", inku: "600+ curated", competitor: "Thousands in course", winner: "competitor" },
       { feature: "Daily time commitment", inku: "10-15 min", competitor: "20-30 min (lesson)", winner: "inku" },
-      { feature: "Pricing", inku: "$29.99/yr", competitor: "$69.99/yr", winner: "inku" },
+      { feature: "Pricing", inku: "$70.99/yr", competitor: "$69.99/yr", winner: "competitor" },
       { feature: "Platform", inku: "iPhone", competitor: "iOS, Android, Web", winner: "competitor" },
       { feature: "Gamification", inku: "None", competitor: "Moderate", winner: "tie" },
     ],
@@ -464,7 +464,7 @@ export const COMPARISONS: Record<string, ComparisonRecord> = {
       {
         scenario: "You want native voice acting",
         explanation:
-          "Inku's audio is actor-recorded. Renshuu uses TTS.",
+          "Inku's audio is bundled with each card. Renshuu uses TTS.",
       },
     ],
     competitorWins: [
@@ -486,7 +486,7 @@ export const COMPARISONS: Record<string, ComparisonRecord> = {
     ],
     features: [
       { feature: "Native app", inku: "iPhone", competitor: "Light iOS + web-first", winner: "inku" },
-      { feature: "Audio", inku: "Actor-recorded", competitor: "TTS", winner: "inku" },
+      { feature: "Audio", inku: "Clear audio", competitor: "TTS", winner: "inku" },
       { feature: "Deck library", inku: "One curated", competitor: "Thousands", winner: "competitor" },
       { feature: "Free tier", inku: "7-day trial", competitor: "Generous free", winner: "competitor" },
       { feature: "Customization", inku: "None", competitor: "Deep", winner: "competitor" },
@@ -526,7 +526,7 @@ export const COMPARISONS: Record<string, ComparisonRecord> = {
       "Busuu has a unique feature: native speakers of your target language review your writing. It is a strong tool for learners who want human feedback. Inku doesn't compete on that. Inku competes on polish, audio quality, and 10-minute-a-day usability.",
     inkuWins: [
       {
-        scenario: "You want actor-recorded audio on every card",
+        scenario: "You want audio on every card",
         explanation:
           "Inku has native voice acting. Busuu uses a mix of TTS and short native clips.",
       },
@@ -560,10 +560,10 @@ export const COMPARISONS: Record<string, ComparisonRecord> = {
     ],
     features: [
       { feature: "Format", inku: "Flashcards", competitor: "Lessons + peer review", winner: "tie" },
-      { feature: "Audio", inku: "Actor-recorded", competitor: "Mix of native + TTS", winner: "inku" },
+      { feature: "Audio", inku: "Clear audio", competitor: "Mix of native + TTS", winner: "inku" },
       { feature: "Peer review", inku: "No", competitor: "Yes, unique", winner: "competitor" },
       { feature: "Languages", inku: "Japanese", competitor: "14", winner: "competitor" },
-      { feature: "Pricing", inku: "$29.99/yr", competitor: "$84/yr", winner: "inku" },
+      { feature: "Pricing", inku: "$70.99/yr", competitor: "$84/yr", winner: "inku" },
       { feature: "Daily commitment", inku: "10-15 min", competitor: "20-30 min (lesson)", winner: "inku" },
       { feature: "Polish", inku: "High", competitor: "High", winner: "tie" },
     ],
@@ -592,7 +592,7 @@ export const COMPARISONS: Record<string, ComparisonRecord> = {
     tagline:
       "Lingopie teaches through TV shows and native media. Inku teaches through spaced flashcards. Immersion vs drill.",
     summary:
-      "Lingopie streams Japanese shows with interactive subtitles. Inku delivers actor-recorded flashcards with FSRS scheduling.",
+      "Lingopie streams Japanese shows with interactive subtitles. Inku delivers audio-supported flashcards with FSRS scheduling.",
     releaseYear: 2019,
     competitorCategory: "Media-based language app",
     competitorPricing: "$12/mo, $67/yr",
@@ -633,7 +633,7 @@ export const COMPARISONS: Record<string, ComparisonRecord> = {
       { feature: "Time per session", inku: "10 min", competitor: "20-40 min", winner: "inku" },
       { feature: "Real media exposure", inku: "No", competitor: "Yes", winner: "competitor" },
       { feature: "Cultural context", inku: "Limited", competitor: "Strong", winner: "competitor" },
-      { feature: "Pricing", inku: "$29.99/yr", competitor: "$67/yr", winner: "inku" },
+      { feature: "Pricing", inku: "$70.99/yr", competitor: "$67/yr", winner: "competitor" },
     ],
     honestTake:
       "Lingopie is the tool for intermediate learners who want to boost input while enjoying real shows. It is probably too ambitious for day-one beginners. Inku is the opposite end of that arc.",
@@ -658,7 +658,7 @@ export const COMPARISONS: Record<string, ComparisonRecord> = {
     competitorName: "Noji",
     competitorShortName: "Noji",
     tagline:
-      "Noji is a web-based flashcard tool with a powerful tool library. Inku is a native iPhone app with actor-recorded audio.",
+      "Noji is a web-based flashcard tool with a powerful tool library. Inku is a native iPhone app with pronunciation audio.",
     summary:
       "Noji offers custom flashcard creation, a toolbox of utilities, and web-first access. Inku offers a curated iPhone experience.",
     releaseYear: 2021,
@@ -702,11 +702,11 @@ export const COMPARISONS: Record<string, ComparisonRecord> = {
     ],
     features: [
       { feature: "Native app", inku: "iPhone", competitor: "Web + mobile", winner: "inku" },
-      { feature: "Audio", inku: "Actor-recorded", competitor: "TTS", winner: "inku" },
+      { feature: "Audio", inku: "Clear audio", competitor: "TTS", winner: "inku" },
       { feature: "Pre-built Japanese deck", inku: "Yes", competitor: "Some user decks", winner: "inku" },
       { feature: "Custom deck creation", inku: "No", competitor: "Yes, strong tools", winner: "competitor" },
       { feature: "AI tools", inku: "None", competitor: "Deck generators, OCR", winner: "competitor" },
-      { feature: "Pricing", inku: "$29.99/yr", competitor: "Free or $60/yr", winner: "competitor" },
+      { feature: "Pricing", inku: "$70.99/yr", competitor: "Free or $60/yr", winner: "competitor" },
     ],
     honestTake:
       "Noji and Inku solve different problems. Noji is a toolbox. Inku is a product. If you want to build your own study system, Noji is powerful. If you want to just learn Japanese, Inku is simpler.",

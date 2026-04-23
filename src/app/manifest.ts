@@ -2,10 +2,10 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Inku — Learn Japanese",
+    name: "Inku: Learn Japanese",
     short_name: "Inku",
     description:
-      "A calm iPhone app for learning Japanese. Flashcards, native voice, no streaks.",
+      "A calm iPhone app for learning Japanese. Flashcards, pronunciation audio, no streaks.",
     start_url: "/",
     display: "standalone",
     background_color: "#FAF8F2",

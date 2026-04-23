@@ -19,8 +19,8 @@
        fallback via .jp class. */
     @apply bg-cream text-ink font-sans;
     background-image:
-      radial-gradient(1200px 600px at 12% -10%, rgba(45, 134, 89, 0.06), transparent 60%),
-      radial-gradient(1000px 500px at 96% 10%, rgba(232, 92, 95, 0.04), transparent 60%);
+      linear-gradient(180deg, rgba(255, 253, 246, 0.92) 0%, rgba(250, 248, 242, 0.98) 42%, rgba(242, 237, 222, 0.62) 100%),
+      repeating-linear-gradient(105deg, rgba(26, 26, 26, 0.018) 0 1px, transparent 1px 18px);
     background-attachment: scroll;
     overflow-x: hidden;
   }

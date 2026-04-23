@@ -2,7 +2,7 @@ export const SITE = {
   name: "Inku",
   tagline: "A calm way to learn Japanese.",
   description:
-    "Inku is a flashcard app for iPhone that teaches Japanese the way you'd want to learn it: calm, deliberate, native voice. Hiragana, katakana, N5 vocab, phrases, and a handwriting mode, all on one quiet screen.",
+    "Inku is a flashcard app for iPhone that teaches Japanese the way you'd want to learn it: calm, deliberate, with pronunciation audio. Hiragana, katakana, N5 vocab, phrases, and a handwriting mode, all on one quiet screen.",
   url: "https://inkujapanese.com",
   supportEmail: "app@inkujapanese.com",
   operator: {
@@ -34,8 +34,8 @@ export const SITE = {
     bing: process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION || "",
   },
   pricing: {
-    yearly: "$29.99 / year",
-    monthly: "$4.99 / month",
+    yearly: "$70.99 / year",
+    monthly: "$12.99 / month",
     trialDays: 7,
   },
 } as const;

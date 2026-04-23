@@ -38,19 +38,19 @@ export function Why() {
 
         <FeatureRow
           eyebrow="Every word, spoken aloud"
-          title="A real actor recorded every card."
+          title="Hear each card before you copy it."
           reverse
           body={
             <>
               <p>
-                Inku ships with native voice acting for every character, word,
-                and phrase. Not a text-to-speech engine. A real voice actor
-                recorded in a studio, and the audio lives on your device.
+                Inku gives every character, word, and phrase a clear
+                pronunciation recording. You can listen first, then repeat it
+                without leaving the review.
               </p>
               <p>
-                That means your pronunciation has something faithful to copy,
-                and the app never has to phone home to speak. It sounds the
-                same on the subway as it does on your couch.
+                The audio lives on your device, so review feels the same on the
+                train as it does at home. No loading state, no extra tool, just
+                the sound when you need it.
               </p>
             </>
           }
@@ -80,7 +80,6 @@ export function Why() {
               </p>
             </>
           }
-          reverse
         >
           <IPhoneMockup
             className="w-[280px]"

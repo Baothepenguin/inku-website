@@ -34,7 +34,7 @@ export const ALTERNATIVES: Record<string, AlternativeRecord> = {
     whatLooksLike:
       "A Duolingo alternative should do three things better than Duolingo: teach you real vocabulary with authentic audio, respect your time with finite sessions, and avoid streak mechanics that punish missed days.",
     howInkuDiffers: [
-      "Native voice acting on every word. Inku ships with an actor-recorded pronunciation for every card, bundled into the app. No TTS. Your ear learns what a Japanese person actually sounds like.",
+      "Pronunciation audio on every word. Inku ships with audio for every card, bundled into the app. No runtime TTS. Your ear has a clear model to copy.",
       "Spaced repetition tuned to your memory. Inku uses FSRS (the same modern algorithm Anki switched to in 2024) to schedule reviews around when you would actually forget. No grinding, no wasted reps.",
       "No streak flames, no leagues, no mascot guilt-tripping. Open the app, do today's review, close. Inku is designed so you look forward to opening it, not dread missing a day.",
       "Local-first. No account, no cloud sync, no behavioral tracking. Your progress lives on your iPhone.",
@@ -134,7 +134,7 @@ export const ALTERNATIVES: Record<string, AlternativeRecord> = {
     whatLooksLike:
       "A Rosetta Stone alternative should teach Japanese through voice and visuals without requiring $200 upfront. It should work on a phone and fit into 10-minute daily sessions.",
     howInkuDiffers: [
-      "$29.99/year vs $200+ lifetime. Cheaper per year, cheaper to try (7-day free trial), no big upfront commitment.",
+      "$70.99/year vs $200+ lifetime. Cheaper to try with a 7-day free trial, no big upfront commitment.",
       "Flashcards plus audio, not image-matching. Faster vocabulary acquisition for adult learners.",
       "Modern iPhone-native UI.",
       "Works entirely offline.",
@@ -219,9 +219,9 @@ export const ALTERNATIVES: Record<string, AlternativeRecord> = {
     whatLooksLike:
       "A Pimsleur alternative should keep the high-quality audio but add the visual script work Japanese requires. It should be faster-paced and more affordable.",
     howInkuDiffers: [
-      "Actor-recorded audio with the written script on the same card. Your eye and ear learn together.",
+      "Pronunciation audio with the written script on the same card. Your eye and ear learn together.",
       "Kana drill built in. You leave Inku able to read hiragana and katakana, not just hear them.",
-      "$30/year vs $240/year.",
+      "$70.99/year vs $240/year.",
       "iPhone native with finite 10-minute sessions. Pimsleur's 30-minute lessons can feel long.",
     ],
     reviews: [

@@ -8,7 +8,7 @@ interface Testimonial {
   platform: "instagram" | "tiktok" | "twitter" | "reddit";
   href: string;
   accent?: "matcha" | "sakura" | "sun" | "ink";
-  /** background style — gradient angle index 0 .. 5 */
+  /** Background gradient angle index 0 .. 5. */
   bgIndex?: number;
 }
 

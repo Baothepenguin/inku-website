@@ -1,9 +1,10 @@
 import { DownloadCTA } from "@/components/download-cta";
 import { SumiBrush } from "@/components/sumi-brush";
+import { SITE } from "@/lib/site";
 
 const INCLUDED = [
   "All six decks: hiragana, katakana, N5 vocab, casual, polite, travel",
-  "Native voice acting on every card",
+  "Pronunciation audio on every card",
   "Handwriting practice for every kana",
   "Spaced repetition tuned for adult learners",
   "Four themes: Matcha, Sakura, Sun, Moon",
@@ -27,7 +28,7 @@ export function Pricing() {
           </p>
         </div>
 
-        <div className="mx-auto mt-14 grid max-w-5xl gap-6 md:grid-cols-2">
+        <div className="mx-auto mt-14 grid max-w-5xl items-stretch gap-6 md:grid-cols-2">
           <div className="relative overflow-hidden rounded-lg border-2 border-matcha bg-cream-raised p-8 shadow-card md:p-10">
             <SumiBrush
               variant="comma"
@@ -36,18 +37,18 @@ export function Pricing() {
             <div className="mb-2 flex flex-wrap items-center gap-3">
               <p className="label-eyebrow text-matcha">Best value</p>
               <span className="rounded-full bg-matcha px-2.5 py-1 font-sans text-[0.68rem] font-semibold uppercase tracking-breath text-cream">
-                Save 50%
+                Free week
               </span>
             </div>
             <h3 className="font-serif text-[1.85rem] text-ink md:text-3xl">Yearly</h3>
             <p className="mt-3 flex items-baseline font-serif text-[2.75rem] leading-none text-ink md:text-5xl">
-              <span className="tabular-nums">$29.99</span>
+              <span className="tabular-nums">$70.99</span>
               <span className="ml-1 font-sans text-base font-normal text-ink-muted">
                 / year
               </span>
             </p>
             <p className="mt-3 font-body text-sm text-ink-muted">
-              That is $2.50 a month, billed once a year.
+              Better value if Inku becomes part of your weekly study routine.
             </p>
             <p className="mt-1 font-sans text-sm text-matcha">
               7-day free trial. No charge until day 8.
@@ -63,7 +64,7 @@ export function Pricing() {
             <p className="label-eyebrow mb-2">Flexible</p>
             <h3 className="font-serif text-[1.85rem] text-ink md:text-3xl">Monthly</h3>
             <p className="mt-3 flex items-baseline font-serif text-[2.75rem] leading-none text-ink md:text-5xl">
-              <span className="tabular-nums">$4.99</span>
+              <span className="tabular-nums">$12.99</span>
               <span className="ml-1 font-sans text-base font-normal text-ink-muted">
                 / month
               </span>
@@ -71,8 +72,8 @@ export function Pricing() {
             <p className="mt-3 font-body text-sm text-ink-muted">
               Cancel any billing cycle. No long commitment.
             </p>
-            <p className="mt-1 font-sans text-sm text-ink-subtle">
-              No trial on monthly plans (Apple rule).
+            <p className="mt-1 font-sans text-sm text-matcha">
+              Includes the same 7-day free trial.
             </p>
             <DownloadCTA
               campaign="pricing-monthly"
@@ -82,19 +83,37 @@ export function Pricing() {
           </div>
         </div>
 
-        <div className="mx-auto mt-14 max-w-3xl rounded-lg border border-border bg-cream-raised p-8 md:p-10">
-          <p className="label-eyebrow mb-5">Both plans include</p>
-          <ul className="grid gap-3 md:grid-cols-2">
+        <div className="mx-auto mt-14 max-w-5xl overflow-hidden rounded-lg border border-border bg-cream-raised shadow-paper">
+          <div className="grid gap-0 md:grid-cols-[0.8fr_1.2fr]">
+            <div className="relative flex flex-col justify-between bg-ink p-8 text-cream md:p-10">
+              <SumiBrush
+                variant="enso"
+                className="pointer-events-none absolute -bottom-16 -right-10 h-48 w-48 opacity-[0.12]"
+                color="#FAF8F2"
+              />
+              <div>
+                <p className="label-eyebrow mb-4 text-cream/70">Both plans include</p>
+                <h3 className="font-serif text-2xl leading-tight md:text-3xl">
+                  Everything in the app, from day one.
+                </h3>
+              </div>
+              <p className="relative mt-8 font-sans text-sm text-cream/70">
+                {SITE.pricing.trialDays}-day free trial. Cancel anytime in
+                Settings.
+              </p>
+            </div>
+            <ul className="grid gap-0 sm:grid-cols-2">
             {INCLUDED.map((item) => (
               <li
                 key={item}
-                className="flex items-start gap-3 font-serif text-[1.02rem] text-ink"
+                className="flex min-h-24 items-start gap-3 border-b border-border/70 p-5 font-serif text-[1.02rem] text-ink last:border-b-0 sm:odd:border-r sm:[&:nth-last-child(2)]:border-b-0"
               >
-                <span className="jp mt-0.5 text-matcha">・</span>
+                <span className="mt-1 h-2 w-2 flex-none rounded-full bg-matcha" />
                 <span className="leading-snug">{item}</span>
               </li>
             ))}
-          </ul>
+            </ul>
+          </div>
         </div>
       </div>
     </section>

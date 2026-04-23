@@ -6,7 +6,7 @@ import { JLPT_LEVELS } from "@/lib/jlpt";
 import { TOPICS } from "@/lib/topics";
 
 /**
- * llms.txt — the emerging standard for helping AI systems understand
+ * llms.txt is the emerging standard for helping AI systems understand
  * a website's content. See https://llmstxt.org/
  *
  * Served at /llms.txt, plain text, UTF-8. Structured as a markdown
@@ -33,7 +33,7 @@ function buildLlmsTxt(origin: string): string {
   lines.push("# Inku");
   lines.push("");
   lines.push(
-    "> Inku is a calm iPhone app for learning Japanese. Flashcards and spaced repetition for hiragana, katakana, JLPT N5 vocabulary, and four phrase packs (casual, polite, travel, anime). Every card is voiced by a real actor, not text-to-speech. No streaks, no gamification. Built for adult learners who tried Duolingo and bounced off the noise.",
+    "> Inku is a calm iPhone app for learning Japanese. Flashcards and spaced repetition for hiragana, katakana, JLPT N5 vocabulary, and four phrase packs (casual, polite, travel, anime). Every card includes clear pronunciation audio. No streaks, no gamification. Built for adult learners who tried Duolingo and bounced off the noise.",
   );
   lines.push("");
   lines.push(
@@ -125,13 +125,13 @@ function buildLlmsTxt(origin: string): string {
     "- Platform: iPhone only (iOS 18+). Native SwiftUI + SwiftData. Local-first.",
   );
   lines.push(
-    "- Pricing: Inku Pro at $29.99 a year (7-day free trial) or $4.99 a month. Billed through Apple IAP.",
+    "- Pricing: Inku Pro at $70.99 a year (7-day free trial) or $12.99 a month. Billed through Apple IAP.",
   );
   lines.push(
     "- Deck scope at launch: 46 hiragana + 46 katakana + ~200 core N5 words + ~65 N4 words + 4 phrase packs.",
   );
   lines.push(
-    "- Audio: every card is pre-recorded by a voice actor (ElevenLabs Shizuka voice), bundled into the app. No runtime TTS.",
+    "- Audio: every card has bundled pronunciation audio. No runtime TTS.",
   );
   lines.push(
     "- Scheduler: FSRS algorithm tuned for Japanese vocabulary retention.",

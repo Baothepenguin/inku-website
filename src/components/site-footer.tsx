@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { LogoMark } from "@/components/logo-mark";
 import { SITE } from "@/lib/site";
 
 const SECTIONS = [
@@ -48,31 +49,47 @@ const SECTIONS = [
 
 export function SiteFooter() {
   return (
-    <footer className="mt-32 border-t border-border/70 bg-cream-deep/40">
-      <div className="container py-14">
+    <footer className="relative mt-32 overflow-hidden bg-ink text-cream">
+      <svg
+        aria-hidden="true"
+        viewBox="0 0 520 260"
+        className="pointer-events-none absolute -left-20 top-4 h-72 w-[34rem] text-cream opacity-[0.045]"
+        fill="currentColor"
+      >
+        <path d="M90 135c26-52 74-76 128-69 62 8 87 59 151 62 52 2 83-26 119-55-13 62-46 110-101 137-74 36-170 19-240-10-43-18-70-35-57-65Z" />
+      </svg>
+      <svg
+        aria-hidden="true"
+        viewBox="0 0 180 180"
+        className="pointer-events-none absolute bottom-8 right-10 h-32 w-32 text-matcha opacity-20"
+        fill="currentColor"
+      >
+        <path d="M91 15c28 35 52 64 52 99 0 31-22 52-52 52s-52-21-52-52c0-35 24-64 52-99Z" />
+      </svg>
+      <div className="container relative py-14">
         <div className="flex flex-col gap-10 md:flex-row md:justify-between">
           <div className="max-w-sm">
-            <Link href="/" className="flex items-center gap-2 font-serif text-xl text-ink">
-              <span className="jp text-[1.35rem] text-matcha">墨</span>
+            <Link href="/" className="flex items-center gap-2 font-serif text-xl text-cream">
+              <LogoMark className="bg-cream text-ink" />
               <span className="font-semibold">Inku</span>
             </Link>
-            <p className="mt-4 font-serif text-[0.98rem] leading-relaxed text-ink-muted">
+            <p className="mt-4 font-serif text-[0.98rem] leading-relaxed text-cream/70">
               A calm way to learn Japanese. Built in Calgary by{" "}
               {SITE.operator.legalName}, one quiet screen at a time.
             </p>
-            <p className="mt-6 label-eyebrow">Available on iPhone</p>
+            <p className="mt-6 label-eyebrow text-cream/50">Available on iPhone</p>
           </div>
 
           <div className="grid flex-1 grid-cols-2 gap-10 md:grid-cols-4 md:gap-6">
             {SECTIONS.map((section) => (
               <div key={section.title}>
-                <p className="label-eyebrow mb-3">{section.title}</p>
+                <p className="label-eyebrow mb-3 text-cream/50">{section.title}</p>
                 <ul className="space-y-2.5">
                   {section.links.map((link) => (
                     <li key={link.href}>
                       <Link
                         href={link.href}
-                        className="font-sans text-[0.92rem] text-ink-muted transition-colors hover:text-ink"
+                        className="font-sans text-[0.92rem] text-cream/70 transition-colors hover:text-cream"
                       >
                         {link.label}
                       </Link>
@@ -84,9 +101,9 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="section-divider mt-12" />
+        <div className="mt-12 h-px w-full bg-gradient-to-r from-transparent via-cream/20 to-transparent" />
 
-        <div className="mt-6 flex flex-col gap-2 text-[0.82rem] text-ink-subtle md:flex-row md:items-center md:justify-between">
+        <div className="mt-6 flex flex-col gap-2 text-[0.82rem] text-cream/45 md:flex-row md:items-center md:justify-between">
           <p>
             &copy; 2026 {SITE.operator.legalName}, sole proprietor. Operated
             from Calgary, Alberta, Canada.

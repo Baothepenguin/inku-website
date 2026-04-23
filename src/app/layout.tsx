@@ -15,7 +15,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: `${SITE.name} — A calm way to learn Japanese on iPhone`,
+    default: `${SITE.name}: A calm way to learn Japanese on iPhone`,
     template: `%s | ${SITE.name}`,
   },
   description: SITE.description,
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     siteName: SITE.name,
     url: SITE.url,
     locale: "en_US",
-    title: `${SITE.name} — A calm way to learn Japanese on iPhone`,
+    title: `${SITE.name}: A calm way to learn Japanese on iPhone`,
     description: SITE.description,
   },
   twitter: {

@@ -18,14 +18,8 @@ export function FinalCTA() {
             Download Inku, spend a week with it, and see if it fits your life.
             If it does not, cancel the trial and no harm done.
           </p>
-          <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row">
+          <div className="mt-10">
             <DownloadCTA campaign="final-cta" variant="badge" />
-            <a
-              href="/guides/learn-hiragana"
-              className="font-sans text-sm text-cream/70 underline underline-offset-[5px] hover:text-cream"
-            >
-              Read the hiragana guide first →
-            </a>
           </div>
         </div>
       </div>

@@ -148,9 +148,9 @@ export default function Post() {
       <p>
         The decks are pre-built. Hiragana, katakana, 200 core N5 words, 65 N4 words,
         four phrase packs. You do not build anything. You open the app and the cards are
-        there. The audio is pre-recorded by a native voice actor, not synthesized on the
-        fly, not a text-to-speech robot. Every card you flip, you hear a real human voice
-        say the word the way a real human would say it.
+        there. The audio is bundled into the app, not synthesized on the fly,
+        not a text-to-speech robot. Every card you flip gives your ear a clear
+        model to copy.
       </p>
       <p>
         The session model is different too. Rather than surfacing 150 due cards at once,

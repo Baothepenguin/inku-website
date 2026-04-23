@@ -12,9 +12,9 @@ import { faqSchema, breadcrumbSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Inku — A calm way to learn Japanese on iPhone",
+  title: "Inku: A calm way to learn Japanese on iPhone",
   description:
-    "Inku is a flashcard app for iPhone that teaches Japanese the way you would want to learn it: calm, deliberate, native voice. Hiragana, katakana, N5 vocab, phrases, and handwriting mode, all on one quiet screen.",
+    "Inku is a flashcard app for iPhone that teaches Japanese the way you would want to learn it: calm, deliberate, with pronunciation audio. Hiragana, katakana, N5 vocab, phrases, and handwriting mode, all on one quiet screen.",
   path: "/",
   keywords: [
     "learn Japanese",
