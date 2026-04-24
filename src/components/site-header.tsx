@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X } from "lucide-react";
 import { DownloadCTA } from "@/components/download-cta";
 import { LogoMark } from "@/components/logo-mark";
 
@@ -38,14 +37,14 @@ export function SiteHeader() {
   }, [isMenuOpen]);
 
   return (
-    <header className="sticky top-0 z-30 border-b border-border/60 bg-cream/80 backdrop-blur supports-[backdrop-filter]:bg-cream/70">
-      <div className="container flex h-16 items-center justify-between gap-6">
+    <header className="sticky top-0 z-30 px-3 pt-3">
+      <div className="container flex h-16 items-center justify-between gap-6 rounded-full border border-border/70 bg-cream/86 px-4 shadow-[0_18px_45px_-32px_rgba(26,26,26,0.5)] backdrop-blur supports-[backdrop-filter]:bg-cream/78 md:px-5">
         <Link
           href="/"
-          className="flex items-center gap-2 font-serif text-xl tracking-tight text-ink hover:text-matcha"
+          className="group flex items-center gap-2 font-serif text-xl tracking-tight text-ink transition-colors duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] hover:text-matcha"
           aria-label="Inku home"
         >
-          <LogoMark className="bg-matcha text-cream" />
+          <LogoMark className="bg-matcha text-cream transition-transform duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:scale-105" />
           <span className="font-semibold">Inku</span>
         </Link>
 
@@ -54,7 +53,11 @@ export function SiteHeader() {
             <Link
               key={item.href}
               href={item.href}
-              className="font-sans text-[0.95rem] text-ink-muted transition-colors hover:text-ink"
+              className={`rounded-full px-3 py-2 font-sans text-[0.95rem] transition-all duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] ${
+                pathname === item.href
+                  ? "bg-cream-deep text-ink"
+                  : "text-ink-muted hover:bg-cream-deep/70 hover:text-ink"
+              }`}
             >
               {item.label}
             </Link>
@@ -69,24 +72,37 @@ export function SiteHeader() {
           />
           <button
             type="button"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border bg-cream-raised text-ink transition-colors hover:border-matcha hover:text-matcha md:hidden"
+            className="relative inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-cream-raised text-ink transition-all duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] hover:border-matcha hover:text-matcha active:scale-[0.98] md:hidden"
             aria-label={isMenuOpen ? "Close navigation" : "Open navigation"}
             aria-expanded={isMenuOpen}
             aria-controls="mobile-primary-nav"
             onClick={() => setIsMenuOpen((open) => !open)}
           >
-            {isMenuOpen ? (
-              <X className="h-5 w-5" aria-hidden="true" />
-            ) : (
-              <Menu className="h-5 w-5" aria-hidden="true" />
-            )}
+            <span
+              className={`absolute h-px w-4 bg-current transition-transform duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] ${
+                isMenuOpen ? "translate-y-0 rotate-45" : "-translate-y-1.5"
+              }`}
+              aria-hidden="true"
+            />
+            <span
+              className={`absolute h-px w-4 bg-current transition-opacity duration-200 ${
+                isMenuOpen ? "opacity-0" : "opacity-100"
+              }`}
+              aria-hidden="true"
+            />
+            <span
+              className={`absolute h-px w-4 bg-current transition-transform duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] ${
+                isMenuOpen ? "translate-y-0 -rotate-45" : "translate-y-1.5"
+              }`}
+              aria-hidden="true"
+            />
           </button>
         </div>
       </div>
 
       <nav
         id="mobile-primary-nav"
-        className={`border-t border-border/60 bg-cream-raised/95 px-5 py-4 shadow-paper md:hidden ${
+        className={`mx-3 mt-2 rounded-3xl border border-border/70 bg-cream-raised/95 px-5 py-4 shadow-paper backdrop-blur md:hidden ${
           isMenuOpen ? "block" : "hidden"
         }`}
         aria-label="Primary"

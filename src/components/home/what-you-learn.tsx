@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 
 const TOPICS = [
   {
@@ -8,6 +9,7 @@ const TOPICS = [
     description:
       "The cursive set you will use to read native words, particles, and verb endings.",
     href: "/guides/learn-hiragana",
+    className: "lg:col-span-5",
   },
   {
     jp: "ア",
@@ -16,6 +18,7 @@ const TOPICS = [
     description:
       "The angular set for loanwords. Once you know hiragana, katakana goes fast.",
     href: "/guides/learn-katakana",
+    className: "lg:col-span-3",
   },
   {
     jp: "水",
@@ -24,6 +27,7 @@ const TOPICS = [
     description:
       "The words you actually use in your first conversation. Each one recorded.",
     href: "/jlpt/n5",
+    className: "lg:col-span-4",
   },
   {
     jp: "話",
@@ -32,6 +36,7 @@ const TOPICS = [
     description:
       "What you say to friends. How to apologize, agree, ask for help without sounding textbook.",
     href: "/japanese/phrases",
+    className: "lg:col-span-4",
   },
   {
     jp: "礼",
@@ -40,6 +45,7 @@ const TOPICS = [
     description:
       "Formal Japanese for work, travel, and your first real conversation.",
     href: "/japanese/phrases",
+    className: "lg:col-span-4",
   },
   {
     jp: "旅",
@@ -48,6 +54,7 @@ const TOPICS = [
     description:
       "Getting around Tokyo, Kyoto, Osaka. What to say at the station, the counter, the onsen.",
     href: "/japanese/phrases",
+    className: "lg:col-span-4",
   },
 ];
 
@@ -66,28 +73,30 @@ export function WhatYouLearn() {
           </p>
         </div>
 
-        <ul className="mt-14 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+        <ul className="mt-14 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-12 lg:gap-5">
           {TOPICS.map((t) => (
-            <li key={t.title}>
+            <li key={t.title} className={cn("min-h-[15rem]", t.className)}>
               <Link
                 href={t.href}
-                className="group flex h-full flex-col rounded-lg border border-border bg-cream-raised p-7 transition-all hover:-translate-y-0.5 hover:shadow-paper"
+                className="group flex h-full flex-col rounded-[1.35rem] bg-cream-raised p-1.5 shadow-[inset_0_0_0_1px_rgba(228,221,199,0.85),0_18px_48px_-36px_rgba(26,26,26,0.45)] transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-1"
               >
-                <div className="flex items-center justify-between">
-                  <span className="jp text-5xl leading-none text-ink group-hover:text-matcha">
-                    {t.jp}
-                  </span>
-                  <span className="font-sans text-xs uppercase tracking-breath text-ink-subtle">
-                    {t.count}
+                <div className="flex h-full flex-col rounded-[1rem] border border-border/70 bg-cream px-6 py-6">
+                  <div className="flex items-center justify-between gap-5">
+                    <span className="jp text-5xl leading-none text-ink transition-colors duration-500 group-hover:text-matcha">
+                      {t.jp}
+                    </span>
+                    <span className="font-sans text-xs uppercase tracking-breath text-ink-subtle">
+                      {t.count}
+                    </span>
+                  </div>
+                  <h3 className="mt-6 font-serif text-xl text-ink">{t.title}</h3>
+                  <p className="mt-2 max-w-[34ch] font-body text-[0.98rem] leading-relaxed text-ink-muted text-pretty">
+                    {t.description}
+                  </p>
+                  <span className="mt-auto pt-5 font-sans text-sm text-matcha opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                    Read more →
                   </span>
                 </div>
-                <h3 className="mt-6 font-serif text-xl text-ink">{t.title}</h3>
-                <p className="mt-2 font-body text-[0.98rem] leading-relaxed text-ink-muted text-pretty">
-                  {t.description}
-                </p>
-                <span className="mt-auto pt-5 font-sans text-sm text-matcha opacity-0 transition-opacity group-hover:opacity-100">
-                  Read more →
-                </span>
               </Link>
             </li>
           ))}

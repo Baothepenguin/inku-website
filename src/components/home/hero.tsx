@@ -6,7 +6,7 @@ import { SITE } from "@/lib/site";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden pb-20 pt-16 md:pb-28 md:pt-24">
+    <section className="relative overflow-hidden pb-20 pt-12 md:pb-28 md:pt-20">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-x-0 bottom-0 top-12 opacity-[0.42]"
@@ -30,17 +30,18 @@ export function Hero() {
       />
 
       <div className="container relative">
-        <div className="mx-auto max-w-3xl text-center md:max-w-4xl">
+        <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,0.88fr)_minmax(520px,1.12fr)] lg:gap-6">
+        <div className="mx-auto max-w-3xl text-center lg:mx-0 lg:max-w-[36rem] lg:text-left">
           <p className="label-eyebrow mb-6 text-matcha">
             A new kind of Japanese app · iPhone only
           </p>
-          <h1 className="font-serif text-display-lg tracking-tight text-balance text-ink md:text-display-xl">
-            Learn Japanese the way you&apos;d want to.{" "}
+          <h1 className="font-serif text-display-lg tracking-tight text-balance text-ink md:text-display-xl lg:text-[clamp(4.25rem,7vw,6.25rem)]">
+            Learn Japanese the way you&apos;d want to.
             <span className="inline-block font-serif italic text-matcha">
               Calmly.
             </span>
           </h1>
-          <p className="mx-auto mt-7 max-w-xl font-body text-lg leading-relaxed text-ink-muted md:max-w-2xl md:text-xl text-pretty">
+          <p className="mx-auto mt-7 max-w-xl font-body text-lg leading-relaxed text-ink-muted md:text-xl lg:mx-0 text-pretty">
             Inku is a flashcard app built like a notebook, not a game. Hiragana,
             katakana, N5 vocabulary, and four phrase packs, each with clear
             pronunciation. No streaks. No pressure. Just ten minutes a day that
@@ -48,7 +49,7 @@ export function Hero() {
             stick.
           </p>
 
-          <div className="mt-10 flex flex-col items-center justify-center">
+          <div className="mt-10 flex flex-col items-center lg:items-start">
             <DownloadCTA
               campaign="hero"
               label="Download now"
@@ -62,10 +63,10 @@ export function Hero() {
           </p>
         </div>
 
-        <div className="relative mt-20">
+        <div className="relative mx-auto w-full max-w-[42rem] lg:max-w-none">
           <div
             aria-hidden
-            className="pointer-events-none absolute left-1/2 top-1/2 -z-0 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-ink opacity-90 md:h-[620px] md:w-[620px]"
+            className="pointer-events-none absolute left-[53%] top-1/2 -z-0 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-ink opacity-90 md:h-[620px] md:w-[620px] lg:h-[680px] lg:w-[680px]"
             style={{
               maskImage:
                 "radial-gradient(circle, black 62%, transparent 72%)",
@@ -74,35 +75,36 @@ export function Hero() {
           />
           <div
             aria-hidden
-            className="pointer-events-none absolute left-1/2 top-1/2 h-[640px] w-[640px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-70 md:h-[760px] md:w-[760px]"
+            className="pointer-events-none absolute left-[53%] top-1/2 h-[640px] w-[640px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-70 md:h-[760px] md:w-[760px]"
             style={{
               background:
                 "radial-gradient(circle, rgba(26,26,26,0.18) 0%, rgba(26,26,26,0.05) 40%, transparent 65%)",
             }}
           />
 
-          <div className="relative flex items-end justify-center gap-0 lg:gap-8">
+          <div className="relative flex items-end justify-center gap-0 lg:justify-end lg:gap-5 xl:gap-8">
             <IPhoneMockup
-              className="hidden lg:block lg:w-[230px] -rotate-[8deg] translate-y-6 opacity-95"
+              className="hidden lg:block lg:w-[220px] -rotate-[8deg] translate-y-8 opacity-95 xl:w-[230px]"
               ariaLabel="Inku home screen"
             >
               <HomeScreen />
             </IPhoneMockup>
 
             <IPhoneMockup
-              className="relative z-10 w-[260px] md:w-[300px]"
+              className="relative z-10 w-[260px] md:w-[300px] lg:w-[320px]"
               ariaLabel="Inku flashcard review session"
             >
               <FlashcardScreen />
             </IPhoneMockup>
 
             <IPhoneMockup
-              className="hidden lg:block lg:w-[230px] rotate-[8deg] translate-y-6 opacity-95"
+              className="hidden lg:block lg:w-[220px] rotate-[8deg] translate-y-8 opacity-95 xl:w-[230px]"
               ariaLabel="Inku vocabulary library"
             >
               <VocabScreen />
             </IPhoneMockup>
           </div>
+        </div>
         </div>
 
         <div className="mx-auto mt-16 grid max-w-4xl grid-cols-2 overflow-hidden rounded-lg border border-border/70 bg-cream-raised/85 shadow-paper backdrop-blur md:grid-cols-4">
