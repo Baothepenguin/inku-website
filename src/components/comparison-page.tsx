@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { ChevronRight, Check, X, Minus } from "lucide-react";
+import { AnswerBox } from "@/components/answer-box";
 import { DownloadCard } from "@/components/download-card";
-import { QuoteBlock } from "@/components/quote-block";
 import { LongFormLayout } from "@/components/long-form-layout";
 import { JsonLd } from "@/components/seo/json-ld";
+import { SourceList, type SourceItem } from "@/components/source-list";
 import {
   articleSchema,
   breadcrumbSchema,
@@ -11,6 +12,48 @@ import {
   productComparisonSchema,
 } from "@/lib/schema";
 import type { ComparisonRecord } from "@/lib/comparisons";
+
+const PRICING_LAST_CHECKED = "April 28, 2026";
+
+const COMPARISON_SOURCES: Record<string, SourceItem[]> = {
+  duolingo: [
+    { label: "Duolingo Super", url: "https://www.duolingo.com/super" },
+    { label: "Duolingo Family Plan", url: "https://blog.duolingo.com/plus-family-plan/" },
+  ],
+  anki: [
+    { label: "Anki official site", url: "https://apps.ankiweb.net/" },
+    { label: "AnkiMobile App Store listing", url: "https://apps.apple.com/us/app/ankimobile-flashcards/id373493387" },
+    { label: "AnkiMobile docs", url: "https://docs.ankimobile.net/" },
+  ],
+  wanikani: [
+    { label: "WaniKani official site", url: "https://www.wanikani.com/" },
+    { label: "WaniKani subscription plans", url: "https://knowledge.wanikani.com/account-and-membership/payment-and-billing/subscription-plans/" },
+  ],
+  bunpo: [
+    { label: "Bunpo official site", url: "https://bunpo.app/" },
+    { label: "Bunpo App Store listing", url: "https://apps.apple.com/us/app/bunpo-learn-japanese/id1279720052" },
+  ],
+  lingodeer: [
+    { label: "LingoDeer official site", url: "https://www.lingodeer.com/" },
+    { label: "LingoDeer payments support", url: "https://support.lingodeer.com/en/support/solutions/folders/61000139661" },
+  ],
+  renshuu: [
+    { label: "Renshuu official site", url: "https://www.renshuu.org/" },
+    { label: "Renshuu Pro", url: "https://www.renshuu.org/index.php?page=pro" },
+  ],
+  busuu: [
+    { label: "Busuu official site", url: "https://www.busuu.com/" },
+    { label: "Busuu Premium", url: "https://www.busuu.com/en/premium" },
+  ],
+  lingopie: [
+    { label: "Lingopie Japanese", url: "https://lingopie.com/w/learn-japanese" },
+    { label: "Lingopie subscription plans", url: "https://help.lingopie.com/support/solutions/articles/150000076244-what-subscription-plans-are-available-" },
+  ],
+  noji: [
+    { label: "Noji official site", url: "https://noji.io/" },
+    { label: "Noji help center", url: "https://help.noji.io/" },
+  ],
+};
 
 export function ComparisonPage({ data }: { data: ComparisonRecord }) {
   const title = `Inku vs ${data.competitorName} for Japanese`;
@@ -70,11 +113,8 @@ export function ComparisonPage({ data }: { data: ComparisonRecord }) {
         ]}
         sidebar={<DownloadCard campaign={`vs-${data.slug}`} />}
       >
-        <section id="summary" className="not-prose mb-10 rounded-lg border border-border bg-cream-raised p-8">
-          <p className="label-eyebrow mb-3 text-matcha">Short answer</p>
-          <p className="font-serif text-[1.1rem] leading-relaxed text-ink">
-            {data.summary}
-          </p>
+        <section id="summary" className="not-prose mb-10">
+          <AnswerBox>{data.summary}</AnswerBox>
           <div className="mt-5 flex flex-wrap gap-x-8 gap-y-2 font-sans text-sm text-ink-muted">
             <span>
               <strong className="text-ink">Category:</strong>{" "}
@@ -116,6 +156,10 @@ export function ComparisonPage({ data }: { data: ComparisonRecord }) {
         </ul>
 
         <h2 id="features">Feature-by-feature</h2>
+        <SourceList
+          sources={COMPARISON_SOURCES[data.slug] ?? []}
+          lastChecked={PRICING_LAST_CHECKED}
+        />
         <div className="not-prose my-6 overflow-x-auto">
           <table className="w-full border-collapse text-[0.96rem]">
             <thead className="bg-cream-deep text-left">
@@ -130,7 +174,7 @@ export function ComparisonPage({ data }: { data: ComparisonRecord }) {
                   {data.competitorShortName}
                 </th>
                 <th className="border-b border-border px-4 py-3 text-center font-sans text-xs font-medium uppercase tracking-breath text-ink-muted">
-                  Winner
+                  Best fit
                 </th>
               </tr>
             </thead>
@@ -188,12 +232,14 @@ export function ComparisonPage({ data }: { data: ComparisonRecord }) {
         </p>
         <p className="mt-4">{data.recommendation}</p>
 
-        <QuoteBlock
-          quote="I came from this app, bounced off, and Inku gave me something I could actually finish. That is the whole pitch."
-          attribution={`A learner who tried ${data.competitorShortName} first`}
-          eyebrow="From a learner"
-          className="my-10"
-        />
+        <div className="not-prose my-10 rounded-lg border border-border bg-cream-raised p-6">
+          <p className="label-eyebrow mb-2 text-matcha">Affiliation note</p>
+          <p className="font-sans text-sm leading-relaxed text-ink-muted">
+            Inku is not affiliated with {data.competitorName}. This comparison
+            uses public product pages, app listings, and help documents where
+            available.
+          </p>
+        </div>
 
         <h2 id="faqs">Common questions</h2>
         <div className="not-prose mt-6 space-y-4">

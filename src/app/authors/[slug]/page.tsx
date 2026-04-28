@@ -22,7 +22,7 @@ export async function generateMetadata({
   const author = AUTHORS[slug as AuthorSlug];
   if (!author) return {};
   return pageMetadata({
-    title: `${author.name} — ${author.jobTitle}`,
+    title: `${author.name}  -  ${author.jobTitle}`,
     description: author.bioShort,
     path: `/authors/${slug}`,
     ogType: "article",

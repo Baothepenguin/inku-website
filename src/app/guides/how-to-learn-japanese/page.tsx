@@ -173,7 +173,7 @@ export default function HowToLearnJapanesePage() {
           first three months. Grammar without words is theory; grammar with
           words is language. Work through the JLPT N5 list (roughly 800
           words) in a spaced-repetition system. Inku&apos;s N5 deck is
-          organized by category and frequency, with audio on every card.
+          organized by category and frequency, with audio support.
         </p>
         <p>
           Daily targets:

@@ -14,7 +14,7 @@ import { pageMetadata } from "@/lib/metadata";
 
 const TITLE = "JLPT N5 Vocabulary: The Definitive List";
 const SUBTITLE =
-  "The 200 core N5 words organized by category, with pronunciation and frequency notes. The exact vocabulary Inku's N5 deck is built on.";
+  "The 515 N5 cards organized by category, with pronunciation and frequency notes. The exact vocabulary Inku's N5 deck is built on.";
 
 export const metadata: Metadata = pageMetadata({
   title: TITLE,

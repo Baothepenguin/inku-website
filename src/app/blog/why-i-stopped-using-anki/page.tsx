@@ -46,7 +46,7 @@ export default function Post() {
         },
         {
           q: "Can I use Anki and Inku at the same time?",
-          a: "Yes, and for the first few weeks this is smart. Inku handles kana, N5-N4 vocabulary, and phrases with native audio out of the box. Anki handles anything outside that scope. The risk is review fatigue from two queues. Pick one as primary.",
+          a: "Yes, and for the first few weeks this is smart. Inku handles kana, N5-N4 vocabulary, and phrases with audio support out of the box. Anki handles anything outside that scope. The risk is review fatigue from two queues. Pick one as primary.",
         },
         {
           q: "Does Inku use spaced repetition like Anki does?",
@@ -146,11 +146,11 @@ export default function Post() {
         from that.
       </p>
       <p>
-        The decks are pre-built. Hiragana, katakana, 200 core N5 words, 65 N4 words,
+        The decks are pre-built. Hiragana, katakana, 515 N5 cards, 391 N4 cards,
         four phrase packs. You do not build anything. You open the app and the cards are
-        there. The audio is bundled into the app, not synthesized on the fly,
-        not a text-to-speech robot. Every card you flip gives your ear a clear
-        model to copy.
+        there. The main card library includes bundled audio, with Apple voice
+        fallback for missing surfaces. The goal is simple: hear the card and
+        copy the sound.
       </p>
       <p>
         The session model is different too. Rather than surfacing 150 due cards at once,
@@ -160,7 +160,7 @@ export default function Post() {
       </p>
       <p>
         The aesthetic matters more than I expected. Sumi ink on washi paper. Calm type.
-        No streaks, no badges, no points. Studying Japanese should feel like a practice,
+        A softer habit, a quiet review flow. Studying Japanese should feel like a practice,
         not a game you are losing. The difference in how I feel opening Inku versus how
         I felt opening Anki at the end is not small. One felt like a chore I had let slide.
         The other feels like something I am choosing.

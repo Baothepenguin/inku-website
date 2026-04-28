@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { AnswerBox } from "@/components/answer-box";
 import { LongFormLayout } from "@/components/long-form-layout";
 import { DownloadCard } from "@/components/download-card";
 import { JsonLd } from "@/components/seo/json-ld";
@@ -65,6 +66,12 @@ export default function JapaneseNameGeneratorPage() {
         ]}
         sidebar={<DownloadCard campaign="name-generator-tool" />}
       >
+        <AnswerBox>
+          Foreign names are usually written in katakana in Japanese. This tool
+          turns an English name into katakana and gives a creative kanji-style
+          option for study and fun.
+        </AnswerBox>
+
         <p>
           This tool does two things: it converts your English name into katakana using sound
           matching, and it suggests a kanji name based on a theme you pick. The katakana
@@ -145,7 +152,7 @@ export default function JapaneseNameGeneratorPage() {
           schedule.
         </p>
         <p>
-          If you want to practice kana on your phone with spaced repetition and native audio,
+          If you want to practice kana on your phone with spaced repetition and audio support,
           Inku has both hiragana and katakana with handwriting practice.{" "}
           <Link href="/">Download Inku on iPhone with a 7-day free trial.</Link>
         </p>

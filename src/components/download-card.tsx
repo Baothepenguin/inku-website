@@ -3,7 +3,7 @@ import { SumiBrush } from "@/components/sumi-brush";
 
 export function DownloadCard({
   title = "Learn it on paper-coloured glass.",
-  body = "Inku has every character, word, and phrase you are reading about here, with pronunciation audio built in. 7-day free trial, iPhone only.",
+  body = "Inku has kana, words, and phrases with audio-supported review. 7-day free trial, iPhone only.",
   campaign = "inline-sidebar",
 }: {
   title?: string;
@@ -25,7 +25,7 @@ export function DownloadCard({
       </p>
       <DownloadCTA
         campaign={campaign}
-        label="Get Inku"
+        label="Start your free week"
         className="mt-5 w-full text-sm"
       />
     </aside>

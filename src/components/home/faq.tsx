@@ -1,7 +1,7 @@
 const FAQS = [
   {
     q: "Is Inku a Duolingo alternative?",
-    a: "Yes. If you bounced off Duolingo because the gamification felt patronizing, Inku is built for you. It gives you real vocabulary, real voice, and a finite session so you can close the app and go about your day.",
+    a: "Yes. Inku is for learners who want flashcards, audio-supported review, and short sessions instead of a busy game-style lesson feed.",
   },
   {
     q: "Do I need an account?",
@@ -9,15 +9,15 @@ const FAQS = [
   },
   {
     q: "Is there a free tier?",
-    a: "Inku is subscription-first with a 7-day free trial on the yearly plan. We do not show ads or sell data, so the subscription is how the app keeps existing.",
+    a: "Inku has a 7-day free trial. After that, it is paid. There are no ads.",
   },
   {
     q: "What level of Japanese does Inku cover?",
-    a: "At launch, Inku covers hiragana and katakana, 200 core N5 words, 65 N4 words, and four phrase packs. We add more N4 content every month, and N3 is planned.",
+    a: "Inku covers 184 kana, 515 N5 cards, 391 N4 cards, topic decks, and four phrase packs. It is best for beginners and early JLPT study.",
   },
   {
     q: "Does Inku work offline?",
-    a: "Yes. The voice audio is bundled into the app at build time and every review session runs on-device.",
+    a: "Core reviews, saved progress, and the bundled audio archive live on your iPhone. Purchases, restores, diagnostics, and any missing-audio fallback may use Apple or app services.",
   },
   {
     q: "What about Android?",
@@ -25,11 +25,11 @@ const FAQS = [
   },
   {
     q: "Can I use Inku with Anki?",
-    a: "You can use them side by side, but most learners switch because Inku already has the cards you would have built and the pronunciation you could not record yourself.",
+    a: "Yes. Use Inku for ready-made Japanese review and use Anki for custom cards outside Inku's library.",
   },
   {
     q: "Is the content accurate?",
-    a: "We source everything from standard JLPT vocabulary lists and check every card against Japanese-native references before release. If something looks wrong, flag it in the app and we review within a week.",
+    a: "Each card is reviewed before release. If something looks wrong, flag it in the app and we can review it.",
   },
 ];
 

@@ -13,7 +13,7 @@ export function organizationSchema(): SchemaObject {
     url: origin,
     logo: {
       "@type": "ImageObject",
-      url: `${origin}/logo.png`,
+      url: `${origin}/icon-512.png`,
       width: 512,
       height: 512,
     },
@@ -49,14 +49,6 @@ export function websiteSchema(): SchemaObject {
     description: SITE.description,
     publisher: { "@id": `${origin}/#organization` },
     inLanguage: "en-US",
-    potentialAction: {
-      "@type": "SearchAction",
-      target: {
-        "@type": "EntryPoint",
-        urlTemplate: `${origin}/search?q={search_term_string}`,
-      },
-      "query-input": "required name=search_term_string",
-    },
   };
 }
 
@@ -93,19 +85,12 @@ export function softwareApplicationSchema(): SchemaObject {
       "Hiragana and katakana flashcards",
       "JLPT N5 and N4 vocabulary",
       "Four phrase packs (casual, polite, travel, anime)",
-      "Pronunciation audio on every card",
+      "Bundled pronunciation audio for the main card library",
       "Spaced repetition based on FSRS",
       "Handwriting practice mode",
       "Four themes: Matcha, Sakura, Sun, Moon",
       "Local-first, no account required",
     ],
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.8",
-      reviewCount: "24",
-      bestRating: "5",
-      worstRating: "1",
-    },
   };
 }
 
@@ -162,7 +147,7 @@ export function articleSchema({
     dateModified: dateModified ?? datePublished,
     image:
       image ??
-      `${origin}/api/og/article?title=${encodeURIComponent(title)}&author=${encodeURIComponent(authorName)}`,
+      `${origin}/api/og?type=article&title=${encodeURIComponent(title)}&author=${encodeURIComponent(authorName)}`,
     author: {
       "@type": "Person",
       "@id": `${origin}/authors/${authorSlug}#person`,

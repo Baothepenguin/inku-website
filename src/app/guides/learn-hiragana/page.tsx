@@ -234,7 +234,7 @@ export default function LearnHiraganaPage() {
           evening, totaling about an hour.
         </p>
 
-        <h3 id="day-one">Day 1 — the first 21 characters</h3>
+        <h3 id="day-one">Day 1  -  the first 21 characters</h3>
         <p>
           Morning (45 minutes). Introduce a, ka, sa, and ta rows plus the
           standalone ん (n). That is 21 characters. For each row, look at the
@@ -247,7 +247,7 @@ export default function LearnHiraganaPage() {
           name every one in under two seconds. Flag the ones that hesitate.
         </p>
 
-        <h3 id="day-two">Day 2 — the next 15</h3>
+        <h3 id="day-two">Day 2  -  the next 15</h3>
         <p>
           Morning (45 minutes). Do a 5-minute review of Day 1 first. Then
           introduce na, ha, and ma rows. That is 15 new characters. Same
@@ -259,7 +259,7 @@ export default function LearnHiraganaPage() {
           drill as the learning, not the test.
         </p>
 
-        <h3 id="day-three">Day 3 — the last 10 and cleanup</h3>
+        <h3 id="day-three">Day 3  -  the last 10 and cleanup</h3>
         <p>
           Morning (45 minutes). Review all 36 first. Then introduce ya, ra,
           and wa rows plus を (wo). That closes the set at 46. The wa row is
@@ -280,7 +280,7 @@ export default function LearnHiraganaPage() {
           </p>
         </Callout>
 
-        <h3 id="days-4-7">Days 4-7 — locking it in</h3>
+        <h3 id="days-4-7">Days 4-7  -  locking it in</h3>
         <p>
           Your brain will forget half of Day 1 by Day 5 if you stop. Do a
           10-minute shuffled drill every day for the rest of the week. Start
@@ -289,7 +289,7 @@ export default function LearnHiraganaPage() {
         </p>
         <p>
           Inku&apos;s hiragana deck is built exactly on this schedule.
-          Each session ends when today&apos;s review ends. No streaks. The
+          Each session ends when today&apos;s review ends. A softer habit. The
           math handles spacing so you do not have to.{" "}
           <Link href="/">Download Inku on iPhone</Link> and let the app drive
           it.
@@ -310,22 +310,22 @@ export default function LearnHiraganaPage() {
         <h3 id="vowel-row">The vowel row (aiueo)</h3>
         <ul>
           <li>
-            <strong>あ (a)</strong> — an antelope with crossed antlers. It
+            <strong>あ (a)</strong>  -  an antelope with crossed antlers. It
             lunges at you saying "ah!"
           </li>
           <li>
-            <strong>い (i)</strong> — two stick figures, one tall, one short.
+            <strong>い (i)</strong>  -  two stick figures, one tall, one short.
             "I, I, me."
           </li>
           <li>
-            <strong>う (u)</strong> — a person bowing. "Oooo, sorry."
+            <strong>う (u)</strong>  -  a person bowing. "Oooo, sorry."
           </li>
           <li>
-            <strong>え (e)</strong> — an exotic bird with a floppy feather.
+            <strong>え (e)</strong>  -  an exotic bird with a floppy feather.
             "Hey!"
           </li>
           <li>
-            <strong>お (o)</strong> — a pitcher with a handle. You lift it and
+            <strong>お (o)</strong>  -  a pitcher with a handle. You lift it and
             say "Oh, that is heavy."
           </li>
         </ul>
@@ -333,40 +333,40 @@ export default function LearnHiraganaPage() {
         <h3 id="k-row">The k-row (ka ki ku ke ko)</h3>
         <ul>
           <li>
-            <strong>か (ka)</strong> — a sword stabbing into wood. "Ka-chunk."
+            <strong>か (ka)</strong>  -  a sword stabbing into wood. "Ka-chunk."
           </li>
           <li>
-            <strong>き (ki)</strong> — an old-fashioned key shape.
+            <strong>き (ki)</strong>  -  an old-fashioned key shape.
           </li>
           <li>
-            <strong>く (ku)</strong> — a bird&apos;s beak opening. "Koo-koo."
+            <strong>く (ku)</strong>  -  a bird&apos;s beak opening. "Koo-koo."
           </li>
           <li>
-            <strong>け (ke)</strong> — a keg on a stand.
+            <strong>け (ke)</strong>  -  a keg on a stand.
           </li>
           <li>
-            <strong>こ (ko)</strong> — two horizontal lines, a stubby cocoon.
+            <strong>こ (ko)</strong>  -  two horizontal lines, a stubby cocoon.
           </li>
         </ul>
 
         <h3 id="s-row">The s-row (sa shi su se so)</h3>
         <ul>
           <li>
-            <strong>さ (sa)</strong> — a boxing sword (the vertical with a
+            <strong>さ (sa)</strong>  -  a boxing sword (the vertical with a
             hook). "Sah!"
           </li>
           <li>
-            <strong>し (shi)</strong> — a fishhook hanging down. "She is
+            <strong>し (shi)</strong>  -  a fishhook hanging down. "She is
             hooked."
           </li>
           <li>
-            <strong>す (su)</strong> — a loop like a lasso. "Swoop."
+            <strong>す (su)</strong>  -  a loop like a lasso. "Swoop."
           </li>
           <li>
-            <strong>せ (se)</strong> — a seatbelt clipping across.
+            <strong>せ (se)</strong>  -  a seatbelt clipping across.
           </li>
           <li>
-            <strong>そ (so)</strong> — a zig-zag like a needle threading.
+            <strong>そ (so)</strong>  -  a zig-zag like a needle threading.
             "So-so stitching."
           </li>
         </ul>
@@ -531,9 +531,9 @@ export default function LearnHiraganaPage() {
         </p>
 
         <QuoteBlock
-          quote="I learned all 46 in a weekend. I still remember them because Monday morning I stopped using the app and started reading menus. The menus were the lesson, not the drill."
-          attribution="Priya N., learning since February 2026"
-          eyebrow="From a learner"
+          quote="Use drills to learn the shape. Then read real Japanese as soon as you can. The goal is not to win the drill. The goal is to recognize hiragana when it appears in your day."
+          attribution="Inku study note"
+          eyebrow="Study note"
           className="my-10"
         />
 

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { AnswerBox } from "@/components/answer-box";
 import { LongFormLayout } from "@/components/long-form-layout";
 import { DownloadCard } from "@/components/download-card";
 import { JsonLd } from "@/components/seo/json-ld";
@@ -64,6 +65,12 @@ export default function StrokeOrderPage() {
         ]}
         sidebar={<DownloadCard campaign="stroke-order-tool" />}
       >
+        <AnswerBox>
+          Stroke order is the order used to write Japanese characters. Learn the
+          basic rules first: top to bottom, left to right, and horizontal before
+          vertical. Then practice common hiragana shapes.
+        </AnswerBox>
+
         <p>
           This viewer shows the correct stroke order for 10 common hiragana characters. Select a
           character from the picker to see the number of strokes, a numbered description of each

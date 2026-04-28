@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { AnswerBox } from "@/components/answer-box";
 import { LongFormLayout } from "@/components/long-form-layout";
 import { DownloadCard } from "@/components/download-card";
 import { JsonLd } from "@/components/seo/json-ld";
@@ -39,6 +40,12 @@ export default function AlternativesIndexPage() {
         ]}
         sidebar={<DownloadCard campaign="alt-index-sidebar" />}
       >
+        <AnswerBox>
+          The best Japanese app alternative depends on what failed for you.
+          Inku is best for learners who want short flashcard reviews, audio
+          support, local progress, and a calmer iPhone app.
+        </AnswerBox>
+
         <p>
           Most apps we compare against are good at something. When they stop
           being good for you, you start looking for alternatives. These pages

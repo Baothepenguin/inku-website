@@ -140,7 +140,7 @@ export default function Post() {
 
       <QuoteBlock
         quote="I thought I was failing because 10 minutes felt small. Then I looked back and I'd spent more consistent time on Japanese than on anything else that year."
-        attribution="A reader on the six-month mark"
+        attribution="Inku study note"
         className="my-10"
       />
 

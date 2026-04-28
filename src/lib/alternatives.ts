@@ -7,10 +7,6 @@ export interface AlternativeRecord {
   whySearching: string[];
   whatLooksLike: string;
   howInkuDiffers: string[];
-  reviews: {
-    quote: string;
-    attribution: string;
-  }[];
   faqs: { q: string; a: string }[];
 }
 
@@ -21,9 +17,9 @@ export const ALTERNATIVES: Record<string, AlternativeRecord> = {
     tagline:
       "The calm, adult-grade Duolingo alternative for learning Japanese.",
     summary:
-      "If Duolingo's gamification burned you out, Inku is the calm, grown-up alternative for learning Japanese. Native voice, spaced repetition, no streaks.",
+      "If Duolingo's gamification burned you out, Inku is the calm, grown-up alternative for learning Japanese. It focuses on flashcards, audio support, spaced repetition, and a softer habit.",
     intro:
-      "Most Duolingo refugees we talk to followed the same path. Downloaded it, committed to the streak, spent 100 days moving a green owl along a path, then realized they could not hold a simple Japanese conversation. They looked for something that respected their time. This page is for them.",
+      "Many learners start with Duolingo because it is easy to try. Some later want a quieter Japanese-only review app with fewer moving parts. This page is for that moment.",
     whySearching: [
       "You built a big Duolingo streak and still cannot read hiragana fluently",
       "The gamification feels like it is taking more than it gives",
@@ -32,25 +28,13 @@ export const ALTERNATIVES: Record<string, AlternativeRecord> = {
       "You have noticed the voice-over is TTS and starting to ingrain bad pronunciation",
     ],
     whatLooksLike:
-      "A Duolingo alternative should do three things better than Duolingo: teach you real vocabulary with authentic audio, respect your time with finite sessions, and avoid streak mechanics that punish missed days.",
+      "A Duolingo alternative should teach useful vocabulary, respect your time with finite sessions, and make daily review feel calm.",
     howInkuDiffers: [
-      "Pronunciation audio on every word. Inku ships with audio for every card, bundled into the app. No runtime TTS. Your ear has a clear model to copy.",
+      "Bundled pronunciation audio. Inku ships with audio for the main card library, bundled into the app.  Your ear has a clear model to copy.",
       "Spaced repetition tuned to your memory. Inku uses FSRS (the same modern algorithm Anki switched to in 2024) to schedule reviews around when you would actually forget. No grinding, no wasted reps.",
-      "No streak flames, no leagues, no mascot guilt-tripping. Open the app, do today's review, close. Inku is designed so you look forward to opening it, not dread missing a day.",
-      "Local-first. No account, no cloud sync, no behavioral tracking. Your progress lives on your iPhone.",
+      "Quiet progress, no leagues, no mascot guilt-tripping. Open the app, do today's review, close.",
+      "Local-first. No account and no cloud sync for learning progress. Your review history lives on your iPhone.",
       "One subscription unlocks everything. No paywalled levels you have to grind through.",
-    ],
-    reviews: [
-      {
-        quote:
-          "I had a 360-day Duolingo streak when I quit. On day one of Inku I learned more hiragana than Duolingo taught me in a year.",
-        attribution: "Dev P., switched March 2026",
-      },
-      {
-        quote:
-          "No streaks. No cartoon owl. It just wants me to learn. Weirdly, that makes me use it more.",
-        attribution: "Priya N., switched February 2026",
-      },
     ],
     faqs: [
       {
@@ -74,7 +58,7 @@ export const ALTERNATIVES: Record<string, AlternativeRecord> = {
     tagline:
       "An Anki alternative for Japanese that comes with cards and audio built in.",
     summary:
-      "Anki is infinitely flexible and infinitely bare. Inku is the Japanese-specific alternative that ships with curated cards, native audio, and zero setup.",
+      "Anki is infinitely flexible and infinitely bare. Inku is the Japanese-specific alternative that ships with curated cards, audio support, and zero setup.",
     intro:
       "Anki is the right tool for power users and medical students. It is the wrong tool for most Japanese beginners because the first week is a full setup project: find a deck, evaluate its quality, install add-ons, hope the audio works. Inku is the alternative for everyone who wants to just start learning.",
     whySearching: [
@@ -88,17 +72,10 @@ export const ALTERNATIVES: Record<string, AlternativeRecord> = {
       "An Anki alternative should keep the useful core (spaced repetition, flashcards, daily queues) while removing the pain (setup cost, UI clutter, having to make your own cards).",
     howInkuDiffers: [
       "Pre-built N5 deck. Every card is hand-curated and organized by category. No time lost building, evaluating, or hunting for decent shared decks.",
-      "Native voice acting on every card, not TTS.",
+      "Japanese audio support, not TTS.",
       "One review session a day with finite length. You are not staring at a queue of 800 cards wondering if you will ever get through it.",
       "No scheduler dials to tune. FSRS runs underneath; you never see it.",
       "iPhone-native UI, not a port of a desktop app.",
-    ],
-    reviews: [
-      {
-        quote:
-          "I had 2,000 cards in Anki and maybe reviewed 200 of them. Inku shows me 20, I do them, I close it. That is the difference.",
-        attribution: "Jen W., ex-Anki user",
-      },
     ],
     faqs: [
       {
@@ -122,9 +99,9 @@ export const ALTERNATIVES: Record<string, AlternativeRecord> = {
     tagline:
       "A modern Rosetta Stone alternative for Japanese at a fraction of the price.",
     summary:
-      "Rosetta Stone's immersion method is 30+ years old and $200. Inku is the modern, $30-a-year alternative designed for a phone, not a CD-ROM era.",
+      "Rosetta Stone is a long-running immersion product. Inku is a lighter iPhone alternative built around flashcards, audio support, and short review sessions.",
     intro:
-      "Rosetta Stone is the brand your parents trust. It invented the immersion method and built a $200+ product around it. The method still works; the product feels from another decade. Inku is a modern alternative that fits in a pocket and costs 15 percent of the price.",
+      "Rosetta Stone is a long-running language product built around immersion. Inku is a modern alternative that fits in a pocket and focuses on short Japanese review.",
     whySearching: [
       "Rosetta Stone is too expensive for how much you want to spend on this",
       "The image-matching method feels slow to you",
@@ -134,23 +111,16 @@ export const ALTERNATIVES: Record<string, AlternativeRecord> = {
     whatLooksLike:
       "A Rosetta Stone alternative should teach Japanese through voice and visuals without requiring $200 upfront. It should work on a phone and fit into 10-minute daily sessions.",
     howInkuDiffers: [
-      "$70.99/year vs $200+ lifetime. Cheaper to try with a 7-day free trial, no big upfront commitment.",
+      "A 7-day free trial, no big upfront commitment.",
       "Flashcards plus audio, not image-matching. Faster vocabulary acquisition for adult learners.",
       "Modern iPhone-native UI.",
-      "Works entirely offline.",
+      "Core review and progress work from the app library.",
       "No account, no cloud sync required.",
-    ],
-    reviews: [
-      {
-        quote:
-          "Tried Rosetta Stone in college, bounced off. Inku has the same immersive quality of native audio without the tablet UI I could never get behind.",
-        attribution: "Ana K., former Rosetta Stone user",
-      },
     ],
     faqs: [
       {
         q: "Does Inku use the immersion method?",
-        a: "Partially. Audio is native, and the app does not translate unnecessarily. But you also get kana, furigana, and English explanations where they help, which is more pragmatic for adult beginners than pure immersion.",
+        a: "Partially. The app uses Japanese audio and does not translate unnecessarily. You also get kana, furigana, and English explanations where they help.",
       },
       {
         q: "Is Rosetta Stone's method actually effective for Japanese?",
@@ -165,7 +135,7 @@ export const ALTERNATIVES: Record<string, AlternativeRecord> = {
     tagline:
       "A Japanese-first Babbel alternative for serious beginners.",
     summary:
-      "Babbel's Japanese catalogue is limited compared to its European languages. Inku is built Japanese-first with native voice acting and a curated N5 deck.",
+      "Babbel's Japanese catalogue is limited compared to its European languages. Inku is built Japanese-first with audio-supported review and a curated N5 deck.",
     intro:
       "Babbel is a strong app for European languages. Its Japanese course is thinner, and the lesson-based structure does not match how most adult Japanese learners actually progress. Inku is a Japanese-first alternative.",
     whySearching: [
@@ -178,16 +148,9 @@ export const ALTERNATIVES: Record<string, AlternativeRecord> = {
     howInkuDiffers: [
       "Japanese-only focus. Every design decision is for Japanese learners.",
       "Flashcard-based, not lesson-based. Dip in for 10 minutes without committing to a lesson.",
-      "Native voice acting on every card.",
+      "Japanese audio support.",
       "Hiragana and katakana guides included.",
       "One-third the annual price.",
-    ],
-    reviews: [
-      {
-        quote:
-          "Babbel is great for Spanish. It is not great for Japanese. Inku filled the gap.",
-        attribution: "Marcos D., trilingual learner",
-      },
     ],
     faqs: [
       {
@@ -223,13 +186,6 @@ export const ALTERNATIVES: Record<string, AlternativeRecord> = {
       "Kana drill built in. You leave Inku able to read hiragana and katakana, not just hear them.",
       "$70.99/year vs $240/year.",
       "iPhone native with finite 10-minute sessions. Pimsleur's 30-minute lessons can feel long.",
-    ],
-    reviews: [
-      {
-        quote:
-          "Did Pimsleur while commuting for two years. Could speak but could not read a menu in Shibuya. Inku fixed that in a month.",
-        attribution: "Tomás R.",
-      },
     ],
     faqs: [
       {

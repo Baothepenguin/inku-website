@@ -40,29 +40,29 @@ export const COMPARISONS: Record<string, ComparisonRecord> = {
       "Duolingo is free, gamified, and designed to make you come back daily. Inku is subscription, calm, and designed to teach you Japanese.",
     releaseYear: 2012,
     competitorCategory: "Gamified multi-language app",
-    competitorPricing: "Free with ads, $7/mo Super",
+    competitorPricing: "Free with ads, paid Super plan",
     intro:
-      "Duolingo is probably the app that got you thinking about Japanese. It is the most downloaded language app in the world and, for millions of people, the first tool they ever opened. Inku exists because a lot of those people bounced off after 100 days of streak-chasing without feeling like they had learned anything. Here is the honest comparison.",
+      "Duolingo is probably the app that got you thinking about Japanese. It is free to start, broad, and built around daily motivation. Inku exists for learners who want a calmer Japanese-only flashcard app with a shorter review loop. Here is the honest comparison.",
     inkuWins: [
       {
         scenario: "You want to actually speak Japanese in 6 months",
         explanation:
-          "Inku is built around spaced repetition with real vocabulary and native voice acting. Six months with Inku takes you through hiragana, katakana, and 200+ N5 words. Six months of Duolingo Japanese is mostly about owning a streak.",
+          "Inku is built around spaced repetition with real vocabulary and audio-supported review. Six months with Inku takes you through hiragana, katakana, and 515 N5 cards. Six months of Duolingo Japanese is mostly about owning a streak.",
       },
       {
         scenario: "You are an adult who finds gamification exhausting",
         explanation:
-          "No fireworks, no leagues, no mascot giving you a guilt trip. Inku opens, presents today's cards, and closes. The whole thing is built for people who feel patronized by streak flames.",
+          "No fireworks, no leagues, no mascot giving you a guilt trip. Inku opens, presents today's cards, and closes. The whole thing is built for people who feel patronized by loud streak pressure.",
       },
       {
         scenario: "You want offline access and privacy",
         explanation:
-          "Inku runs fully on-device with no account required. No data collected, no behavioral profile built. Duolingo uses aggressive tracking and behavioral nudges.",
+          "Inku does not require an account, and learning progress is stored on your iPhone. Duolingo is an online account-based app with ads on the free tier.",
       },
       {
         scenario: "You care about authentic pronunciation",
         explanation:
-          "Every word in Inku is recorded by an actor. Duolingo uses text-to-speech that gets pitch accent and tone wrong for Japanese. Your ear will learn whatever it hears first.",
+          "Inku bundles audio for the main card library and keeps listening inside the review flow. Duolingo also has audio, but it is part of a broader lesson system.",
       },
     ],
     competitorWins: [
@@ -84,22 +84,22 @@ export const COMPARISONS: Record<string, ComparisonRecord> = {
     ],
     features: [
       { feature: "Free tier", inku: "7-day trial only", competitor: "Free with ads", winner: "competitor" },
-      { feature: "Pronunciation audio", inku: "Yes, on every card", competitor: "TTS only", winner: "inku" },
+      { feature: "Pronunciation audio", inku: "Bundled library audio", competitor: "Included in lessons", winner: "tie" },
       { feature: "Spaced repetition", inku: "FSRS algorithm", competitor: "Basic interval", winner: "inku" },
       { feature: "Hiragana + katakana", inku: "Full guide + drill", competitor: "Covered in early lessons", winner: "inku" },
-      { feature: "Offline mode", inku: "Always (all on-device)", competitor: "Limited (Super only)", winner: "inku" },
+      { feature: "Offline mode", inku: "Core review content on-device", competitor: "Plan-dependent", winner: "inku" },
       { feature: "Account required", inku: "No", competitor: "Yes", winner: "inku" },
       { feature: "Languages supported", inku: "Japanese", competitor: "40+", winner: "competitor" },
-      { feature: "Gamification", inku: "None", competitor: "Heavy", winner: "tie" },
+      { feature: "Gamification", inku: "Quiet progress", competitor: "Heavy", winner: "tie" },
       { feature: "Ads", inku: "None", competitor: "Yes (free tier)", winner: "inku" },
-      { feature: "Pricing", inku: "$70.99/yr or $12.99/mo", competitor: "$84/yr Super", winner: "inku" },
+      { feature: "Pricing", inku: "$70.99/yr or $12.99/mo", competitor: "paid Super plan", winner: "inku" },
     ],
     honestTake:
       "Duolingo is not a bad app. It is a good app built for mass-market retention, and that retention comes from gamification. If you thrive on streaks and leaderboards, it can be a genuinely fun way to spend 10 minutes a day. If you find those things exhausting (or, like many people, shame-inducing), you are the exact person Inku was built for.",
     verdict:
       "Use Duolingo if: you want free, multiple languages, and enjoy gamification. Use Inku if: you are a serious adult learner who wants to actually produce Japanese and is willing to pay for a calmer experience.",
     recommendation:
-      "If you have tried Duolingo for Japanese and are not happy with how much (or little) you've learned, Inku is worth a 7-day trial. Most of our users were Duolingo users for 100+ days first.",
+      "If you have tried Duolingo for Japanese and want a quieter way to review kana, vocabulary, and phrases, Inku is worth a 7-day trial.",
     faqs: [
       {
         q: "Can I use Inku and Duolingo at the same time?",
@@ -107,11 +107,11 @@ export const COMPARISONS: Record<string, ComparisonRecord> = {
       },
       {
         q: "Does Inku have a streak feature?",
-        a: "No. We deliberately removed streak mechanics. The home screen shows ink drops collected instead, which accumulate at your own pace.",
+        a: "Yes. Inku has streak and progress tracking, but it uses a calm tone and ink drops so the habit feels soft.",
       },
       {
         q: "How does Duolingo's TTS compare to Inku's audio?",
-        a: "Duolingo's TTS is serviceable for kana reading but misses Japanese pitch accent entirely. Inku uses an actor recorded at studio quality. The difference is audible within the first minute of using Inku.",
+        a: "Duolingo includes audio inside its lessons. Inku bundles audio for the main card library and keeps listening inside each review.",
       },
     ],
   },
@@ -123,7 +123,7 @@ export const COMPARISONS: Record<string, ComparisonRecord> = {
     tagline:
       "Anki is the open-source SRS warhorse. Inku is the opinionated iPhone flashcard app. Power vs polish.",
     summary:
-      "Anki is infinitely flexible and infinitely bare. Inku is pre-built and opinionated with native voice and curated cards.",
+      "Anki is infinitely flexible and infinitely bare. Inku is pre-built and opinionated with audio-supported review and curated cards.",
     releaseYear: 2006,
     competitorCategory: "Open-source flashcard SRS",
     competitorPricing: "Free (desktop/Android), $25 one-time (iOS)",
@@ -133,7 +133,7 @@ export const COMPARISONS: Record<string, ComparisonRecord> = {
       {
         scenario: "You don't want to build your own deck",
         explanation:
-          "Inku ships with 600+ hand-crafted cards with native audio. Anki requires you to find (or build) a deck, vet the content, and hope the TTS is passable.",
+          "Inku ships with 17 unlocked study bundles with audio support. Anki requires you to find (or build) a deck, vet the content, and hope the TTS is passable.",
       },
       {
         scenario: "You want a calm, beautiful daily session",
@@ -141,9 +141,9 @@ export const COMPARISONS: Record<string, ComparisonRecord> = {
           "Inku's review session is designed for the calm, quiet 10 minutes before bed. Anki's UI is utilitarian; the cards are whatever you made them look like.",
       },
       {
-        scenario: "You want audio on every card",
+        scenario: "You want audio support",
         explanation:
-          "Every Inku card has pronunciation audio bundled into the app. Anki decks typically use TTS or no audio at all.",
+          "Inku bundles audio for the main card library. Anki decks vary because many are made by users.",
       },
       {
         scenario: "You want to start today, not set up for a week",
@@ -175,7 +175,7 @@ export const COMPARISONS: Record<string, ComparisonRecord> = {
     ],
     features: [
       { feature: "Setup time", inku: "2 minutes", competitor: "1-8 hours", winner: "inku" },
-      { feature: "Native audio", inku: "Yes, on every card", competitor: "TTS or none", winner: "inku" },
+      { feature: "Audio support", inku: "Bundled library audio", competitor: "TTS or none", winner: "inku" },
       { feature: "Pre-built Japanese deck", inku: "Yes, curated", competitor: "User-made, variable quality", winner: "inku" },
       { feature: "Customization", inku: "Limited", competitor: "Total", winner: "competitor" },
       { feature: "SRS algorithm", inku: "FSRS", competitor: "FSRS (2024+) or SM-2", winner: "tie" },
@@ -188,7 +188,7 @@ export const COMPARISONS: Record<string, ComparisonRecord> = {
     honestTake:
       "Anki is a nuclear reactor. It is incredibly powerful and it will happily let you turn it into a shrine. If you enjoy that, stay. Inku is the opposite: a single-purpose tool that does one thing without asking you to configure it. The choice is mostly about whether you want to build a study system or just use one.",
     verdict:
-      "Use Anki if: you love customization, need multi-domain SRS, or already have a large personal deck. Use Inku if: you want Japanese flashcards with native audio, ready to use, without a weekend of setup.",
+      "Use Anki if: you love customization, need multi-domain SRS, or already have a large personal deck. Use Inku if: you want Japanese flashcards with audio support, ready to use, without a weekend of setup.",
     recommendation:
       "Most learners do not need Anki's power. If you want to learn Japanese and you want to start today, Inku is the faster path.",
     faqs: [
@@ -201,8 +201,8 @@ export const COMPARISONS: Record<string, ComparisonRecord> = {
         a: "Yes, the underlying scheduler math is FSRS with parameters tuned for Japanese learning. The difference is that Inku hides the scheduler entirely; Anki exposes every dial.",
       },
       {
-        q: "Is $30 a year worth it over Anki's $25 one-time?",
-        a: "If you value the native audio, the curated deck, and the calmer UI, yes. If you are a power user who will build your own deck anyway, no.",
+        q: "Is the yearly plan worth it over AnkiMobile's one-time price?",
+        a: "If you value the audio support, the curated deck, and the calmer UI, yes. If you are a power user who will build your own deck anyway, no.",
       },
     ],
   },
@@ -217,7 +217,7 @@ export const COMPARISONS: Record<string, ComparisonRecord> = {
       "WaniKani is a 2000-kanji SRS organized by radicals. Inku is a kana + N5 vocab + phrases app for beginners.",
     releaseYear: 2012,
     competitorCategory: "Kanji-focused SRS",
-    competitorPricing: "$9/mo, $89/yr, $299 lifetime",
+    competitorPricing: "Paid plans, see official pricing",
     intro:
       "WaniKani is the most respected kanji app of the last decade. If your goal is to read novels in Japanese, there is no single tool more useful. But WaniKani assumes you already know hiragana, katakana, and some vocabulary. Inku covers exactly that prerequisite phase.",
     inkuWins: [
@@ -232,9 +232,9 @@ export const COMPARISONS: Record<string, ComparisonRecord> = {
           "WaniKani teaches kanji and the words that contain them. Inku teaches vocabulary across categories, plus conversational phrases.",
       },
       {
-        scenario: "You want native audio on every card",
+        scenario: "You want audio support",
         explanation:
-          "Inku has pronunciation audio on every card. WaniKani uses a single native speaker for audio on vocabulary, but not on kanji readings individually.",
+          "Inku has pronunciation audio support. WaniKani uses a single native speaker for audio on vocabulary, but not on kanji readings individually.",
       },
       {
         scenario: "You want a shorter daily commitment",
@@ -262,8 +262,8 @@ export const COMPARISONS: Record<string, ComparisonRecord> = {
     features: [
       { feature: "Hiragana/katakana coverage", inku: "Full guide + drill", competitor: "Assumed known", winner: "inku" },
       { feature: "Kanji count", inku: "Minimal (starts in N4)", competitor: "2,000+", winner: "competitor" },
-      { feature: "Vocabulary count", inku: "600+", competitor: "6,000+ (through 60 levels)", winner: "competitor" },
-      { feature: "Audio quality", inku: "Clear audio on every card", competitor: "Native speaker, vocab only", winner: "inku" },
+      { feature: "Vocabulary count", inku: "17 bundles", competitor: "6,000+ (through 60 levels)", winner: "competitor" },
+      { feature: "Audio quality", inku: "Bundled library audio", competitor: "Native speaker, vocab only", winner: "inku" },
       { feature: "SRS algorithm", inku: "FSRS", competitor: "Custom interval", winner: "inku" },
       { feature: "Mobile experience", inku: "Native iPhone app", competitor: "Web or third-party apps", winner: "inku" },
       { feature: "Price per year", inku: "$70.99", competitor: "$89 or $299 lifetime", winner: "inku" },
@@ -297,12 +297,12 @@ export const COMPARISONS: Record<string, ComparisonRecord> = {
     competitorName: "Bunpo",
     competitorShortName: "Bunpo",
     tagline:
-      "Bunpo is the grammar-drill specialist for Japanese. Inku is a kana and vocabulary app with native audio. Sequential, not alternative.",
+      "Bunpo is the grammar-drill specialist for Japanese. Inku is a kana and vocabulary app with audio support. Sequential, not alternative.",
     summary:
       "Bunpo drills JLPT grammar patterns through structured lessons. Inku drills vocabulary and kana through spaced flashcards.",
     releaseYear: 2015,
     competitorCategory: "Grammar-drill Japanese app",
-    competitorPricing: "$9/mo, $69/yr",
+    competitorPricing: "paid plan",
     intro:
       "Bunpo is built around grammar: JLPT-level patterns, conjugation drills, and sentence construction. Inku is built around vocabulary and kana. Most serious learners eventually use both, but for different reasons.",
     inkuWins: [
@@ -314,7 +314,7 @@ export const COMPARISONS: Record<string, ComparisonRecord> = {
       {
         scenario: "You want vocabulary with authentic pronunciation",
         explanation:
-          "Inku's pronunciation audio is on every card. Bunpo focuses on grammar patterns; pronunciation is secondary.",
+          "Inku's pronunciation audio is built into the main card library. Bunpo focuses on grammar patterns; pronunciation is secondary.",
       },
       {
         scenario: "You want a calm, un-gamified experience",
@@ -341,7 +341,7 @@ export const COMPARISONS: Record<string, ComparisonRecord> = {
     ],
     features: [
       { feature: "Focus", inku: "Vocabulary + kana", competitor: "Grammar", winner: "tie" },
-      { feature: "Native audio", inku: "Clear audio", competitor: "Limited TTS", winner: "inku" },
+      { feature: "Audio support", inku: "Clear audio", competitor: "Limited TTS", winner: "inku" },
       { feature: "Grammar drills", inku: "None", competitor: "Extensive, by JLPT level", winner: "competitor" },
       { feature: "Spaced repetition", inku: "FSRS", competitor: "Built-in but lighter", winner: "inku" },
       { feature: "JLPT alignment", inku: "N5 complete, N4 partial", competitor: "N5-N1", winner: "competitor" },
@@ -377,7 +377,7 @@ export const COMPARISONS: Record<string, ComparisonRecord> = {
       "LingoDeer teaches full Japanese curriculum through lessons. Inku teaches vocabulary, kana, and phrases through spaced flashcards.",
     releaseYear: 2017,
     competitorCategory: "Curriculum-based Japanese app",
-    competitorPricing: "$11.99/mo, $69.99/yr, $159.99 lifetime",
+    competitorPricing: "Paid plans, see official pricing",
     intro:
       "LingoDeer came out of Korean and Japanese teachers who were frustrated with Duolingo's Asian-language handling. It's the app that most seriously covers Japanese grammar in a lesson format. Inku takes a different approach: flashcards and audio, not lessons.",
     inkuWins: [
@@ -387,7 +387,7 @@ export const COMPARISONS: Record<string, ComparisonRecord> = {
           "LingoDeer is lesson-based. You go A then B then C. Inku lets you dip in for 10 minutes without committing to a lesson.",
       },
       {
-        scenario: "You want native voice acting",
+        scenario: "You want audio-supported review",
         explanation:
           "Inku's audio is bundled with each card. LingoDeer uses TTS for most content.",
       },
@@ -411,9 +411,9 @@ export const COMPARISONS: Record<string, ComparisonRecord> = {
     ],
     features: [
       { feature: "Format", inku: "Flashcards", competitor: "Lesson-based", winner: "tie" },
-      { feature: "Native audio", inku: "Clear audio on every card", competitor: "Mixed TTS", winner: "inku" },
+      { feature: "Audio support", inku: "Bundled library audio", competitor: "Mixed TTS", winner: "inku" },
       { feature: "Grammar lessons", inku: "None", competitor: "Full course", winner: "competitor" },
-      { feature: "Vocabulary breadth", inku: "600+ curated", competitor: "Thousands in course", winner: "competitor" },
+      { feature: "Vocabulary breadth", inku: "17 unlocked bundles", competitor: "Thousands in course", winner: "competitor" },
       { feature: "Daily time commitment", inku: "10-15 min", competitor: "20-30 min (lesson)", winner: "inku" },
       { feature: "Pricing", inku: "$70.99/yr", competitor: "$69.99/yr", winner: "competitor" },
       { feature: "Platform", inku: "iPhone", competitor: "iOS, Android, Web", winner: "competitor" },
@@ -422,7 +422,7 @@ export const COMPARISONS: Record<string, ComparisonRecord> = {
     honestTake:
       "LingoDeer is the right call if you want a structured course and are comfortable with lesson-based pacing. Inku is the right call if you want to spend 10 minutes a day on targeted vocabulary practice without being pulled through a curriculum.",
     verdict:
-      "Use LingoDeer if: you want a full Japanese course. Use Inku if: you want focused flashcard practice with native audio and no lesson commitment.",
+      "Use LingoDeer if: you want a full Japanese course. Use Inku if: you want focused flashcard practice with audio support and no lesson commitment.",
     recommendation:
       "They can pair. LingoDeer for grammar lessons, Inku for spaced vocab review.",
     faqs: [
@@ -447,7 +447,7 @@ export const COMPARISONS: Record<string, ComparisonRecord> = {
       "Renshuu offers deep customization, community-made content, and web-first flexibility. Inku offers a curated, native iPhone experience.",
     releaseYear: 2011,
     competitorCategory: "Customizable web-first Japanese SRS",
-    competitorPricing: "Free tier, $6/mo, $60/yr Pro",
+    competitorPricing: "Free tier, paid plan Pro",
     intro:
       "Renshuu is a love letter from a small team of Japanese teachers. It has forums, custom schedules, thousands of user decks, and a depth that only 14 years of iteration can produce. Inku is the opposite: one deck, one opinion, built for the 10-minute phone break.",
     inkuWins: [
@@ -462,7 +462,7 @@ export const COMPARISONS: Record<string, ComparisonRecord> = {
           "Renshuu rewards tinkering: custom schedules, custom quiz modes, user decks. Inku gives you one curated deck and one review flow.",
       },
       {
-        scenario: "You want native voice acting",
+        scenario: "You want audio-supported review",
         explanation:
           "Inku's audio is bundled with each card. Renshuu uses TTS.",
       },
@@ -496,7 +496,7 @@ export const COMPARISONS: Record<string, ComparisonRecord> = {
     honestTake:
       "Renshuu is the classic power-user Japanese tool. If you want control and community, it is a wonderful and free option. Inku is the opposite: a finished product you just use. The choice is about what you want to do with your 10 minutes a day.",
     verdict:
-      "Use Renshuu if: you want web-based, free, and customizable. Use Inku if: you want native iPhone with native audio and no setup.",
+      "Use Renshuu if: you want web-based, free, and customizable. Use Inku if: you want native iPhone with audio support and no setup.",
     recommendation:
       "Try Renshuu's free tier first; if the web-first feel doesn't land, Inku is the native alternative.",
     faqs: [
@@ -516,19 +516,19 @@ export const COMPARISONS: Record<string, ComparisonRecord> = {
     competitorName: "Busuu",
     competitorShortName: "Busuu",
     tagline:
-      "Busuu is a multi-language app with human peer feedback. Inku is Japanese-only with native audio. Community vs focus.",
+      "Busuu is a multi-language app with human peer feedback. Inku is Japanese-only with audio support. Community vs focus.",
     summary:
       "Busuu offers structured Japanese lessons with native-speaker review on your writing. Inku is flashcard-first with curated content.",
     releaseYear: 2008,
     competitorCategory: "Multi-language lesson app with peer review",
-    competitorPricing: "$14/mo, $84/yr Premium",
+    competitorPricing: "Paid plans, see official pricing",
     intro:
       "Busuu has a unique feature: native speakers of your target language review your writing. It is a strong tool for learners who want human feedback. Inku doesn't compete on that. Inku competes on polish, audio quality, and 10-minute-a-day usability.",
     inkuWins: [
       {
-        scenario: "You want audio on every card",
+        scenario: "You want audio support",
         explanation:
-          "Inku has native voice acting. Busuu uses a mix of TTS and short native clips.",
+          "Inku has audio-supported review. Busuu uses a mix of TTS and short native clips.",
       },
       {
         scenario: "You prefer flashcards over structured lessons",
@@ -570,7 +570,7 @@ export const COMPARISONS: Record<string, ComparisonRecord> = {
     honestTake:
       "Busuu's peer review is a genuinely good feature that no other app has at the same quality. If that matters to you, Busuu wins. If you want flashcards and actor audio and a calmer daily ritual, Inku wins.",
     verdict:
-      "Use Busuu if: you want peer review and a structured curriculum. Use Inku if: you want focused flashcard practice with native audio.",
+      "Use Busuu if: you want peer review and a structured curriculum. Use Inku if: you want focused flashcard practice with audio support.",
     recommendation:
       "They can pair. Inku for daily flashcards, Busuu for occasional writing practice with peer feedback.",
     faqs: [
@@ -595,7 +595,7 @@ export const COMPARISONS: Record<string, ComparisonRecord> = {
       "Lingopie streams Japanese shows with interactive subtitles. Inku delivers audio-supported flashcards with FSRS scheduling.",
     releaseYear: 2019,
     competitorCategory: "Media-based language app",
-    competitorPricing: "$12/mo, $67/yr",
+    competitorPricing: "Paid plans, see official pricing",
     intro:
       "Lingopie is the TV-through-Japanese app. You watch shows, tap words for definitions, and build a vocabulary from real media. Inku is the opposite: you build vocabulary from flashcards, then watch Japanese media later with less help. Two methods, same destination.",
     inkuWins: [
@@ -633,7 +633,7 @@ export const COMPARISONS: Record<string, ComparisonRecord> = {
       { feature: "Time per session", inku: "10 min", competitor: "20-40 min", winner: "inku" },
       { feature: "Real media exposure", inku: "No", competitor: "Yes", winner: "competitor" },
       { feature: "Cultural context", inku: "Limited", competitor: "Strong", winner: "competitor" },
-      { feature: "Pricing", inku: "$70.99/yr", competitor: "$67/yr", winner: "competitor" },
+      { feature: "Pricing", inku: "$70.99/yr", competitor: "paid plan", winner: "competitor" },
     ],
     honestTake:
       "Lingopie is the tool for intermediate learners who want to boost input while enjoying real shows. It is probably too ambitious for day-one beginners. Inku is the opposite end of that arc.",
@@ -663,7 +663,7 @@ export const COMPARISONS: Record<string, ComparisonRecord> = {
       "Noji offers custom flashcard creation, a toolbox of utilities, and web-first access. Inku offers a curated iPhone experience.",
     releaseYear: 2021,
     competitorCategory: "Web flashcard tool",
-    competitorPricing: "Free tier, $5/mo Pro",
+    competitorPricing: "Free tier, paid plan",
     intro:
       "Noji has emerged as a flexible web-first flashcard tool with a strong set of side utilities (AI deck generators, PDF-to-flashcard tools). Inku is a dedicated iPhone app with a curated deck. Different shapes of the same problem.",
     inkuWins: [
@@ -711,7 +711,7 @@ export const COMPARISONS: Record<string, ComparisonRecord> = {
     honestTake:
       "Noji and Inku solve different problems. Noji is a toolbox. Inku is a product. If you want to build your own study system, Noji is powerful. If you want to just learn Japanese, Inku is simpler.",
     verdict:
-      "Use Noji if: you like building custom flashcards and experimenting with tools. Use Inku if: you want a ready-made Japanese deck with native audio.",
+      "Use Noji if: you like building custom flashcards and experimenting with tools. Use Inku if: you want a ready-made Japanese deck with audio support.",
     recommendation:
       "Different tools for different workflows.",
     faqs: [

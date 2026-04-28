@@ -12,13 +12,13 @@ export function Why() {
       <div className="container space-y-24 md:space-y-32">
         <FeatureRow
           eyebrow="How it works"
-          title="One quiet screen a day."
+          title="Open Inku. Do today&apos;s cards. Stop."
           body={
             <>
               <p>
-                Open Inku and it already knows what you need to see. A handful
-                of kana, a few vocabulary cards, one or two phrases. The review
-                ends when today&apos;s review ends. There is no infinite feed.
+                Open Inku and it shows a small review for today. You may see
+                kana, words, and phrases. When the review is done, you are done.
+                There is no infinite feed.
               </p>
               <p>
                 Under the hood, Inku uses a modern spaced-repetition scheduler
@@ -37,20 +37,19 @@ export function Why() {
         </FeatureRow>
 
         <FeatureRow
-          eyebrow="Every word, spoken aloud"
+          eyebrow="Audio"
           title="Hear each card before you copy it."
           reverse
           body={
             <>
               <p>
-                Inku gives every character, word, and phrase a clear
-                pronunciation recording. You can listen first, then repeat it
-                without leaving the review.
+                Inku bundles pronunciation audio for the main card library. You
+                can listen first, then repeat it without leaving the review.
               </p>
               <p>
-                The audio lives on your device, so review feels the same on the
-                train as it does at home. No loading state, no extra tool, just
-                the sound when you need it.
+                If a small surface is missing bundled audio, your iPhone can
+                fall back to its Japanese voice. The goal is still simple: hear
+                the card and keep moving.
               </p>
             </>
           }
@@ -64,19 +63,19 @@ export function Why() {
         </FeatureRow>
 
         <FeatureRow
-          eyebrow="Built like a notebook, not a game"
-          title="No streaks. No notifications. No guilt."
+          eyebrow="Daily habit"
+          title="A soft habit you can return to."
+          reverse
           body={
             <>
               <p>
-                Most language apps punish you for missing a day. Inku does not.
-                You can pick it up after a week away and the cards you need
-                will still be the cards you need.
+                Inku has streak and progress tracking, but the tone is gentle.
+                Miss a day and come back. The app still shows the cards you
+                need next.
               </p>
               <p>
-                The home screen shows your progress as ink drops collected, not
-                a streak flame you&apos;re afraid to lose. You&apos;ll look
-                forward to opening it. That is the whole idea.
+                The home screen also uses ink drops to show daily practice. It
+                feels more like filling a notebook than chasing a scoreboard.
               </p>
             </>
           }

@@ -148,9 +148,8 @@ export default function Post() {
       <h3 id="lesson-2">2. Use a real-audio tool from day one</h3>
       <p>
         Duolingo&apos;s TTS was my biggest regret. I built a listening model
-        that I had to rebuild from scratch at day 120. If you cannot hear
-        actual recorded Japanese on every card, you are not learning
-        Japanese.
+        that I had to rebuild from scratch at day 120. Use a tool that lets you
+        hear Japanese often, then copy the sound out loud.
       </p>
 
       <h3 id="lesson-3">3. Set a learning goal, not a streak goal</h3>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { AnswerBox } from "@/components/answer-box";
 import { LongFormLayout } from "@/components/long-form-layout";
 import { DownloadCard } from "@/components/download-card";
 import { JsonLd } from "@/components/seo/json-ld";
@@ -65,6 +66,12 @@ export default function HiraganaChartPage() {
         ]}
         sidebar={<DownloadCard campaign="hiragana-chart-tool" />}
       >
+        <AnswerBox>
+          Hiragana is one of the two Japanese kana scripts. This chart shows all
+          46 basic hiragana in the standard order. Click a character to hear its
+          sound, then hide romaji when you want to test your memory.
+        </AnswerBox>
+
         <p>
           This chart shows all 46 hiragana characters arranged in the traditional aiueo order.
           Click any cell to hear its pronunciation spoken aloud using your device&apos;s Japanese
@@ -168,7 +175,7 @@ export default function HiraganaChartPage() {
         <p>
           If you want spaced repetition built into a mobile app so you are not maintaining your
           own review schedule, Inku handles that on iPhone. Every hiragana and katakana character
-          in this chart is in the app with native voice audio and handwriting practice.{" "}
+          in this chart is in the app with audio-supported review audio and handwriting practice.{" "}
           <Link href="/">Download Inku with a 7-day free trial.</Link>
         </p>
       </LongFormLayout>

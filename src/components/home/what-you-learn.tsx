@@ -4,35 +4,35 @@ import { cn } from "@/lib/utils";
 const TOPICS = [
   {
     jp: "あ",
-    title: "Hiragana",
-    count: "46 characters",
+    title: "Hiragana and katakana",
+    count: "184 kana",
     description:
-      "The cursive set you will use to read native words, particles, and verb endings.",
+      "Basic kana, voiced kana, and yoon forms for reading Japanese from the start.",
     href: "/guides/learn-hiragana",
-    className: "lg:col-span-5",
-  },
-  {
-    jp: "ア",
-    title: "Katakana",
-    count: "46 characters",
-    description:
-      "The angular set for loanwords. Once you know hiragana, katakana goes fast.",
-    href: "/guides/learn-katakana",
-    className: "lg:col-span-3",
+    className: "lg:col-span-4",
   },
   {
     jp: "水",
-    title: "JLPT N5 vocabulary",
-    count: "200 core words",
+    title: "JLPT N5 cards",
+    count: "515 cards",
     description:
-      "The words you actually use in your first conversation. Each one recorded.",
+      "Beginner words for daily life, study, food, time, people, and places.",
     href: "/jlpt/n5",
+    className: "lg:col-span-4",
+  },
+  {
+    jp: "語",
+    title: "JLPT N4 cards",
+    count: "391 cards",
+    description:
+      "The next step after N5, already available in the app library.",
+    href: "/jlpt/n4",
     className: "lg:col-span-4",
   },
   {
     jp: "話",
     title: "Casual phrases",
-    count: "30+ phrases",
+    count: "187 phrases",
     description:
       "What you say to friends. How to apologize, agree, ask for help without sounding textbook.",
     href: "/japanese/phrases",
@@ -41,7 +41,7 @@ const TOPICS = [
   {
     jp: "礼",
     title: "Polite phrases",
-    count: "30+ phrases",
+    count: "107 phrases",
     description:
       "Formal Japanese for work, travel, and your first real conversation.",
     href: "/japanese/phrases",
@@ -49,8 +49,8 @@ const TOPICS = [
   },
   {
     jp: "旅",
-    title: "Travel phrases",
-    count: "30+ phrases",
+    title: "Travel and anime phrases",
+    count: "55 phrases",
     description:
       "Getting around Tokyo, Kyoto, Osaka. What to say at the station, the counter, the onsen.",
     href: "/japanese/phrases",
@@ -60,16 +60,16 @@ const TOPICS = [
 
 export function WhatYouLearn() {
   return (
-    <section className="py-24 md:py-32">
+    <section id="whats-inside" className="py-24 md:py-32">
       <div className="container">
         <div className="mx-auto max-w-2xl text-center">
           <p className="label-eyebrow mb-4 text-matcha">What&apos;s inside</p>
           <h2 className="font-serif text-display-md tracking-tight text-balance">
-            Six decks, all on day one.
+            What is inside on day one.
           </h2>
           <p className="mt-4 font-serif text-lg text-ink-muted">
-            No paywalled chapters you have to grind toward. Every deck is
-            unlocked as soon as you subscribe.
+            Inku opens with 17 unlocked study bundles: kana, JLPT vocabulary,
+            topic decks, and useful phrase packs.
           </p>
         </div>
 

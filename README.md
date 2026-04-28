@@ -21,7 +21,7 @@ Open [http://localhost:3000](http://localhost:3000).
 - **shadcn/ui** style components (Button, primitives)
 - **MDX** via `@next/mdx` for future blog content (current posts are TSX)
 - **`@vercel/og`** for dynamic OG image generation
-- **`next-sitemap`** as a belt-and-suspenders fallback (primary sitemap is `src/app/sitemap.ts`)
+- **App Router sitemap** from `src/app/sitemap.ts`
 - **GA4** via `next/script` with DNT respect
 - **Vercel** for hosting
 
@@ -101,9 +101,9 @@ Same as comparison pages, but add to `ALTERNATIVES` in `src/lib/alternatives.ts`
 
 Dynamic OG images are rendered at `/api/og?title=...&type=website`. The route lives at `src/app/api/og/route.tsx`. Templates:
 
-- `type=website` (default) — homepage brand hero
-- `type=article` — blog post title + author
-- `type=comparison` — Inku vs [competitor] side-by-side
+- `type=website` (default)  -  homepage brand hero
+- `type=article`  -  blog post title + author
+- `type=comparison`  -  Inku vs [competitor] side-by-side
 
 Every page sets its OG URL via the `pageMetadata` helper in `src/lib/metadata.ts`. If you pass `ogImage: "/api/og?..."` to that helper, it overrides the default.
 
@@ -158,13 +158,13 @@ Colors (from `src/lib/site.ts` and `tailwind.config.ts`):
 
 Fonts:
 
-- **Fraunces** (variable serif) — display headings, body serif
-- **Satoshi** (sans) — UI labels, buttons, captions (self-hosted in `public/fonts/`)
-- **Klee One** — Japanese characters (via `jp` utility class)
+- **Fraunces** (variable serif)  -  display headings, body serif
+- **Satoshi** (sans)  -  UI labels, buttons, captions (self-hosted in `public/fonts/`)
+- **Klee One**  -  Japanese characters (via `jp` utility class)
 
 ## Brand rules (never violate)
 
-- No em dashes (—). Use hyphens or rewrite.
+- No em dashes ( - ). Use hyphens or rewrite.
 - No emoji in product copy or legal.
 - Second person voice ("you").
 - Calm, not gamified.
@@ -175,7 +175,7 @@ Fonts:
 
 ```bash
 pnpm dev          # Start dev server
-pnpm build        # Production build (runs next-sitemap afterwards)
+pnpm build        # Production build
 pnpm start        # Run the built app
 pnpm lint         # ESLint check
 ```

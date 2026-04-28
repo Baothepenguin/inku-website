@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { AnswerBox } from "@/components/answer-box";
 import { LongFormLayout } from "@/components/long-form-layout";
 import { DownloadCard } from "@/components/download-card";
 import { JsonLd } from "@/components/seo/json-ld";
@@ -52,6 +53,12 @@ export default function JlptIndexPage() {
         ]}
         sidebar={<DownloadCard campaign="jlpt-hub" />}
       >
+        <AnswerBox>
+          The JLPT has five levels: N5, N4, N3, N2, and N1. N5 is the first
+          level. N1 is the highest. Most beginners should start with kana, N5
+          vocabulary, and basic grammar.
+        </AnswerBox>
+
         <p>
           The Japanese-Language Proficiency Test (JLPT) is the standard
           certification for non-native Japanese speakers. It has five
@@ -107,8 +114,8 @@ export default function JlptIndexPage() {
         </ul>
 
         <p>
-          Inku&apos;s current deck covers N5 completely and is actively
-          expanding through N4.{" "}
+          Inku includes 515 N5 cards and 391 N4 cards in the current app
+          library.{" "}
           <Link href="/jlpt/n5">Start with N5</Link>, or read{" "}
           <Link href="/guides/how-to-learn-japanese">
             the full learning roadmap

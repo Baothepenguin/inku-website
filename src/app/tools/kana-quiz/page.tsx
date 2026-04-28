@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { AnswerBox } from "@/components/answer-box";
 import { LongFormLayout } from "@/components/long-form-layout";
 import { DownloadCard } from "@/components/download-card";
 import { JsonLd } from "@/components/seo/json-ld";
@@ -65,6 +66,12 @@ export default function KanaQuizPage() {
         ]}
         sidebar={<DownloadCard campaign="kana-quiz-tool" />}
       >
+        <AnswerBox>
+          This kana quiz tests hiragana and katakana reading. Choose a mode,
+          type the romaji for each character, and check your score as you go.
+          It is best after one pass through the kana charts.
+        </AnswerBox>
+
         <p>
           This quiz shows one kana character at a time and asks you to type its romaji reading.
           Choose hiragana only, katakana only, or both together. After you type and submit, you
@@ -149,7 +156,7 @@ export default function KanaQuizPage() {
           If you want spaced repetition - which automatically schedules reviews at the optimal
           intervals for your memory rather than asking you to do it manually - Inku handles that
           on iPhone. The same kana you practiced here, plus vocabulary, phrases, and handwriting,
-          are all in the app with native audio.{" "}
+          are all in the app with audio support.{" "}
           <Link href="/">Download Inku with a 7-day free trial.</Link>
         </p>
       </LongFormLayout>

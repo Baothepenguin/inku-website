@@ -54,7 +54,7 @@ export default function Post() {
         },
         {
           q: "How do I practice pitch accent without a teacher?",
-          a: "OJAD (Online Japanese Accent Dictionary) shows pitch patterns visually for any word. Dogen's pitch accent course on Patreon is the most comprehensive self-study resource in English. Shadowing native audio is the best daily practice: listen to a sentence, immediately repeat it matching the rhythm and pitch. Your ear develops faster than you expect once you know what to listen for.",
+          a: "OJAD (Online Japanese Accent Dictionary) shows pitch patterns visually for any word. Dogen's pitch accent course on Patreon is the most comprehensive self-study resource in English. Shadowing Japanese audio is the best daily practice: listen to a sentence, immediately repeat it matching the rhythm and pitch. Your ear develops faster than you expect once you know what to listen for.",
         },
       ]}
       related={[
@@ -156,7 +156,7 @@ export default function Post() {
         to develop genuine pitch intuition rather than memorizing a handful of examples.
       </p>
       <p>
-        Before N4: listen to a lot of native audio. Shadow it. Your ear will absorb pitch patterns
+        Before N4: listen to a lot of Japanese audio. Shadow it. Your ear will absorb pitch patterns
         passively even before you know consciously what they are. When you shadow, copy the rhythm
         and melody of the speaker as closely as you can. You are building auditory and motor patterns
         that will make explicit pitch study more effective later.

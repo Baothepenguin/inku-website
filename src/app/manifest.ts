@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "Inku: Learn Japanese",
     short_name: "Inku",
     description:
-      "A calm iPhone app for learning Japanese. Flashcards, pronunciation audio, no streaks.",
+      "A calm iPhone app for learning Japanese. Flashcards, pronunciation audio, a softer habit.",
     start_url: "/",
     display: "standalone",
     background_color: "#FAF8F2",

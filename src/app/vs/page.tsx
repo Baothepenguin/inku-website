@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { AnswerBox } from "@/components/answer-box";
 import { LongFormLayout } from "@/components/long-form-layout";
 import { DownloadCard } from "@/components/download-card";
 import { JsonLd } from "@/components/seo/json-ld";
@@ -39,6 +40,12 @@ export default function VsIndexPage() {
         ]}
         sidebar={<DownloadCard campaign="vs-index-sidebar" />}
       >
+        <AnswerBox>
+          Use Inku if you want a calm Japanese flashcard app for iPhone. Use
+          another app if you need full lessons, many languages, community
+          features, or advanced grammar tools.
+        </AnswerBox>
+
         <p>
           If you are weighing Inku against another Japanese app, start here.
           Every comparison includes a feature-by-feature table, scenarios

@@ -184,7 +184,7 @@ export default function Post() {
         The tutor will find your gaps faster than any app.
       </p>
       <p>
-        Shadow native audio during this period. Shadowing means listening to a sentence, then
+        Shadow Japanese audio during this period. Shadowing means listening to a sentence, then
         immediately repeating it out loud, matching the rhythm and pitch as closely as possible.
         It is uncomfortable and that discomfort is the point. Your mouth is building muscle
         memory for sounds it has never made.

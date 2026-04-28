@@ -10,6 +10,7 @@ export const metadata: Metadata = pageMetadata({
   description:
     "The rules of using Inku. Plain language, sole-proprietor, Alberta governing law.",
   path: "/terms",
+  noIndex: true,
 });
 
 const UPDATED = "April 21, 2026";

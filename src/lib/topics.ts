@@ -320,7 +320,7 @@ export const TOPICS: Record<string, TopicHub> = {
     tagline:
       "The phrases you actually need in your first week of using Japanese.",
     summary:
-      "Inku teaches four phrase packs (casual, polite, travel, anime) with native voice acting. These are the conversations you'll have in the first week of using Japanese in the wild.",
+      "Inku teaches four phrase packs (casual, polite, travel, anime) with audio-supported review. These are the conversations you'll have in the first week of using Japanese in the wild.",
     content: [
       {
         heading: "Why phrases, not just vocabulary",

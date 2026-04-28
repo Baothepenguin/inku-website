@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { LongFormLayout } from "@/components/long-form-layout";
 import { DownloadCard } from "@/components/download-card";
-import { QuoteBlock } from "@/components/quote-block";
 import { AnswerBox } from "@/components/answer-box";
 import { JsonLd } from "@/components/seo/json-ld";
 import {
@@ -62,7 +61,6 @@ export function AlternativePage({ data }: { data: AlternativeRecord }) {
           { id: "why", label: "Why you are searching" },
           { id: "what", label: `What to look for` },
           { id: "differs", label: "How Inku is different" },
-          { id: "reviews", label: "What learners say" },
           { id: "faqs", label: "Common questions" },
         ]}
         sidebar={<DownloadCard campaign={`alt-${data.slug}`} />}
@@ -91,16 +89,6 @@ export function AlternativePage({ data }: { data: AlternativeRecord }) {
             <li key={i}>{line}</li>
           ))}
         </ol>
-
-        <h2 id="reviews">What learners say</h2>
-        {data.reviews.map((review, i) => (
-          <QuoteBlock
-            key={i}
-            quote={review.quote}
-            attribution={review.attribution}
-            className="my-8"
-          />
-        ))}
 
         <h2 id="faqs">Common questions</h2>
         <div className="not-prose mt-6 space-y-4">

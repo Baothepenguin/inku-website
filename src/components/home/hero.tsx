@@ -33,26 +33,21 @@ export function Hero() {
         <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,0.88fr)_minmax(520px,1.12fr)] lg:gap-6">
         <div className="mx-auto max-w-3xl text-center lg:mx-0 lg:max-w-[36rem] lg:text-left">
           <p className="label-eyebrow mb-6 text-matcha">
-            A new kind of Japanese app · iPhone only
+            Japanese flashcards for iPhone
           </p>
           <h1 className="font-serif text-display-lg tracking-tight text-balance text-ink md:text-display-xl lg:text-[clamp(4.25rem,7vw,6.25rem)]">
-            Learn Japanese the way you&apos;d want to.
-            <span className="inline-block font-serif italic text-matcha">
-              Calmly.
-            </span>
+            Learn Japanese without the noise.
           </h1>
           <p className="mx-auto mt-7 max-w-xl font-body text-lg leading-relaxed text-ink-muted md:text-xl lg:mx-0 text-pretty">
-            Inku is a flashcard app built like a notebook, not a game. Hiragana,
-            katakana, N5 vocabulary, and four phrase packs, each with clear
-            pronunciation. No streaks. No pressure. Just ten minutes a day that
-            actually
-            stick.
+            Inku helps you learn hiragana, katakana, N5 words, N4 words, and
+            useful phrases in short daily sessions. Learn a few cards. Review
+            what is due. Keep going without ads, accounts, or a busy screen.
           </p>
 
           <div className="mt-10 flex flex-col items-center lg:items-start">
             <DownloadCTA
               campaign="hero"
-              label="Download now"
+              label="Start your free week"
               className="text-base md:text-[1.05rem]"
             />
           </div>
@@ -108,8 +103,8 @@ export function Hero() {
         </div>
 
         <div className="mx-auto mt-16 grid max-w-4xl grid-cols-2 overflow-hidden rounded-lg border border-border/70 bg-cream-raised/85 shadow-paper backdrop-blur md:grid-cols-4">
-          <StatChip label="decks unlocked" value="6" />
-          <StatChip label="core cards" value="600+" />
+          <StatChip label="unlocked bundles" value="17" />
+          <StatChip label="N5 cards" value="515" />
           <StatChip label="free trial" value="7 days" />
           <StatChip label="account required" value="0" />
         </div>

@@ -3,14 +3,15 @@ import { SumiBrush } from "@/components/sumi-brush";
 import { SITE } from "@/lib/site";
 
 const INCLUDED = [
-  "All six decks: hiragana, katakana, N5 vocab, casual, polite, travel",
-  "Pronunciation audio on every card",
+  "17 unlocked study bundles from day one",
+  "515 N5 cards and 391 N4 cards",
+  "4 phrase packs: casual, polite, travel, anime",
+  "Bundled audio for the main card library",
   "Handwriting practice for every kana",
   "Spaced repetition tuned for adult learners",
   "Four themes: Matcha, Sakura, Sun, Moon",
-  "Works offline; your progress lives on your phone",
+  "Core reviews and progress saved on your phone",
   "One-tap flag for any card that looks wrong",
-  "New N4 vocabulary landing every month",
 ];
 
 export function Pricing() {
@@ -23,8 +24,8 @@ export function Pricing() {
             One subscription. Everything unlocked.
           </h2>
           <p className="mt-4 font-serif text-lg text-ink-muted">
-            No chapters to grind, no ads, no upsells. Start with a 7-day free
-            trial. Cancel from Settings with two taps if it is not for you.
+            Try Inku free for 7 days. After that, choose yearly or monthly.
+            There are no ads and no extra lesson packs.
           </p>
         </div>
 
@@ -55,7 +56,7 @@ export function Pricing() {
             </p>
             <DownloadCTA
               campaign="pricing-yearly"
-              label="Start free trial"
+              label="Start your free week"
               className="mt-8 w-full"
             />
           </div>
@@ -77,7 +78,7 @@ export function Pricing() {
             </p>
             <DownloadCTA
               campaign="pricing-monthly"
-              label="Get the monthly plan"
+              label="Start your free week"
               className="mt-8 w-full"
             />
           </div>

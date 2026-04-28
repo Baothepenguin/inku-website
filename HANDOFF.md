@@ -1,4 +1,4 @@
-# Inku Website — Handoff Document
+# Inku Website  -  Handoff Document
 
 > Complete context for any agent (Codex, Claude, future you) picking up work on this repo. Read top-to-bottom before touching code. The [README.md](./README.md) covers mechanical "how do I run things"; this doc covers "why is it like this" + "what's still open."
 
@@ -45,7 +45,7 @@ Core Web Vitals: LCP 5.3s, FCP 3.5s, TBT 150ms, CLS 0, TTFB 40ms. Known perf gap
 | Icons | lucide-react | Standard. |
 | Analytics | GA4 via `next/script` | `G-8HWG5TBT17`. Respects DNT. No other trackers. |
 | OG images | `@vercel/og` edge function at `/api/og` | Three templates: website, article, comparison. |
-| Sitemap | Dynamic `src/app/sitemap.ts` | 72 URLs auto-generated from data registries. `next-sitemap` postbuild is a fallback. |
+| Sitemap | Dynamic `src/app/sitemap.ts` | URLs auto-generated from data registries. App Router sitemap is the source of truth. |
 | Deploy | Vercel auto on push to main | GitHub app connected. `inkujapanese.com` is the primary alias. |
 
 ---
@@ -128,26 +128,26 @@ Fonts (via `next/font/google`, CSS vars):
 
 Display sizes:
 
-- `text-display-xl` — hero H1 (44px → 80px)
-- `text-display-lg` — long-form H1 (36px → 60px)
-- `text-display-md` — section H2 (30px → 46px)
-- `text-display-sm` — smaller H2 (26px → 34px)
+- `text-display-xl`  -  hero H1 (44px → 80px)
+- `text-display-lg`  -  long-form H1 (36px → 60px)
+- `text-display-md`  -  section H2 (30px → 46px)
+- `text-display-sm`  -  smaller H2 (26px → 34px)
 
 Utility classes in `globals.css`:
 
-- `.label-eyebrow` — small-caps label
-- `.btn-primary`, `.btn-ghost` — button presets
-- `.card-surface` — cream-raised rounded card
-- `.section-divider` — soft horizontal rule
-- `.prose-inku` — long-form reading wrapper (our own type scale)
-- `.jp` — switches font to Noto Sans JP
-- `.break-anywhere` — force long-string wrapping
+- `.label-eyebrow`  -  small-caps label
+- `.btn-primary`, `.btn-ghost`  -  button presets
+- `.card-surface`  -  cream-raised rounded card
+- `.section-divider`  -  soft horizontal rule
+- `.prose-inku`  -  long-form reading wrapper (our own type scale)
+- `.jp`  -  switches font to Noto Sans JP
+- `.break-anywhere`  -  force long-string wrapping
 
 ---
 
 ## 6. How to add content
 
-All content is TSX (MDX is disabled — see section 3).
+All content is TSX (MDX is disabled  -  see section 3).
 
 ### Blog post
 
@@ -219,7 +219,7 @@ Manual deploy: `vercel --prod --yes`
 - **Next 16 + Turbopack breaks `@next/mdx`** with a "loader options not serializable" error. MDX is disabled until `@next/mdx` ships a Turbopack-compatible release.
 - **Manifest `purpose` field** cannot be `"any maskable"` as a single string in Next 16's type. Split into two icon entries with separate `purpose` values.
 - **`new Date().getFullYear()` in SiteFooter caused hydration mismatch** (UTC midnight drift). Hardcoded to 2026.
-- **JSON-LD was originally using `next/script` with `afterInteractive`** — AI crawlers that don't execute JS saw zero structured data. Fix: render `<script type="application/ld+json">` server-side. See `src/components/seo/json-ld.tsx` for the exact pattern (uses `dangerouslySet` + InnerHTML via a props spread to keep the security linter happy).
+- **JSON-LD was originally using `next/script` with `afterInteractive`**  -  AI crawlers that don't execute JS saw zero structured data. Fix: render `<script type="application/ld+json">` server-side. See `src/components/seo/json-ld.tsx` for the exact pattern (uses `dangerouslySet` + InnerHTML via a props spread to keep the security linter happy).
 - **Font preload explosion** (38+ `<link rel=preload>` per page). Caused by Fraunces with `axes: ["opsz", "SOFT"]`. Fix: drop axes, use `preload: false` on non-critical fonts. Now 1 preload per page.
 - **Vulnerable dep blocks.** Vercel blocks deploys on known-vulnerable deps (Next < 16, next-mdx-remote < 6). Keep deps fresh. `pnpm outdated` is your friend.
 - **ESLint 9 + eslint-config-next 16 flat config is broken** (circular ref in `react` plugin). `pnpm run lint` is currently disabled. Next's build still does basic lint during compilation.
@@ -234,7 +234,7 @@ Manual deploy: `vercel --prod --yes`
 
 ### CI backstop (staged, not pushed)
 
-GitHub Actions workflow is at `/tmp/inku-ci-backup/ci.yml` but wasn't pushed — OAuth token needs `workflow` scope. To add:
+GitHub Actions workflow is at `/tmp/inku-ci-backup/ci.yml` but wasn't pushed  -  OAuth token needs `workflow` scope. To add:
 
 ```bash
 gh auth refresh -s workflow
@@ -253,7 +253,7 @@ What's shipped:
 - **Sitemap**: https://inkujapanese.com/sitemap.xml (72 URLs)
 - **Robots**: https://inkujapanese.com/robots.txt (welcomes GPTBot, ClaudeBot, Claude-Web, anthropic-ai, PerplexityBot, Google-Extended, CCBot, Bytespider, Applebot-Extended)
 - **llms.txt**: https://inkujapanese.com/llms.txt (emerging AI-crawler standard)
-- **JSON-LD**: 3-5 blocks per page, server-rendered. Types: Organization, WebSite, SoftwareApplication, Article/BlogPosting, Product, AggregateOffer, FAQPage, HowTo, Person, PostalAddress, AggregateRating, Offer, ImageObject, SearchAction, BreadcrumbList
+- **JSON-LD**: 3-5 blocks per page, server-rendered. Types: Organization, WebSite, SoftwareApplication, Article/BlogPosting, Product, AggregateOffer, FAQPage, HowTo, Person, PostalAddress, Offer, ImageObject, BreadcrumbList
 - **Apple smart banner** on every page
 - **Canonical tags** on every page
 - **OG images** via `/api/og` with three templates
@@ -268,7 +268,7 @@ What Bao needs to do (blocked on external steps):
 
 ## 10. Pending tasks Bao owns (not Codex)
 
-- Spaceship DNS flip (DONE — DNS resolves)
+- Spaceship DNS flip (DONE  -  DNS resolves)
 - Google Search Console sitemap submission (in progress)
 - Bing Webmaster Tools (Bao explicitly skipped)
 - App Store ID once Inku is approved
@@ -337,7 +337,7 @@ npx -y lighthouse@latest https://inkujapanese.com/ --only-categories=performance
 
 ---
 
-## Appendix C: Brand rules (hard constraints — never violate)
+## Appendix C: Brand rules (hard constraints  -  never violate)
 
 1. No em dashes anywhere. Use hyphens or rewrite sentences. Brand hard rule.
 2. No emoji in product copy or legal docs. Twitter/TikTok is fine.

@@ -107,10 +107,10 @@ export default function AboutPage() {
 
         <h2 id="what-inku-is">What Inku is</h2>
         <p>
-          Inku is a flashcard app for iPhone, iOS 18 and up. It teaches hiragana
-          and katakana (92 characters), the 200 core N5 vocabulary words,
-          roughly 65 N4 words so far, and four phrase packs (casual, polite,
-          travel, anime). Every word is spoken aloud by an actor.
+          Inku is a flashcard app for iPhone, iOS 18 and up. It teaches 184
+          kana, 515 N5 cards, 391 N4 cards, topic decks, and four phrase packs
+          (casual, polite, travel, anime). The main card library includes
+          bundled pronunciation audio.
         </p>
         <p>
           The review session is finite. You open the app, Inku shows you today:
@@ -128,7 +128,7 @@ export default function AboutPage() {
 
         <h2 id="what-inku-is-not">What Inku is not</h2>
         <ul>
-          <li>It is not a streak app. There is no fire to keep alive.</li>
+          <li>It is not built around public leaderboards or loud pressure.</li>
           <li>It is not a chatbot. It will not generate cards for you on the fly.</li>
           <li>
             It is not an all-in-one Japanese platform. It will not teach you

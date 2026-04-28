@@ -58,7 +58,7 @@ export const JLPT_LEVELS: Record<string, JlptLevel> = {
     ],
     studyPlan: [
       "Week 1-2: Hiragana and katakana to full recognition.",
-      "Month 1-2: Build vocabulary through the 200 core N5 words. Aim for 10 new words a day.",
+      "Month 1-2: Build vocabulary through the 515 N5 cards. Aim for 10 new words a day.",
       "Month 2-3: Expand to the full N5 list (~800 words). Add basic grammar patterns.",
       "Month 3-4: Start reading simple Japanese (NHK Web Easy, graded readers).",
       "Month 4-5: Take the JLPT N5 practice test. Identify weak areas and drill.",

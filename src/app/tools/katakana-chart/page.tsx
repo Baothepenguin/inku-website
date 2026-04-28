@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { AnswerBox } from "@/components/answer-box";
 import { LongFormLayout } from "@/components/long-form-layout";
 import { DownloadCard } from "@/components/download-card";
 import { JsonLd } from "@/components/seo/json-ld";
@@ -65,6 +66,12 @@ export default function KatakanaChartPage() {
         ]}
         sidebar={<DownloadCard campaign="katakana-chart-tool" />}
       >
+        <AnswerBox>
+          Katakana is the Japanese kana script used for foreign words, names,
+          and loanwords. This chart shows all 46 basic katakana with audio and
+          romaji controls so you can practice recognition.
+        </AnswerBox>
+
         <p>
           This chart shows all 46 katakana characters in the traditional aiueo order. Click any
           cell to hear its pronunciation through your device&apos;s Japanese voice. Toggle romaji

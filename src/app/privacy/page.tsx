@@ -10,6 +10,7 @@ export const metadata: Metadata = pageMetadata({
   description:
     "How Inku handles your data. Local-first on your iPhone, no account, no trackers, no ads.",
   path: "/privacy",
+  noIndex: true,
 });
 
 const UPDATED = "April 21, 2026";

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { AnswerBox } from "@/components/answer-box";
 import { LongFormLayout } from "@/components/long-form-layout";
 import { DownloadCard } from "@/components/download-card";
 import { JsonLd } from "@/components/seo/json-ld";
@@ -38,6 +39,12 @@ export default function GuidesIndexPage() {
         ]}
         sidebar={<DownloadCard campaign="guides-index-sidebar" />}
       >
+        <AnswerBox>
+          Start with hiragana, then katakana, then beginner words. These guides
+          show the path from zero Japanese to basic N5 reading, listening, and
+          review.
+        </AnswerBox>
+
         <p>
           These are the pillars. Each one stands alone, and together they map a
           path from zero Japanese to comfortable N5 reading and listening. They

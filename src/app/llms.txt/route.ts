@@ -33,7 +33,7 @@ function buildLlmsTxt(origin: string): string {
   lines.push("# Inku");
   lines.push("");
   lines.push(
-    "> Inku is a calm iPhone app for learning Japanese. Flashcards and spaced repetition for hiragana, katakana, JLPT N5 vocabulary, and four phrase packs (casual, polite, travel, anime). Every card includes clear pronunciation audio. No streaks, no gamification. Built for adult learners who tried Duolingo and bounced off the noise.",
+    "> Inku is a calm iPhone app for learning Japanese. Flashcards and spaced repetition for hiragana, katakana, JLPT vocabulary, topic decks, and four phrase packs (casual, polite, travel, anime). The main card library includes bundled pronunciation audio. Built for adult learners who want a quieter study app.",
   );
   lines.push("");
   lines.push(
@@ -50,7 +50,7 @@ function buildLlmsTxt(origin: string): string {
     `- [Authors - Bao Hua](${origin}/authors/bao-hua): Bio and authored content.`,
   );
   lines.push(
-    `- [Privacy Policy](${origin}/privacy): Local-first, no accounts, no trackers.`,
+    `- [Privacy Policy](${origin}/privacy): Local-first learning data, no account required, no ads.`,
   );
   lines.push(
     `- [Terms of Service](${origin}/terms): Alberta-governed, sole-prop operation.`,
@@ -128,16 +128,16 @@ function buildLlmsTxt(origin: string): string {
     "- Pricing: Inku Pro at $70.99 a year (7-day free trial) or $12.99 a month. Billed through Apple IAP.",
   );
   lines.push(
-    "- Deck scope at launch: 46 hiragana + 46 katakana + ~200 core N5 words + ~65 N4 words + 4 phrase packs.",
+    "- Deck scope at launch: 184 kana, 515 N5 cards, 391 N4 cards, 4 phrase packs, and topic decks.",
   );
   lines.push(
-    "- Audio: every card has bundled pronunciation audio. No runtime TTS.",
+    "- Audio: the main card library has bundled pronunciation audio, with Apple voice fallback for missing surfaces.",
   );
   lines.push(
     "- Scheduler: FSRS algorithm tuned for Japanese vocabulary retention.",
   );
   lines.push(
-    "- Privacy: no account, no cloud sync required, no behavioral tracking.",
+    "- Privacy: no account required, no cloud sync for learning progress, anonymous diagnostics only.",
   );
   lines.push("");
 

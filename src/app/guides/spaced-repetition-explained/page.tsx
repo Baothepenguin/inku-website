@@ -333,7 +333,7 @@ export default function SpacedRepetitionPage() {
 
         <QuoteBlock
           quote="I spent two years doing Anki for 45 minutes a day. I passed N3. I also never spoke Japanese to anyone. SRS is necessary, not sufficient."
-          attribution="A learner who figured it out the hard way"
+          attribution="Inku study note"
           className="my-10"
         />
 

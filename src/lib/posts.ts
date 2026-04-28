@@ -238,6 +238,51 @@ export const ALL_POSTS: PostRecord[] = [
     tags: ["Kanji", "Strategy"],
     category: "blog",
   },
+  {
+    slug: "/blog/i-built-the-japanese-app-i-wanted",
+    title: "I Built the Japanese App I Wanted After Quitting Noisy Language Apps",
+    description:
+      "A short launch note about why Inku exists: Japanese that sticks, without a phone that yells at you.",
+    date: "2026-04-28",
+    readingTime: "4 min read",
+    wordCount: 850,
+    authorSlug: "bao-hua",
+    tags: ["Launch", "Founder story"],
+    category: "blog",
+    answerBox:
+      "Inku exists for learners who want Japanese to stick, but do not want their phone to yell at them. It is a calm iPhone flashcard app for kana, beginner vocabulary, phrases, audio-supported review, handwriting, progress, and a soft daily habit.",
+    keywords: ["Inku launch", "Japanese app", "calm language app"],
+  },
+  {
+    slug: "/blog/why-inku-teaches-five-cards-at-a-time",
+    title: "Why Inku Teaches Five Cards at a Time",
+    description:
+      "Why small review sets make Japanese easier to start, easier to finish, and easier to remember.",
+    date: "2026-04-28",
+    readingTime: "4 min read",
+    wordCount: 820,
+    authorSlug: "bao-hua",
+    tags: ["Launch", "Flashcards"],
+    category: "blog",
+    answerBox:
+      "Inku teaches five cards at a time because small sets are easier to start and easier to finish. A tiny stack lowers pressure, keeps attention on the Japanese, and makes the daily habit feel possible.",
+    keywords: ["Japanese flashcards", "five cards at a time", "spaced repetition"],
+  },
+  {
+    slug: "/blog/streak-trap-vs-study-habit",
+    title: "The Difference Between a Streak Trap and a Study Habit",
+    description:
+      "A simple way to tell whether your Japanese app is helping you learn or just helping you come back.",
+    date: "2026-04-28",
+    readingTime: "4 min read",
+    wordCount: 900,
+    authorSlug: "bao-hua",
+    tags: ["Launch", "Study habit"],
+    category: "blog",
+    answerBox:
+      "A streak trap makes you protect the number. A study habit helps you remember the Japanese. Good habit design makes it easy to return without shame, review what is due, and leave with something learned.",
+    keywords: ["study habit", "language app streak", "Japanese learning habit"],
+  },
 
   // --- Comparison pages ---
   {
@@ -340,7 +385,7 @@ export const ALL_POSTS: PostRecord[] = [
     slug: "/vs/noji",
     title: "Inku vs Noji",
     description:
-      "Noji is a powerful web flashcard tool with a tool library. Inku is iPhone-first with native audio.",
+      "Noji is a powerful web flashcard tool with a tool library. Inku is iPhone-first with Japanese audio.",
     date: "2026-04-21",
     readingTime: "10 min read",
     wordCount: 2200,

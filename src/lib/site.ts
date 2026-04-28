@@ -2,7 +2,7 @@ export const SITE = {
   name: "Inku",
   tagline: "A calm way to learn Japanese.",
   description:
-    "Inku is a flashcard app for iPhone that teaches Japanese the way you'd want to learn it: calm, deliberate, with pronunciation audio. Hiragana, katakana, N5 vocab, phrases, and a handwriting mode, all on one quiet screen.",
+    "Inku is a calm Japanese flashcard app for iPhone. Learn kana, JLPT vocabulary, useful phrases, audio-supported cards, handwriting, and spaced review without ads or accounts.",
   url: "https://inkujapanese.com",
   supportEmail: "app@inkujapanese.com",
   operator: {

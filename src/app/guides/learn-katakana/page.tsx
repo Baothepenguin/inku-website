@@ -225,7 +225,7 @@ export default function LearnKatakanaPage() {
           on the sounds.
         </p>
 
-        <h3 id="day-one-kat">Day 1 — 21 characters</h3>
+        <h3 id="day-one-kat">Day 1  -  21 characters</h3>
         <p>
           Learn rows ア, カ, サ, タ, and ン. Same process as hiragana:
           shape, audio, compare each katakana against its hiragana
@@ -233,13 +233,13 @@ export default function LearnKatakanaPage() {
           three times. Morning session 45 minutes, evening session 20.
         </p>
 
-        <h3 id="day-two-kat">Day 2 — 15 more</h3>
+        <h3 id="day-two-kat">Day 2  -  15 more</h3>
         <p>
           Add rows ナ, ハ, マ. Review Day 1 first, then introduce new.
           Shuffle all 36 and drill.
         </p>
 
-        <h3 id="day-three-kat">Day 3 — the last 10 and cleanup</h3>
+        <h3 id="day-three-kat">Day 3  -  the last 10 and cleanup</h3>
         <p>
           Add ヤ, ラ, ワ rows and ヲ. Drill the full 46. Isolate the
           confusables (see below) and drill them together. Read a few
@@ -295,23 +295,23 @@ export default function LearnKatakanaPage() {
         </p>
         <ul>
           <li>
-            <strong>ファ, フィ, フェ, フォ</strong> — fa, fi, fe, fo (for
+            <strong>ファ, フィ, フェ, フォ</strong>  -  fa, fi, fe, fo (for
             words like ファミリー, family).
           </li>
           <li>
-            <strong>ヴァ, ヴィ, ヴ, ヴェ, ヴォ</strong> — va, vi, vu, ve, vo
+            <strong>ヴァ, ヴィ, ヴ, ヴェ, ヴォ</strong>  -  va, vi, vu, ve, vo
             (rare, and younger speakers often just use B instead).
           </li>
           <li>
-            <strong>ティ, ディ</strong> — ti, di (for パーティ (party) and
+            <strong>ティ, ディ</strong>  -  ti, di (for パーティ (party) and
             ディナー (dinner)).
           </li>
           <li>
-            <strong>チェ, ジェ</strong> — che, je (for チェス (chess) and
+            <strong>チェ, ジェ</strong>  -  che, je (for チェス (chess) and
             ジェット (jet)).
           </li>
           <li>
-            <strong>ウィ, ウェ, ウォ</strong> — wi, we, wo (for
+            <strong>ウィ, ウェ, ウォ</strong>  -  wi, we, wo (for
             ウェブ (web) and ウィスキー (whiskey)).
           </li>
         </ul>
@@ -339,7 +339,7 @@ export default function LearnKatakanaPage() {
         <p>
           Japanese grocery stores are a katakana playground. Walk past the
           snack aisle and you will see ポテトチップス, バター, ミルク,
-          チョコレート — and also the occasional Japanese product that
+          チョコレート  -  and also the occasional Japanese product that
           uses katakana for a marketing edge (the Japanese confection
           オレオ is Oreo, yes).
         </p>
