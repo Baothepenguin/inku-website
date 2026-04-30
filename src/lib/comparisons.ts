@@ -653,6 +653,389 @@ export const COMPARISONS: Record<string, ComparisonRecord> = {
     ],
   },
 
+  japanesepod101: {
+    slug: "japanesepod101",
+    competitorName: "JapanesePod101",
+    competitorShortName: "JapanesePod101",
+    tagline:
+      "JapanesePod101 is the audio-lesson catalog with thousands of episodes. Inku is a calm flashcard app for iPhone. Listen vs review.",
+    summary:
+      "JapanesePod101 is a podcast-style platform with thousands of audio lessons across every JLPT level. Inku is a curated flashcard app with bundled audio and FSRS spaced review. Different shapes for different study modes.",
+    releaseYear: 2008,
+    competitorCategory: "Audio-lesson Japanese platform",
+    competitorPricing: "Paid plans, see official pricing",
+    intro:
+      "JapanesePod101 has been the go-to audio-lesson resource for Japanese for nearly two decades. It is enormous, friendly, and pedagogically sound. Inku does not compete on audio lessons. Inku competes on the daily 10-minute flashcard ritual that turns lessons into long-term retention.",
+    inkuWins: [
+      {
+        scenario: "You learn vocabulary faster from spaced flashcards than from podcasts",
+        explanation:
+          "JapanesePod101 episodes introduce vocabulary inside dialogue. Inku surfaces the word, the audio, and the meaning in 30 seconds and schedules its return. Different efficiency curves; Inku is faster for raw vocabulary acquisition.",
+      },
+      {
+        scenario: "You want a calm 10-minute daily ritual",
+        explanation:
+          "JapanesePod101 lessons run 10-25 minutes each. Inku's review session ends when today's queue ends. The shape of the daily commitment is different.",
+      },
+      {
+        scenario: "You want offline, account-free learning",
+        explanation:
+          "Inku's main card library and progress are on your iPhone. JapanesePod101 is account-based with cloud-stored progress and streaming audio.",
+      },
+    ],
+    competitorWins: [
+      {
+        scenario: "You learn best by listening",
+        explanation:
+          "JapanesePod101's catalog of dialogues, slang, and culture commentary is genuinely irreplaceable. Inku has bundled card audio but does not teach via dialogue.",
+      },
+      {
+        scenario: "You want cultural context and conversation patterns",
+        explanation:
+          "JapanesePod101 hosts explain Japanese culture, regional dialects, and conversational nuance throughout. Inku is vocabulary-focused.",
+      },
+      {
+        scenario: "You're studying for JLPT N3, N2, or N1",
+        explanation:
+          "JapanesePod101 has thousands of intermediate-to-advanced lessons. Inku's curriculum is N5/N4 today; deeper levels are on the roadmap.",
+      },
+    ],
+    features: [
+      { feature: "Format", inku: "Flashcards + audio", competitor: "Audio lessons + PDF notes", winner: "tie" },
+      { feature: "Daily commitment", inku: "10-15 min", competitor: "20-30 min/lesson", winner: "inku" },
+      { feature: "Vocabulary breadth", inku: "17 unlocked bundles (N5/N4)", competitor: "Thousands of words across all JLPT levels", winner: "competitor" },
+      { feature: "Cultural / conversation content", inku: "Minimal", competitor: "Extensive", winner: "competitor" },
+      { feature: "Spaced repetition", inku: "FSRS scheduler", competitor: "Built-in review tools, lighter", winner: "inku" },
+      { feature: "Offline / no account", inku: "Yes", competitor: "Account required", winner: "inku" },
+      { feature: "Pricing", inku: "$70.99/yr", competitor: "$4-$25/mo plan-dependent", winner: "tie" },
+      { feature: "Platform", inku: "iPhone", competitor: "iOS, Android, web", winner: "competitor" },
+    ],
+    honestTake:
+      "These two pair beautifully. JapanesePod101 supplies input — listening, dialogue, culture. Inku supplies retention — vocabulary, kana, daily review. Most adults who study with both progress faster than either alone.",
+    verdict:
+      "Use JapanesePod101 if: you learn by listening and want cultural depth. Use Inku if: you want a calm flashcard ritual that turns lessons into long-term memory.",
+    recommendation:
+      "Pair them. Listen to one JapanesePod101 lesson, then review the new vocabulary in Inku.",
+    faqs: [
+      {
+        q: "Can I use Inku and JapanesePod101 together?",
+        a: "Yes — they're complementary. Listen for input, drill in Inku for retention. Many serious learners do exactly this.",
+      },
+      {
+        q: "Which is better for absolute beginners?",
+        a: "Inku, for the kana foundation. JapanesePod101's beginner lessons assume you know hiragana already, which is the same gap Duolingo and Lingopie have.",
+      },
+      {
+        q: "How does the audio compare?",
+        a: "JapanesePod101's audio is dialogue at conversational speed by native hosts. Inku's audio is per-card pronunciation. Different purposes — listening practice vs production model.",
+      },
+    ],
+  },
+
+  memrise: {
+    slug: "memrise",
+    competitorName: "Memrise",
+    competitorShortName: "Memrise",
+    tagline:
+      "Memrise teaches Japanese through user-recorded native speaker videos. Inku teaches Japanese through curated flashcards with bundled audio. Video vs card.",
+    summary:
+      "Memrise is a multi-language app built around short videos of native speakers. Inku is a Japanese-only flashcard app with FSRS scheduling and curated vocabulary. Different mediums of the same problem.",
+    releaseYear: 2010,
+    competitorCategory: "Video-based multi-language app",
+    competitorPricing: "Free tier, paid plan",
+    intro:
+      "Memrise's signature feature is short clips of real Japanese speakers saying real phrases. It is a strong tool for learners who want to model native pronunciation. Inku takes a different angle: curated flashcards with FSRS-scheduled review. Choose by how you remember best.",
+    inkuWins: [
+      {
+        scenario: "You want a Japanese-only app, not a 22-language platform",
+        explanation:
+          "Memrise covers many languages and its Japanese course is one of many. Inku is Japanese-only and stays that way.",
+      },
+      {
+        scenario: "You want a modern spaced-repetition scheduler",
+        explanation:
+          "Inku uses FSRS. Memrise's review system is lighter and less retention-optimized.",
+      },
+      {
+        scenario: "You're tired of generic 'learning a language is fun' UI",
+        explanation:
+          "Memrise is gamified with points, leaderboards, and dailies. Inku has none.",
+      },
+    ],
+    competitorWins: [
+      {
+        scenario: "You learn pronunciation best from native speaker videos",
+        explanation:
+          "Memrise's short user-submitted clips of native speakers are genuinely useful for pronunciation exposure and have no real equivalent in Inku.",
+      },
+      {
+        scenario: "You want a free tier",
+        explanation:
+          "Memrise has a more generous free tier than Inku's 7-day trial.",
+      },
+      {
+        scenario: "You're learning multiple languages",
+        explanation:
+          "One Memrise subscription covers all 22+ languages. Inku is Japanese-only.",
+      },
+    ],
+    features: [
+      { feature: "Format", inku: "Flashcards + audio", competitor: "Videos + spaced review", winner: "tie" },
+      { feature: "Audio", inku: "Bundled clean audio", competitor: "Native speaker video clips", winner: "tie" },
+      { feature: "SRS algorithm", inku: "FSRS", competitor: "Lighter custom system", winner: "inku" },
+      { feature: "Gamification", inku: "None", competitor: "Heavy", winner: "tie" },
+      { feature: "Languages", inku: "Japanese", competitor: "22+", winner: "competitor" },
+      { feature: "Free tier", inku: "7-day trial", competitor: "Yes", winner: "competitor" },
+      { feature: "Platform", inku: "iPhone", competitor: "iOS, Android, web", winner: "competitor" },
+    ],
+    honestTake:
+      "Memrise's video-with-real-speakers innovation is real and valuable for pronunciation. If you struggle with how Japanese should sound, it helps. If your bottleneck is vocabulary retention or kana, Inku's spaced review is a more efficient daily tool.",
+    verdict:
+      "Use Memrise if: you learn pronunciation from video and want a multi-language platform. Use Inku if: you want focused Japanese flashcard practice with modern SRS.",
+    recommendation:
+      "They can pair. Memrise for native speaker video exposure, Inku for daily vocabulary review.",
+    faqs: [
+      {
+        q: "Is Memrise still good for Japanese in 2026?",
+        a: "Yes, for pronunciation and listening practice. Memrise's grammar coverage is thinner than dedicated Japanese apps and the free tier has been narrowing over time.",
+      },
+      {
+        q: "Why use Inku if Memrise has native speaker videos?",
+        a: "Different jobs. Native videos help you hear Japanese; spaced flashcards help you remember it. Most learners need both, not one.",
+      },
+    ],
+  },
+
+  drops: {
+    slug: "drops",
+    competitorName: "Drops",
+    competitorShortName: "Drops",
+    tagline:
+      "Drops is a beautiful 5-minute vocabulary app with illustrations. Inku is a calm flashcard app with audio and SRS. Visual vs auditory.",
+    summary:
+      "Drops teaches vocabulary through fast, illustrated drag-and-drop puzzles in 5-minute sessions. Inku teaches vocabulary through audio-supported flashcards with FSRS scheduling. Different efficiency curves.",
+    releaseYear: 2015,
+    competitorCategory: "Illustrated vocabulary app",
+    competitorPricing: "Free with limited daily time, paid Premium",
+    intro:
+      "Drops is famously beautiful: every word has a custom illustration, sessions are capped at 5 minutes by design, and the UI is genuinely lovely. Inku's design is calmer but the loops are different — Drops uses pattern-matching mini-games, Inku uses spaced flashcards with audio.",
+    inkuWins: [
+      {
+        scenario: "You want clear pronunciation audio with each word",
+        explanation:
+          "Drops uses minimal audio per card. Inku bundles pronunciation audio for the main card library so you hear every word.",
+      },
+      {
+        scenario: "You want unlimited study time per day",
+        explanation:
+          "Drops caps free users at 5 minutes a day and Premium at longer windows. Inku has no daily cap.",
+      },
+      {
+        scenario: "You want spaced repetition to drive what you see",
+        explanation:
+          "Drops uses a shallow review system. Inku uses FSRS, which is the same modern scheduler Anki adopted in 2024.",
+      },
+    ],
+    competitorWins: [
+      {
+        scenario: "You're a strong visual learner",
+        explanation:
+          "Drops' custom illustrations are a real edge for visual memory. Inku's cards are typographic, not illustrated.",
+      },
+      {
+        scenario: "You want a free tier you can actually use",
+        explanation:
+          "Drops' 5-minute free tier is enough to learn slowly without paying. Inku is subscription-first.",
+      },
+      {
+        scenario: "You're learning multiple languages",
+        explanation:
+          "Drops covers 50+ languages. Inku is Japanese-only.",
+      },
+    ],
+    features: [
+      { feature: "Format", inku: "Flashcards + audio", competitor: "Illustrated drag-and-drop", winner: "tie" },
+      { feature: "Daily time cap", inku: "None", competitor: "5 min free, longer paid", winner: "inku" },
+      { feature: "Audio support", inku: "Bundled", competitor: "Light", winner: "inku" },
+      { feature: "Visuals", inku: "Typographic + JP type", competitor: "Custom illustrations", winner: "competitor" },
+      { feature: "SRS algorithm", inku: "FSRS", competitor: "Light custom", winner: "inku" },
+      { feature: "Languages", inku: "Japanese", competitor: "50+", winner: "competitor" },
+      { feature: "Pricing", inku: "$70.99/yr", competitor: "Free or ~$70/yr", winner: "tie" },
+    ],
+    honestTake:
+      "Drops is a wonderful tool for visual learners and casual study. If you have 5 minutes a day and want them to feel like a small game with illustrations, Drops fits. If you want to actually retain hundreds of words and pass JLPT N5, Inku's flashcard + SRS loop is the better engine.",
+    verdict:
+      "Use Drops if: you're visual, casual, and budget-conscious. Use Inku if: you want serious vocabulary retention with audio.",
+    recommendation:
+      "Drops for casual exposure, Inku for the daily retention engine.",
+    faqs: [
+      {
+        q: "Is Drops actually only 5 minutes a day?",
+        a: "On the free tier, yes. Premium unlocks longer sessions. The 5-minute design is intentional — Drops believes shorter sessions retain better.",
+      },
+      {
+        q: "Does Drops teach kanji?",
+        a: "Lightly. Drops introduces kanji visually through illustrations rather than systematic radicals or stroke order. Inku covers kana more deeply; for kanji depth, see WaniKani.",
+      },
+    ],
+  },
+
+  pimsleur: {
+    slug: "pimsleur",
+    competitorName: "Pimsleur",
+    competitorShortName: "Pimsleur",
+    tagline:
+      "Pimsleur is the audio-only Japanese course you listen to. Inku is a visual-plus-audio iPhone flashcard app. Listening vs reading.",
+    summary:
+      "Pimsleur is a 30-minute-per-lesson audio course based on graduated interval recall. Inku is a calm flashcard app with FSRS scheduling and curated vocabulary. Different modalities for different learners.",
+    releaseYear: 1963,
+    competitorCategory: "Audio-only Japanese course",
+    competitorPricing: "Paid subscription, see official pricing",
+    intro:
+      "Pimsleur is the godfather of audio-only language learning. It's been refined over six decades, and its 30-minute lessons drill listening and pronunciation through a method called graduated interval recall. Inku takes the opposite approach: visual flashcards with spaced review. The two solve different problems.",
+    inkuWins: [
+      {
+        scenario: "You want to read Japanese, not just speak it",
+        explanation:
+          "Pimsleur is intentionally audio-only — you don't see kana or kanji during a lesson. Inku teaches both reading and listening from day one.",
+      },
+      {
+        scenario: "You want to learn at your own pace, not 30 minutes at a time",
+        explanation:
+          "Pimsleur lessons are fixed-length 30-minute audio. Inku's session is finite but variable — about 10 minutes for most learners.",
+      },
+      {
+        scenario: "You want to study in silence (subway, library, office)",
+        explanation:
+          "Pimsleur requires headphones and active listening. Inku works silently — read, tap, swipe.",
+      },
+    ],
+    competitorWins: [
+      {
+        scenario: "You learn best by ear and want to focus on speaking",
+        explanation:
+          "Pimsleur's graduated interval recall builds spoken Japanese fast for adults who can commit to 30 minutes a day of focused listening.",
+      },
+      {
+        scenario: "You commute hands-free",
+        explanation:
+          "Pimsleur is designed for the car, the gym, the walk. Inku needs your eyes on a screen.",
+      },
+      {
+        scenario: "You distrust apps and prefer a course",
+        explanation:
+          "Pimsleur is a structured, sequential course. Inku is a tool. If you want a syllabus that holds your hand, Pimsleur is the older choice.",
+      },
+    ],
+    features: [
+      { feature: "Format", inku: "Flashcards + audio", competitor: "Audio lessons", winner: "tie" },
+      { feature: "Reading practice", inku: "Yes (kana + kanji)", competitor: "No, audio-only", winner: "inku" },
+      { feature: "Speaking drills", inku: "Light (audio prompts)", competitor: "Core feature", winner: "competitor" },
+      { feature: "Daily time", inku: "10-15 min", competitor: "30 min per lesson", winner: "inku" },
+      { feature: "Spaced repetition", inku: "FSRS", competitor: "Graduated interval recall (1960s)", winner: "inku" },
+      { feature: "Pricing", inku: "$70.99/yr", competitor: "$15-$22/mo plan-dependent", winner: "competitor" },
+      { feature: "Hands-free", inku: "No", competitor: "Yes", winner: "competitor" },
+    ],
+    honestTake:
+      "Pimsleur builds a different muscle. Adults who finish Pimsleur Japanese 1-3 can speak passable conversational Japanese without ever having read kana — which is striking, but also leaves a real reading gap. Inku closes that gap. If your goal is to read Japanese, you need Inku or something like it; if your goal is to speak it on a trip, Pimsleur is faster.",
+    verdict:
+      "Use Pimsleur if: your bottleneck is listening + speaking and you commute. Use Inku if: your bottleneck is reading + retention and you want to study on your phone.",
+    recommendation:
+      "Pair them: Pimsleur for the commute, Inku for the coffee break. Reading and listening are separate skills.",
+    faqs: [
+      {
+        q: "Is Pimsleur worth it for Japanese?",
+        a: "Yes if you commute and learn by listening. The cost-per-hour is high relative to free podcasts, but the structured method works for many adults.",
+      },
+      {
+        q: "Can I learn Japanese with Pimsleur alone?",
+        a: "You can speak it. You can't read it. Pimsleur intentionally skips written Japanese. Pair with a kana app like Inku from day one.",
+      },
+      {
+        q: "How does Pimsleur's interval recall compare to Inku's FSRS?",
+        a: "Pimsleur invented graduated interval recall in the 1960s — it's a fixed schedule embedded in the audio. FSRS adapts intervals per-card per-user. FSRS is more efficient for retention; Pimsleur is more comfortable as a passive listening experience.",
+      },
+    ],
+  },
+
+  "rocket-japanese": {
+    slug: "rocket-japanese",
+    competitorName: "Rocket Japanese",
+    competitorShortName: "Rocket",
+    tagline:
+      "Rocket Japanese is a one-time-purchase audio-and-text course. Inku is a calm subscription flashcard app for iPhone. Course vs tool.",
+    summary:
+      "Rocket Japanese sells three lifetime levels of structured audio + text Japanese lessons. Inku is a Japanese flashcard app with FSRS scheduling. Owning a course versus subscribing to a tool.",
+    releaseYear: 2004,
+    competitorCategory: "One-time-purchase Japanese course",
+    competitorPricing: "$149-$300+ one-time per level (level 1, 2, 3)",
+    intro:
+      "Rocket Japanese is one of the few major courses still offered as a one-time purchase rather than a subscription. It bundles audio lessons, written lessons, and culture notes across three levels. Inku is the opposite shape: a small, focused flashcard app you subscribe to. Buy a course, or rent a tool.",
+    inkuWins: [
+      {
+        scenario: "You want a calm daily ritual, not a 30-60 minute lesson",
+        explanation:
+          "Rocket Japanese lessons run long. Inku's session is finite — 10-15 minutes for most adults.",
+      },
+      {
+        scenario: "You want a modern spaced-repetition scheduler",
+        explanation:
+          "Rocket has built-in flashcard tools but uses a basic interval system. Inku uses FSRS.",
+      },
+      {
+        scenario: "You're focused on retention, not lessons",
+        explanation:
+          "Rocket teaches new material. Inku makes the material you already know stick. Different jobs.",
+      },
+    ],
+    competitorWins: [
+      {
+        scenario: "You hate subscriptions and want to own your course",
+        explanation:
+          "Rocket is one of the few major Japanese courses sold as a permanent license. If subscription fatigue is real for you, Rocket fits.",
+      },
+      {
+        scenario: "You want structured grammar lessons",
+        explanation:
+          "Rocket has a real Japanese grammar curriculum across three levels. Inku does not teach grammar directly.",
+      },
+      {
+        scenario: "You want native + non-native instructor explanations",
+        explanation:
+          "Rocket's Japanese hosts include both native speakers and an English-speaking guide who explains pitfalls. Inku has no instructor at all.",
+      },
+    ],
+    features: [
+      { feature: "Format", inku: "Flashcards + audio", competitor: "Audio + text lessons + flashcards", winner: "tie" },
+      { feature: "Daily commitment", inku: "10-15 min", competitor: "30-60 min/lesson", winner: "inku" },
+      { feature: "Grammar lessons", inku: "None", competitor: "Full curriculum", winner: "competitor" },
+      { feature: "SRS algorithm", inku: "FSRS", competitor: "Basic interval", winner: "inku" },
+      { feature: "Payment model", inku: "Subscription", competitor: "One-time per level", winner: "tie" },
+      { feature: "Total cost over 3 years", inku: "~$210", competitor: "$300-600+ across 3 levels", winner: "inku" },
+      { feature: "Platform", inku: "iPhone", competitor: "Web + iOS + Android", winner: "competitor" },
+    ],
+    honestTake:
+      "Rocket is the right choice if you want structured grammar lessons you own forever and the subscription model bothers you. Inku is the right choice if you want a small daily app that makes Japanese stick. Some adults run Rocket as their morning lesson and Inku as their afternoon review — the combination works.",
+    verdict:
+      "Use Rocket if: you want a one-time-purchase course with grammar. Use Inku if: you want a subscription tool focused on daily vocabulary retention.",
+    recommendation:
+      "Rocket for the lesson, Inku for the retention.",
+    faqs: [
+      {
+        q: "Is Rocket Japanese still updated?",
+        a: "The course has been updated periodically since 2004. New audio recordings have been added, but the core curriculum is mature rather than rapidly evolving.",
+      },
+      {
+        q: "Does Rocket Japanese teach kanji?",
+        a: "Lightly, mostly through context inside vocabulary. For systematic kanji, you'd still pair with WaniKani or similar.",
+      },
+      {
+        q: "Is one-time-purchase actually cheaper long-term?",
+        a: "Depends on study horizon. Three Rocket levels at full price runs $300-$600. Three years of Inku runs $210. If you only ever want Level 1 of Rocket, it's cheaper than three years of any subscription.",
+      },
+    ],
+  },
+
   noji: {
     slug: "noji",
     competitorName: "Noji",

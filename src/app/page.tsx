@@ -11,17 +11,21 @@ import { pageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = pageMetadata({
   title: "Inku: A calm way to learn Japanese on iPhone",
+  // Trimmed to ~155 chars so it does not get clipped in SERP snippets.
   description:
-    "Inku is a calm Japanese flashcard app for iPhone. Learn kana, JLPT vocabulary, useful phrases, audio-supported cards, handwriting, and spaced review without ads or accounts.",
+    "Calm Japanese flashcard app for iPhone. Hiragana, katakana, JLPT N5 + N4 vocabulary, 4 phrase packs. Spaced repetition, audio, no ads. 7-day free trial.",
   path: "/",
   keywords: [
+    "Japanese flashcard app",
     "learn Japanese",
     "Japanese app iPhone",
     "hiragana katakana app",
     "JLPT N5 vocabulary",
+    "JLPT N4 vocabulary",
     "Duolingo alternative",
     "Anki alternative",
     "spaced repetition Japanese",
+    "calm language app",
   ],
 });
 

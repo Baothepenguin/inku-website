@@ -7,6 +7,7 @@ import { DownloadCTA } from "@/components/download-cta";
 import { LogoMark } from "@/components/logo-mark";
 
 const NAV = [
+  { href: "/learn-japanese", label: "Learn Japanese" },
   { href: "/guides", label: "Guides" },
   { href: "/blog", label: "Blog" },
   { href: "/vs", label: "Compare" },

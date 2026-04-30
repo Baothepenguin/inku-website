@@ -53,6 +53,26 @@ const COMPARISON_SOURCES: Record<string, SourceItem[]> = {
     { label: "Noji official site", url: "https://noji.io/" },
     { label: "Noji help center", url: "https://help.noji.io/" },
   ],
+  japanesepod101: [
+    { label: "JapanesePod101 official site", url: "https://www.japanesepod101.com/" },
+    { label: "JapanesePod101 pricing", url: "https://www.japanesepod101.com/member/myaccount/" },
+  ],
+  memrise: [
+    { label: "Memrise official site", url: "https://www.memrise.com/" },
+    { label: "Memrise plans", url: "https://www.memrise.com/plans/" },
+  ],
+  drops: [
+    { label: "Drops official site", url: "https://languagedrops.com/" },
+    { label: "Drops Premium pricing", url: "https://help.languagedrops.com/article/15-what-is-drops-premium" },
+  ],
+  pimsleur: [
+    { label: "Pimsleur Japanese", url: "https://www.pimsleur.com/learn-japanese" },
+    { label: "Pimsleur subscription pricing", url: "https://www.pimsleur.com/subscriptions" },
+  ],
+  "rocket-japanese": [
+    { label: "Rocket Japanese official site", url: "https://www.rocketlanguages.com/japanese" },
+    { label: "Rocket Languages pricing", url: "https://www.rocketlanguages.com/pricing" },
+  ],
 };
 
 export function ComparisonPage({ data }: { data: ComparisonRecord }) {
@@ -73,7 +93,13 @@ export function ComparisonPage({ data }: { data: ComparisonRecord }) {
             authorName: "Bao Hua",
             authorSlug: "bao-hua",
             type: "Article",
-            wordCount: 2800,
+            // wordCount intentionally omitted — see ALL_POSTS for honest counts.
+            about: [
+              "Inku",
+              data.competitorName,
+              "Japanese learning apps",
+              "Japanese language",
+            ],
           }),
           productComparisonSchema({
             name: title,

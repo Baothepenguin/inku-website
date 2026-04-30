@@ -10,12 +10,12 @@ import { COMPARISONS } from "@/lib/comparisons";
 
 const TITLE = "Inku vs every Japanese learning app";
 const SUBTITLE =
-  "Nine honest side-by-side comparisons. Where Inku wins, where it loses, which app is right for your stage.";
+  "Honest side-by-side comparisons across the major Japanese apps. Where Inku wins, where it loses, which app is right for your stage.";
 
 export const metadata: Metadata = pageMetadata({
   title: TITLE,
   description:
-    "Compare Inku to Duolingo, Anki, WaniKani, Bunpo, LingoDeer, Renshuu, Busuu, Lingopie, and Noji. Honest feature-by-feature breakdowns.",
+    "Compare Inku to Duolingo, Anki, WaniKani, Bunpo, LingoDeer, Renshuu, Busuu, Lingopie, Noji, JapanesePod101, Memrise, Drops, Pimsleur, and Rocket Japanese.",
   path: "/vs",
 });
 

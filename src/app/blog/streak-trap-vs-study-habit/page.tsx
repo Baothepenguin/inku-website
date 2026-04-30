@@ -32,9 +32,28 @@ export default function Post() {
         { id: "habit", label: "What a study habit is" },
         { id: "inku", label: "Where Inku fits" },
       ]}
+      faqs={[
+        {
+          q: "What is a streak trap?",
+          a: "A streak trap is when an app's daily-streak counter becomes the reason you open the app, instead of the learning. You do the shortest action that keeps the number alive, feel relief when it's done, and remember almost nothing the next day.",
+        },
+        {
+          q: "Are streaks bad for learning Japanese?",
+          a: "Streaks are not inherently bad. They become bad when shame about breaking them replaces curiosity about learning. A healthy streak rewards showing up; an unhealthy streak punishes missing a day so hard that you protect the number instead of the knowledge.",
+        },
+        {
+          q: "How do I know if my Japanese app is a streak trap?",
+          a: "Three tells: you feel anxiety about losing the streak, you do the minimum lesson rather than the right lesson, and you cannot remember what you studied yesterday. If two of three are true, the app is optimizing for retention of you, not retention of Japanese.",
+        },
+        {
+          q: "How does Inku handle streaks differently?",
+          a: "Inku tracks streak and progress with a soft, ink-drop visual instead of a fire emoji and a guilt-trip notification. Missing a day surfaces the cards that need work first — not a shame screen. The product target is Japanese that sticks, not panic that retains you.",
+        },
+      ]}
       related={[
         { href: "/blog/why-inku-teaches-five-cards-at-a-time", label: "Why Inku teaches five cards at a time" },
         { href: "/why-inku", label: "Why Inku exists" },
+        { href: "/blog/duolingo-100-days", label: "Duolingo for 100 days" },
       ]}
     >
       <h2 id="trap">What a streak trap is</h2>

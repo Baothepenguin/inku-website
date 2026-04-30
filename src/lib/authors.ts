@@ -7,6 +7,12 @@ export interface AuthorRecord {
   bioShort: string;
   bioLong: string;
   links: { label: string; url: string }[];
+  /** Topics this author writes with first-hand experience. Surfaced in Person schema. */
+  knowsAbout: string[];
+  /** ISO language tags this author can write or teach about. */
+  knowsLanguage: string[];
+  /** Short scannable credentials shown on the bio page and used by AI for E-E-A-T. */
+  credentials: string[];
 }
 
 export const AUTHORS: Record<AuthorSlug, AuthorRecord> = {
@@ -25,6 +31,25 @@ When I am not building, I am reading Kenzaburō Ōe, drinking kōcha, and trying
       { label: "Twitter", url: "https://twitter.com/baothepenguin" },
       { label: "Email", url: "mailto:app@inkujapanese.com" },
       { label: "GitHub", url: "https://github.com/Baothepenguin" },
+    ],
+    knowsAbout: [
+      "Japanese language",
+      "Adult language acquisition",
+      "Spaced repetition",
+      "FSRS algorithm",
+      "Hiragana",
+      "Katakana",
+      "JLPT",
+      "iOS development",
+      "SwiftUI",
+      "Indie software",
+    ],
+    knowsLanguage: ["en", "ja"],
+    credentials: [
+      "Adult Japanese learner since 2022",
+      "Built Inku full-time from Calgary, Alberta",
+      "10+ years shipping software (iOS, web, internal tools)",
+      "Personally writes and audits every guide on this site",
     ],
   },
 };

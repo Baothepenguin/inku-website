@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { outfit, notoSansJp } from "@/lib/fonts";
+import { outfit, fraunces, notoSansJp } from "@/lib/fonts";
 import { SITE } from "@/lib/site";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
@@ -74,7 +74,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${outfit.variable} ${notoSansJp.variable}`}
+      className={`${outfit.variable} ${fraunces.variable} ${notoSansJp.variable}`}
     >
       <body className="min-h-screen antialiased">
         <JsonLd

@@ -10,6 +10,7 @@ import {
   articleSchema,
   breadcrumbSchema,
   faqSchema,
+  howToSchema,
 } from "@/lib/schema";
 import { pageMetadata } from "@/lib/metadata";
 
@@ -68,6 +69,29 @@ const FAQS = [
   },
 ];
 
+const STEPS = [
+  {
+    name: "Pick a tool with a modern scheduler",
+    text: "Use a flashcard app that runs FSRS or a similarly evidence-based algorithm. Inku, Anki (with FSRS enabled), and a handful of newer tools all qualify. Avoid SM-2-only apps for new decks.",
+  },
+  {
+    name: "Cap new cards at 5-15 per day",
+    text: "Going faster than ~15 new cards a day creates a review pile-up that destroys long-term retention. For Japanese vocabulary, 10 new cards a day is a healthy ceiling for most adults.",
+  },
+  {
+    name: "Review every day, even when small",
+    text: "The whole system depends on you seeing each card right before you'd forget it. A 5-minute daily session beats a 60-minute weekly session every time.",
+  },
+  {
+    name: "Grade honestly with Again / Hard / Good / Easy",
+    text: "Don't punish yourself for hitting Again. The scheduler uses your honest grades to predict future intervals; lying to feel better produces a deck that lies back to you.",
+  },
+  {
+    name: "Make atomic, audio-rich cards",
+    text: "One concept per card. Front: prompt. Back: answer plus pronunciation audio plus a sentence. The cleaner the card, the cleaner the recall. Bloated cards are why most SRS attempts fail.",
+  },
+];
+
 export default function SpacedRepetitionPage() {
   return (
     <>
@@ -84,6 +108,19 @@ export default function SpacedRepetitionPage() {
             type: "Article",
             wordCount: 3800,
             keywords: ["spaced repetition", "FSRS", "SM-2", "Anki algorithm"],
+            about: [
+              "Spaced repetition",
+              "FSRS algorithm",
+              "Memory science",
+              "Forgetting curve",
+            ],
+          }),
+          howToSchema({
+            name: "How to use spaced repetition correctly",
+            description:
+              "A five-step practical method for using spaced repetition (SRS) to retain Japanese vocabulary without burning out.",
+            slug: "/guides/spaced-repetition-explained",
+            steps: STEPS,
           }),
           faqSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           breadcrumbSchema([

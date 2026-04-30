@@ -10,6 +10,7 @@ import {
   articleSchema,
   breadcrumbSchema,
   faqSchema,
+  howToSchema,
 } from "@/lib/schema";
 import { pageMetadata } from "@/lib/metadata";
 
@@ -63,6 +64,25 @@ const FAQS = [
   },
 ];
 
+const STEPS = [
+  {
+    name: "Day 1: First 25 katakana",
+    text: "Learn the a, ka, sa, ta, and na rows. That's 25 characters. Spend 45 minutes in the morning on shapes + audio + writing each three times, then 20 minutes in the evening on a shuffled recognition drill.",
+  },
+  {
+    name: "Day 2: Add 21 more, plus reviews",
+    text: "Add the ha, ma, ya, ra, and wa rows. Review the 25 from Day 1 first, then introduce the new 21. Finish by recognizing all 46 from a shuffled deck.",
+  },
+  {
+    name: "Day 3: Confusables drill",
+    text: "Drill the classic katakana confusables side by side: シ vs ツ, ン vs ソ, ク vs ワ, and ナ vs メ. Spend the rest of the session on the small tsu (ッ), the long-vowel mark (ー), and dakuten on katakana.",
+  },
+  {
+    name: "Days 4-7: Lock it in with real text",
+    text: "Read katakana on real-world surfaces: train station signs, Japanese product labels, restaurant menus. Decode loanwords using the standard transformation rules (L becomes R, vowels attached to final consonants).",
+  },
+];
+
 export default function LearnKatakanaPage() {
   return (
     <>
@@ -79,6 +99,15 @@ export default function LearnKatakanaPage() {
             type: "Article",
             wordCount: 4200,
             keywords: ["katakana", "learn katakana"],
+            about: ["Katakana", "Japanese language", "Japanese loanwords", "Kana"],
+          }),
+          howToSchema({
+            name: "Learn katakana in three days",
+            description:
+              "A three-day plan to go from zero katakana to recognizing all 46 characters and reading real-world loanwords.",
+            slug: "/guides/learn-katakana",
+            totalTime: "P3D",
+            steps: STEPS,
           }),
           faqSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           breadcrumbSchema([

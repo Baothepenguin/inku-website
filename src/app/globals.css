@@ -66,17 +66,29 @@
     z-index: 1;
   }
 
-  /* Headings use Outfit. Slightly tighter letter-spacing looks better on
-     geometric sans at large sizes. */
+  /* Headings use Fraunces (editorial display). Optical sizing handles
+     the visual weight at large sizes; we explicitly relax weight to
+     500 because serifs at 600 read heavy. Slight negative tracking
+     keeps display lines tight. */
   h1,
   h2,
   h3,
   h4 {
-    font-family: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
-    font-weight: 600;
+    font-family: var(--font-display), ui-serif, Georgia, "Times New Roman",
+      serif;
+    font-weight: 500;
+    font-variation-settings: "opsz" 144, "SOFT" 50;
     overflow-wrap: break-word;
     text-wrap: balance;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.012em;
+  }
+
+  /* H3/H4 sit at smaller optical sizes — pull the opsz axis down so
+     they read like running titles, not display. */
+  h3,
+  h4 {
+    font-variation-settings: "opsz" 36, "SOFT" 30;
+    letter-spacing: -0.005em;
   }
 
   p {
@@ -84,8 +96,13 @@
     text-wrap: pretty;
   }
 
+  /* `.serif` and `.font-serif` opt into the display face. `.font-body`
+     and `.sans` stay on Outfit for paragraph reading. */
   .serif,
-  .font-serif,
+  .font-serif {
+    font-family: var(--font-display), ui-serif, Georgia, "Times New Roman",
+      serif;
+  }
   .font-body,
   .sans {
     font-family: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
@@ -121,24 +138,32 @@
 
 @layer components {
   .prose-inku {
+    /* Body remains on Outfit for legibility. Headings inside prose
+       inherit the global h1-h4 Fraunces rules above. */
     font-family: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
     @apply max-w-[68ch] text-ink;
-    line-height: 1.65;
+    line-height: 1.6;
     overflow-wrap: break-word;
   }
   .prose-inku h1 {
     @apply text-display-md mt-0 mb-5 tracking-tight;
-    font-weight: 600;
+    font-family: var(--font-display), ui-serif, Georgia, serif;
+    font-weight: 500;
+    font-variation-settings: "opsz" 144, "SOFT" 50;
     text-wrap: balance;
   }
   .prose-inku h2 {
-    @apply text-[1.65rem] md:text-[1.85rem] leading-tight mt-14 mb-4 tracking-tight;
-    font-weight: 600;
+    @apply text-[1.65rem] md:text-[1.95rem] leading-tight mt-14 mb-4 tracking-tight;
+    font-family: var(--font-display), ui-serif, Georgia, serif;
+    font-weight: 500;
+    font-variation-settings: "opsz" 80, "SOFT" 40;
     text-wrap: balance;
   }
   .prose-inku h3 {
-    @apply text-[1.25rem] md:text-[1.4rem] leading-snug mt-10 mb-3 tracking-tight;
-    font-weight: 600;
+    @apply text-[1.3rem] md:text-[1.45rem] leading-snug mt-10 mb-3 tracking-tight;
+    font-family: var(--font-display), ui-serif, Georgia, serif;
+    font-weight: 500;
+    font-variation-settings: "opsz" 36, "SOFT" 30;
     text-wrap: balance;
   }
   .prose-inku p {
@@ -156,8 +181,12 @@
     text-wrap: pretty;
   }
   .prose-inku a {
-    @apply text-matcha underline underline-offset-[3px] decoration-matcha/40 hover:decoration-matcha transition-colors;
+    @apply text-matcha underline underline-offset-[3px] decoration-matcha/40 hover:decoration-matcha transition-[text-decoration-color,color] duration-300;
     overflow-wrap: anywhere;
+    text-decoration-thickness: 1px;
+  }
+  .prose-inku a:hover {
+    text-decoration-thickness: 2px;
   }
   .prose-inku blockquote {
     @apply my-8 border-l-2 border-matcha/60 pl-6 italic text-ink/80;
@@ -226,6 +255,23 @@
       rgba(250, 248, 242, 0) 0%,
       rgba(242, 237, 222, 0.5) 100%
     );
+  }
+
+  /* Animated underline for inline links — left-to-right reveal on
+     hover. Replaces text-decoration:underline for surfaces that want
+     the polish without permanent rule-style emphasis. Opt in with
+     `link-ink` class on individual <a> elements. */
+  .link-ink {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0 1px;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    transition: background-size 320ms cubic-bezier(0.32, 0.72, 0, 1);
+    text-decoration: none;
+  }
+  .link-ink:hover,
+  .link-ink:focus-visible {
+    background-size: 100% 1px;
   }
 
   .no-scrollbar::-webkit-scrollbar {

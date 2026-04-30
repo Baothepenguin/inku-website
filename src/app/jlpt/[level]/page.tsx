@@ -9,6 +9,7 @@ import { JsonLd } from "@/components/seo/json-ld";
 import {
   articleSchema,
   breadcrumbSchema,
+  faqSchema,
 } from "@/lib/schema";
 import { pageMetadata } from "@/lib/metadata";
 import { JLPT_LEVELS } from "@/lib/jlpt";
@@ -35,6 +36,10 @@ export async function generateMetadata({
       `${data.level.toUpperCase()} grammar`,
       `${data.level.toUpperCase()} study plan`,
     ],
+    // Thin "coming-soon" pages should not be indexed until they have full
+    // content. They still resolve and appear in the sitemap so internal links
+    // do not 404 — they just stay out of search results.
+    noIndex: data.status === "coming-soon",
   });
 }
 
@@ -62,8 +67,11 @@ export default async function JlptLevelPage({
             authorName: "Bao Hua",
             authorSlug: "bao-hua",
             type: "Article",
-            wordCount: 2200,
+            about: [data.title, "JLPT", "Japanese language proficiency"],
           }),
+          faqSchema(
+            data.faqs.map((f) => ({ question: f.q, answer: f.a })),
+          ),
           breadcrumbSchema([
             { name: "Home", path: "/" },
             { name: "JLPT", path: "/jlpt" },
@@ -90,6 +98,7 @@ export default async function JlptLevelPage({
           { id: "vocab", label: "Vocabulary examples" },
           { id: "grammar", label: "Grammar examples" },
           { id: "study-plan", label: "Study plan" },
+          { id: "faqs", label: "Common questions" },
           { id: "next", label: "Related guides" },
         ]}
         sidebar={<DownloadCard campaign={`jlpt-${level}`} />}
@@ -194,6 +203,26 @@ export default async function JlptLevelPage({
             <li key={i}>{step}</li>
           ))}
         </ol>
+
+        <h2 id="faqs">Common questions</h2>
+        <div className="not-prose mt-6 space-y-4">
+          {data.faqs.map((faq) => (
+            <details
+              key={faq.q}
+              className="group rounded-lg border border-border bg-cream-raised p-5"
+            >
+              <summary className="flex cursor-pointer list-none items-start justify-between gap-3 font-serif text-lg text-ink">
+                {faq.q}
+                <span className="mt-1 shrink-0 font-sans text-xl text-matcha transition-transform group-open:rotate-45">
+                  +
+                </span>
+              </summary>
+              <p className="mt-3 font-serif text-[1rem] leading-relaxed text-ink-muted">
+                {faq.a}
+              </p>
+            </details>
+          ))}
+        </div>
 
         <h2 id="next">Related guides</h2>
         <ul>

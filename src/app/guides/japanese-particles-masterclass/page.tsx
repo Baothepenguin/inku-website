@@ -9,6 +9,7 @@ import {
   articleSchema,
   breadcrumbSchema,
   faqSchema,
+  howToSchema,
 } from "@/lib/schema";
 import { pageMetadata } from "@/lib/metadata";
 
@@ -350,6 +351,29 @@ const FAQS = [
   },
 ];
 
+const STEPS = [
+  {
+    name: "Memorize the 12 core particles",
+    text: "Drill は, が, を, に, で, へ, と, から, まで, の, も, や until you can name each one's primary role on demand. These twelve cover roughly 95% of everyday Japanese particle usage.",
+  },
+  {
+    name: "Read 50+ example sentences for each",
+    text: "Particles are pattern-based, not rule-based. Read enough example sentences (50 minimum per particle) that you start to feel which particle belongs without thinking. Genki, Tae Kim, and Cure Dolly all work.",
+  },
+  {
+    name: "Drill は vs が separately",
+    text: "The topic-vs-subject distinction is the single biggest stumbling block. Spend dedicated sessions just on は vs が contrasts until each pair feels obvious in context.",
+  },
+  {
+    name: "Notice particles in real Japanese input",
+    text: "When you read manga, watch anime with Japanese subtitles, or listen to podcasts, pause when you hear a particle and ask yourself why that particle. Active noticing accelerates intuition.",
+  },
+  {
+    name: "Reproduce particles in your own writing",
+    text: "Write three Japanese sentences a day, even simple ones, and self-check the particles. Use a tutor or LangCorrect to flag mistakes; production exposes gaps that recognition alone hides.",
+  },
+];
+
 export default function ParticlesPage() {
   return (
     <>
@@ -366,6 +390,14 @@ export default function ParticlesPage() {
             type: "Article",
             wordCount: 5200,
             keywords: ["japanese particles", "wa vs ga", "ni vs de"],
+            about: ["Japanese particles", "Japanese grammar", "Japanese language"],
+          }),
+          howToSchema({
+            name: "How to learn Japanese particles",
+            description:
+              "A five-step approach to mastering the twelve core Japanese particles through memorization, exposure, and production.",
+            slug: "/guides/japanese-particles-masterclass",
+            steps: STEPS,
           }),
           faqSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           breadcrumbSchema([

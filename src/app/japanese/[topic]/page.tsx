@@ -8,6 +8,7 @@ import { JsonLd } from "@/components/seo/json-ld";
 import {
   articleSchema,
   breadcrumbSchema,
+  definedTermSchema,
   faqSchema,
 } from "@/lib/schema";
 import { pageMetadata } from "@/lib/metadata";
@@ -55,7 +56,13 @@ export default async function JapaneseTopicPage({
             authorName: "Bao Hua",
             authorSlug: "bao-hua",
             type: "Article",
-            wordCount: 1800,
+            about: [data.title.split(":")[0].trim(), "Japanese language"],
+          }),
+          definedTermSchema({
+            name: data.title.split(":")[0].trim(),
+            description: data.summary,
+            slug: `/japanese/${topic}`,
+            termCode: topic,
           }),
           faqSchema(data.faqs.map((f) => ({ question: f.q, answer: f.a }))),
           breadcrumbSchema([

@@ -50,7 +50,11 @@ export default async function AuthorPage({
             slug,
             jobTitle: author.jobTitle,
             description: author.bioShort,
-            sameAs: author.links.map((l) => l.url),
+            sameAs: author.links
+              .filter((l) => !l.url.startsWith("mailto:"))
+              .map((l) => l.url),
+            knowsAbout: author.knowsAbout,
+            knowsLanguage: author.knowsLanguage,
           }),
           breadcrumbSchema([
             { name: "Home", path: "/" },
@@ -97,6 +101,26 @@ export default async function AuthorPage({
           {author.bioLong.split("\n\n").map((para, i) => (
             <p key={i}>{para}</p>
           ))}
+        </div>
+
+        <div className="not-prose my-10 rounded-lg border border-border/70 bg-cream-raised p-6">
+          <p className="label-eyebrow mb-3 text-matcha-deep">Credentials</p>
+          <ul className="grid gap-2 font-serif text-[1rem] leading-snug text-ink">
+            {author.credentials.map((c) => (
+              <li key={c} className="flex items-start gap-3">
+                <span className="mt-[0.55rem] h-1.5 w-1.5 flex-none rounded-full bg-matcha" />
+                <span>{c}</span>
+              </li>
+            ))}
+          </ul>
+          {author.knowsAbout.length > 0 && (
+            <>
+              <p className="label-eyebrow mb-2 mt-6 text-matcha-deep">Writes about</p>
+              <p className="font-body text-[0.98rem] leading-relaxed text-ink-muted">
+                {author.knowsAbout.join(" · ")}
+              </p>
+            </>
+          )}
         </div>
 
         <h2 id="posts">Posts by {author.name}</h2>

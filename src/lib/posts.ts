@@ -393,6 +393,66 @@ export const ALL_POSTS: PostRecord[] = [
     tags: ["Noji"],
     category: "vs",
   },
+  {
+    slug: "/vs/japanesepod101",
+    title: "Inku vs JapanesePod101",
+    description:
+      "JapanesePod101 is the audio-lesson catalog with thousands of episodes. Inku is a calm flashcard app for iPhone.",
+    date: "2026-04-30",
+    readingTime: "11 min read",
+    wordCount: 2400,
+    authorSlug: "bao-hua",
+    tags: ["JapanesePod101"],
+    category: "vs",
+  },
+  {
+    slug: "/vs/memrise",
+    title: "Inku vs Memrise",
+    description:
+      "Memrise teaches Japanese through native speaker videos. Inku teaches through curated flashcards with bundled audio.",
+    date: "2026-04-30",
+    readingTime: "10 min read",
+    wordCount: 2200,
+    authorSlug: "bao-hua",
+    tags: ["Memrise"],
+    category: "vs",
+  },
+  {
+    slug: "/vs/drops",
+    title: "Inku vs Drops",
+    description:
+      "Drops is a beautiful 5-minute illustrated vocabulary app. Inku is a calm flashcard app with audio and FSRS.",
+    date: "2026-04-30",
+    readingTime: "9 min read",
+    wordCount: 2100,
+    authorSlug: "bao-hua",
+    tags: ["Drops"],
+    category: "vs",
+  },
+  {
+    slug: "/vs/pimsleur",
+    title: "Inku vs Pimsleur for Japanese",
+    description:
+      "Pimsleur is the audio-only Japanese course. Inku is a visual-plus-audio iPhone flashcard app.",
+    date: "2026-04-30",
+    readingTime: "11 min read",
+    wordCount: 2300,
+    authorSlug: "bao-hua",
+    tags: ["Pimsleur"],
+    category: "vs",
+  },
+  {
+    slug: "/vs/rocket-japanese",
+    title: "Inku vs Rocket Japanese",
+    description:
+      "Rocket Japanese is a one-time-purchase audio-and-text course. Inku is a calm subscription flashcard app for iPhone.",
+    date: "2026-04-30",
+    readingTime: "10 min read",
+    wordCount: 2200,
+    authorSlug: "bao-hua",
+    tags: ["Rocket Japanese"],
+    category: "vs",
+  },
 
   // --- Alternative pages ---
   {
@@ -449,6 +509,54 @@ export const ALL_POSTS: PostRecord[] = [
     description:
       "Pimsleur is audio-only. Inku is audio plus visual plus writing. A side-by-side for the kind of learner who needs to see the kana.",
     date: "2026-04-21",
+    readingTime: "9 min read",
+    wordCount: 2000,
+    authorSlug: "bao-hua",
+    tags: ["Alternatives"],
+    category: "alternative",
+  },
+  {
+    slug: "/alternatives/wanikani",
+    title: "A WaniKani Alternative for the Phase Before Kanji",
+    description:
+      "WaniKani is the gold-standard kanji SRS but assumes you already know kana. Inku is the alternative for the prerequisite phase WaniKani skips.",
+    date: "2026-04-30",
+    readingTime: "10 min read",
+    wordCount: 2200,
+    authorSlug: "bao-hua",
+    tags: ["Alternatives"],
+    category: "alternative",
+  },
+  {
+    slug: "/alternatives/bunpo",
+    title: "A Bunpo Alternative for Vocabulary and Kana",
+    description:
+      "Bunpo is the grammar-drill specialist. Inku is the vocabulary-and-kana alternative that pairs with Bunpo's grammar drills.",
+    date: "2026-04-30",
+    readingTime: "9 min read",
+    wordCount: 2000,
+    authorSlug: "bao-hua",
+    tags: ["Alternatives"],
+    category: "alternative",
+  },
+  {
+    slug: "/alternatives/memrise",
+    title: "A Memrise Alternative for Focused Japanese Learners",
+    description:
+      "Memrise teaches Japanese inside a multi-language platform. Inku is the Japanese-only alternative with FSRS scheduling and bundled audio.",
+    date: "2026-04-30",
+    readingTime: "9 min read",
+    wordCount: 2000,
+    authorSlug: "bao-hua",
+    tags: ["Alternatives"],
+    category: "alternative",
+  },
+  {
+    slug: "/alternatives/drops",
+    title: "A Drops Alternative for Serious Japanese Learners",
+    description:
+      "Drops is a beautiful 5-minute vocabulary app. Inku is the alternative for learners who want unlimited daily study and modern spaced repetition.",
+    date: "2026-04-30",
     readingTime: "9 min read",
     wordCount: 2000,
     authorSlug: "bao-hua",

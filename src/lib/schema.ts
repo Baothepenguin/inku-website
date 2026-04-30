@@ -122,6 +122,8 @@ export function articleSchema({
   type = "BlogPosting",
   image,
   keywords,
+  about,
+  speakable = true,
 }: {
   title: string;
   description: string;
@@ -135,8 +137,10 @@ export function articleSchema({
   type?: "BlogPosting" | "Article";
   image?: string;
   keywords?: string[];
+  about?: string[];
+  speakable?: boolean;
 }): SchemaObject {
-  return {
+  const base: SchemaObject = {
     "@context": "https://schema.org",
     "@type": type,
     "@id": `${origin}${slug}#article`,
@@ -160,10 +164,22 @@ export function articleSchema({
       "@type": "WebPage",
       "@id": `${origin}${slug}`,
     },
-    wordCount,
     keywords: keywords?.join(", "),
     inLanguage: "en-US",
   };
+  if (typeof wordCount === "number") base.wordCount = wordCount;
+  if (about && about.length) {
+    base.about = about.map((name) => ({ "@type": "Thing", name }));
+  }
+  if (speakable) {
+    // Speakable hints for voice assistants. Selectors point to the answer-first
+    // box, the H1, and the first H2 (the most extractable surfaces).
+    base.speakable = {
+      "@type": "SpeakableSpecification",
+      cssSelector: ['[aria-label="Short answer"]', "h1", "h2:first-of-type"],
+    };
+  }
+  return base;
 }
 
 export function personSchema({
@@ -172,14 +188,20 @@ export function personSchema({
   jobTitle,
   description,
   sameAs = [],
+  knowsAbout = [],
+  knowsLanguage = [],
+  image,
 }: {
   name: string;
   slug: string;
   jobTitle: string;
   description: string;
   sameAs?: string[];
+  knowsAbout?: string[];
+  knowsLanguage?: string[];
+  image?: string;
 }): SchemaObject {
-  return {
+  const out: SchemaObject = {
     "@context": "https://schema.org",
     "@type": "Person",
     "@id": `${origin}/authors/${slug}#person`,
@@ -189,6 +211,92 @@ export function personSchema({
     url: `${origin}/authors/${slug}`,
     sameAs,
     worksFor: { "@id": `${origin}/#organization` },
+  };
+  if (knowsAbout.length) out.knowsAbout = knowsAbout;
+  if (knowsLanguage.length) out.knowsLanguage = knowsLanguage;
+  if (image) out.image = image;
+  return out;
+}
+
+export function definedTermSchema({
+  name,
+  description,
+  slug,
+  termCode,
+  inDefinedTermSet = "https://inkujapanese.com/japanese",
+}: {
+  name: string;
+  description: string;
+  slug: string;
+  termCode?: string;
+  inDefinedTermSet?: string;
+}): SchemaObject {
+  const out: SchemaObject = {
+    "@context": "https://schema.org",
+    "@type": "DefinedTerm",
+    "@id": `${origin}${slug}#term`,
+    name,
+    description,
+    url: `${origin}${slug}`,
+    inDefinedTermSet,
+  };
+  if (termCode) out.termCode = termCode;
+  return out;
+}
+
+export function blogSchema({
+  name,
+  description,
+  slug,
+  posts,
+}: {
+  name: string;
+  description: string;
+  slug: string;
+  posts: { title: string; slug: string; datePublished: string; description: string }[];
+}): SchemaObject {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "@id": `${origin}${slug}#blog`,
+    name,
+    description,
+    url: `${origin}${slug}`,
+    publisher: { "@id": `${origin}/#organization` },
+    inLanguage: "en-US",
+    blogPost: posts.map((p) => ({
+      "@type": "BlogPosting",
+      "@id": `${origin}${p.slug}#article`,
+      headline: p.title,
+      description: p.description,
+      url: `${origin}${p.slug}`,
+      datePublished: p.datePublished,
+      author: { "@id": `${origin}/authors/bao-hua#person` },
+    })),
+  };
+}
+
+export function itemListSchema({
+  name,
+  slug,
+  items,
+}: {
+  name: string;
+  slug: string;
+  items: { name: string; url: string; position?: number }[];
+}): SchemaObject {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "@id": `${origin}${slug}#list`,
+    name,
+    url: `${origin}${slug}`,
+    itemListElement: items.map((it, i) => ({
+      "@type": "ListItem",
+      position: it.position ?? i + 1,
+      url: it.url,
+      name: it.name,
+    })),
   };
 }
 

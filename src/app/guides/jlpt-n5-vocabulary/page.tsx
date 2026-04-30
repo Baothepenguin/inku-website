@@ -9,6 +9,7 @@ import {
   articleSchema,
   breadcrumbSchema,
   faqSchema,
+  howToSchema,
 } from "@/lib/schema";
 import { pageMetadata } from "@/lib/metadata";
 
@@ -225,6 +226,29 @@ const FAQS = [
   },
 ];
 
+const STEPS = [
+  {
+    name: "Group the list by category",
+    text: "Don't drill the words alphabetically. Use the categories on this page (people, places, time, food, daily life) so each session sticks to one cohesive topic.",
+  },
+  {
+    name: "Add 10-15 new words per study session",
+    text: "Going faster than ~15 new cards a day collapses retention. Pace the 515 N5 cards over roughly 60 sessions of 10-15 minutes each.",
+  },
+  {
+    name: "Review every day with audio",
+    text: "Spaced repetition only works if reviews actually happen. Open the app daily, even when due cards are sparse, and listen to each card — pronunciation locks faster than visual memory.",
+  },
+  {
+    name: "Test recall with example sentences",
+    text: "Once a word feels familiar, see it inside an N5 example sentence. If you understand the sentence on the first read, the word is in long-term memory; if not, the card needs more reps.",
+  },
+  {
+    name: "Take a mock JLPT N5 vocabulary section",
+    text: "After ~3 months of study, take a timed N5 vocab mock from past JLPT papers. Mistakes show you which categories still leak, and the test pressure is itself useful exposure.",
+  },
+];
+
 export default function JlptN5VocabularyPage() {
   return (
     <>
@@ -241,6 +265,15 @@ export default function JlptN5VocabularyPage() {
             type: "Article",
             wordCount: 5200,
             keywords: ["JLPT N5 vocabulary", "N5 word list"],
+            about: ["JLPT N5", "Japanese vocabulary", "Japanese for beginners"],
+          }),
+          howToSchema({
+            name: "How to study JLPT N5 vocabulary",
+            description:
+              "A five-step study plan to learn the 515 most useful JLPT N5 words with spaced repetition, audio, and example sentences.",
+            slug: "/guides/jlpt-n5-vocabulary",
+            totalTime: "P3M",
+            steps: STEPS,
           }),
           faqSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           breadcrumbSchema([

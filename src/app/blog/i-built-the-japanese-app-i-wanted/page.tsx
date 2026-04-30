@@ -33,9 +33,29 @@ export default function Post() {
         { id: "what", label: "What Inku is" },
         { id: "for-who", label: "Who it is for" },
       ]}
+      faqs={[
+        {
+          q: "What is Inku?",
+          a: "Inku is a calm Japanese flashcard app for iPhone. It teaches kana, beginner vocabulary, useful phrases, handwriting, and spaced review with bundled audio for the main card library. Progress lives on the phone, no account is required, and there are no ads.",
+        },
+        {
+          q: "Why build another Japanese learning app?",
+          a: "Existing apps are designed to make you come back, not to make Japanese stick. I wanted a tool that respected adult attention: a finite daily session, no streak guilt, no infinite feed, and audio that plays inside the review instead of next to it.",
+        },
+        {
+          q: "Who is Inku for?",
+          a: "Adult learners who want Japanese to stick but do not want their phone yelling at them. People who study after work, on the train, or before bed. Beginners through high N4 are the current sweet spot, with N3 in active expansion.",
+        },
+        {
+          q: "How is Inku different from Duolingo or Anki?",
+          a: "Duolingo is gamified and broad across 40+ languages. Anki is infinitely flexible and mostly DIY. Inku is opinionated, Japanese-only, and shipped with a curated deck plus bundled pronunciation audio — no setup, no streak panic, no leaderboard.",
+        },
+      ]}
       related={[
         { href: "/why-inku", label: "Why Inku exists" },
         { href: "/best-japanese-flashcard-apps", label: "Best Japanese flashcard apps" },
+        { href: "/vs/duolingo", label: "Inku vs Duolingo" },
+        { href: "/vs/anki", label: "Inku vs Anki" },
       ]}
     >
       <h2 id="why">Why I built it</h2>

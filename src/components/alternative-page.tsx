@@ -28,7 +28,12 @@ export function AlternativePage({ data }: { data: AlternativeRecord }) {
             authorName: "Bao Hua",
             authorSlug: "bao-hua",
             type: "Article",
-            wordCount: 2400,
+            about: [
+              "Inku",
+              data.competitorName,
+              "Japanese learning apps",
+              "Japanese language",
+            ],
           }),
           productComparisonSchema({
             name: title,

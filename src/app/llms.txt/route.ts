@@ -44,7 +44,13 @@ function buildLlmsTxt(origin: string): string {
   lines.push("");
   lines.push(`- [Home](${origin}/): Why Inku exists, pricing, what you learn.`);
   lines.push(
+    `- [Learn Japanese hub](${origin}/learn-japanese): The full map of Japanese learning — phases, tools, time estimates, and links to every guide on the site.`,
+  );
+  lines.push(
     `- [About](${origin}/about): Founder story and the problem Inku solves.`,
+  );
+  lines.push(
+    `- [Help center](${origin}/help): Single-page FAQ — getting started, studying, billing, content, privacy, troubleshooting.`,
   );
   lines.push(
     `- [Authors - Bao Hua](${origin}/authors/bao-hua): Bio and authored content.`,

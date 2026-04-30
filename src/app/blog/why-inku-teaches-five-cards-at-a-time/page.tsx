@@ -32,9 +32,28 @@ export default function Post() {
         { id: "finish", label: "Finish matters" },
         { id: "memory", label: "Memory needs space" },
       ]}
+      faqs={[
+        {
+          q: "Why does Inku show only five cards at a time?",
+          a: "Because small batches are easier to start and easier to finish. Five cards lower the activation cost of opening the app, give the session a clear ending, and let each card get real attention instead of being rushed in a long stack.",
+        },
+        {
+          q: "Is five cards enough to actually learn Japanese?",
+          a: "Yes — five new cards a day compounds. Over a 60-day stretch that's 300 new items studied with full attention plus daily reviews from the FSRS scheduler. Most learners absorb more from a small set seen consistently than a large set seen once.",
+        },
+        {
+          q: "Can I do more than five cards in a session?",
+          a: "Yes. Inku surfaces today's review and lets you continue past it if you want. The default is five so the floor is low. The ceiling is whatever your attention can sustain.",
+        },
+        {
+          q: "How does spaced repetition work in Inku?",
+          a: "Inku uses FSRS — a modern spaced-repetition algorithm tuned for Japanese vocabulary. The scheduler decides when each card returns. You see only today's small stack; the math handling intervals stays out of your way.",
+        },
+      ]}
       related={[
         { href: "/guides/spaced-repetition-explained", label: "Spaced repetition explained" },
         { href: "/blog/streak-trap-vs-study-habit", label: "Streak trap vs study habit" },
+        { href: "/blog/spaced-repetition-mistake", label: "The spaced repetition mistake that wastes 90% of learners' time" },
       ]}
     >
       <h2 id="small">Small starts</h2>

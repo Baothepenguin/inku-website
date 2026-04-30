@@ -10,6 +10,7 @@ import {
   articleSchema,
   breadcrumbSchema,
   faqSchema,
+  howToSchema,
 } from "@/lib/schema";
 import { pageMetadata } from "@/lib/metadata";
 
@@ -71,6 +72,33 @@ const FAQS = [
   },
 ];
 
+const STEPS = [
+  {
+    name: "Phase 1: Hiragana and katakana (2 weeks)",
+    text: "Learn all 46 hiragana, then all 46 katakana. Use mnemonics and a 3-day schedule per script. Cement them by reading real-world Japanese signs and product labels in the second week.",
+  },
+  {
+    name: "Phase 2: JLPT N5 vocabulary (3 months)",
+    text: "Drill 500-800 N5 words via spaced repetition with audio. Aim for 5-15 new cards a day plus daily reviews. Cover people, places, time, food, and basic verbs first.",
+  },
+  {
+    name: "Phase 3: Grammar foundation (3 months)",
+    text: "Work through a structured grammar source like Tae Kim or Genki. Cover ~30 N5 patterns plus the polite -masu/-desu form, particles, and basic verb conjugation.",
+  },
+  {
+    name: "Phase 4: Real input (6 months)",
+    text: "Switch from study to graded input: NHK Easy, beginner podcasts, slice-of-life manga with furigana. Add ~1500 N4 words via SRS. Read or listen to Japanese 30+ minutes a day.",
+  },
+  {
+    name: "Phase 5: Output (3 months)",
+    text: "Start producing Japanese. Journal three sentences a day, use italki or HelloTalk for tutoring, write replies on Twitter or LangCorrect. Mistakes are the point.",
+  },
+  {
+    name: "Phase 6: Maintenance (forever)",
+    text: "Once conversational, keep daily input and weekly output. Reading native material is the engine: novels, news, manga without furigana. SRS shrinks; immersion grows.",
+  },
+];
+
 export default function HowToLearnJapanesePage() {
   return (
     <>
@@ -87,6 +115,22 @@ export default function HowToLearnJapanesePage() {
             type: "Article",
             wordCount: 5600,
             keywords: ["how to learn japanese", "japanese roadmap"],
+            about: [
+              "Japanese language",
+              "Adult language acquisition",
+              "JLPT",
+              "Spaced repetition",
+              "Hiragana",
+              "Katakana",
+            ],
+          }),
+          howToSchema({
+            name: "Learn Japanese as an adult: a 6-phase roadmap",
+            description:
+              "A realistic six-phase plan for adult learners to reach conversational Japanese in 12 to 18 months at 30 to 45 minutes a day.",
+            slug: "/guides/how-to-learn-japanese",
+            totalTime: "P18M",
+            steps: STEPS,
           }),
           faqSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           breadcrumbSchema([

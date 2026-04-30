@@ -18,17 +18,20 @@ export function IPhoneMockup({
   return (
     <div
       className={cn(
-        "relative mx-auto aspect-[9/19.5] w-[300px] overflow-hidden rounded-[44px] bg-ink shadow-card",
-        "ring-[10px] ring-ink/90",
+        // Bezel: thin titanium-style rim instead of a flat 10px ring.
+        // Layered shadows give a real key + ambient + contact shadow
+        // stack so the device floats with weight.
+        "relative mx-auto aspect-[9/19.5] w-[300px] overflow-hidden rounded-[44px] bg-ink p-[5px]",
+        "[box-shadow:_inset_0_0_0_1px_rgba(255,253,246,0.06),_inset_0_1px_0_0_rgba(255,253,246,0.12),_0_2px_4px_-1px_rgba(26,26,26,0.35),_0_18px_38px_-12px_rgba(26,26,26,0.45),_0_42px_70px_-30px_rgba(26,26,26,0.55)]",
         className,
       )}
       role={ariaLabel ? "img" : undefined}
       aria-label={ariaLabel}
     >
-      {/* Dynamic island */}
-      <div className="pointer-events-none absolute left-1/2 top-2 z-20 h-6 w-24 -translate-x-1/2 rounded-full bg-ink" />
-      {/* Screen surface */}
-      <div className="absolute inset-[2px] overflow-hidden rounded-[36px] bg-cream">
+      {/* Dynamic island — sits ~10px from the top with a thin inner highlight. */}
+      <div className="pointer-events-none absolute left-1/2 top-[10px] z-20 h-[26px] w-[92px] -translate-x-1/2 rounded-full bg-black shadow-[inset_0_1px_0_0_rgba(255,253,246,0.08)]" />
+      {/* Screen surface — slightly inset from the bezel so the rim reads. */}
+      <div className="relative h-full w-full overflow-hidden rounded-[36px] bg-cream">
         {children}
       </div>
     </div>

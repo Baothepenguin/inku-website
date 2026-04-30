@@ -6,11 +6,14 @@ import { JLPT_LEVELS } from "@/lib/jlpt";
 import { TOPICS } from "@/lib/topics";
 import { ALL_POSTS } from "@/lib/posts";
 import { AUTHORS } from "@/lib/authors";
+import { VOCAB_THEMES } from "@/lib/vocab-themes";
 
 const origin = SITE.url;
 
 const STATIC_PATHS: { path: string; changefreq: MetadataRoute.Sitemap[number]["changeFrequency"]; priority: number }[] = [
   { path: "/", changefreq: "weekly", priority: 1.0 },
+  { path: "/learn-japanese", changefreq: "weekly", priority: 0.95 },
+  { path: "/help", changefreq: "monthly", priority: 0.7 },
   { path: "/about", changefreq: "monthly", priority: 0.7 },
   { path: "/why-inku", changefreq: "monthly", priority: 0.8 },
   { path: "/best-japanese-flashcard-apps", changefreq: "monthly", priority: 0.9 },
@@ -104,6 +107,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: post.updated ? new Date(post.updated).toISOString() : post.date,
       changeFrequency: "monthly",
       priority,
+    });
+  }
+
+  // JLPT N5 vocabulary by topic — programmatic SEO surface
+  entries.push({
+    url: `${origin}/jlpt/n5/vocabulary`,
+    lastModified: today,
+    changeFrequency: "monthly",
+    priority: 0.8,
+  });
+  for (const theme of Object.values(VOCAB_THEMES)) {
+    if (theme.level !== "n5") continue;
+    entries.push({
+      url: `${origin}/jlpt/n5/vocabulary/${theme.slug}`,
+      lastModified: today,
+      changeFrequency: "monthly",
+      priority: 0.7,
     });
   }
 

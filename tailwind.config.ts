@@ -60,15 +60,24 @@ const config: Config = {
         easy: "#6BA3D6",
       },
       fontFamily: {
-        // Outfit is the single English face for the whole site. The
-        // existing font-serif / font-body / font-sans utility names are
-        // kept so JSX does not need to change; they all point to Outfit.
+        // `font-serif` -> Fraunces (editorial display). Used on hero,
+        // H1/H2/H3, pricing prices, pull-quotes. `font-body` and
+        // `font-sans` stay on Outfit. JSX keeps existing class names
+        // since most of the site is already labeled `font-serif` for
+        // display surfaces and `font-body`/`font-sans` for body text.
         serif: [
-          "var(--font-outfit)",
-          "ui-sans-serif",
-          "system-ui",
-          "-apple-system",
-          "sans-serif",
+          "var(--font-display)",
+          "ui-serif",
+          "Georgia",
+          "Cambria",
+          "Times New Roman",
+          "serif",
+        ],
+        display: [
+          "var(--font-display)",
+          "ui-serif",
+          "Georgia",
+          "serif",
         ],
         body: [
           "var(--font-outfit)",
@@ -130,6 +139,16 @@ const config: Config = {
         card:
           "0 1px 0 0 rgba(26,26,26,0.03), 0 24px 60px -30px rgba(26,26,26,0.25)",
         brush: "0 30px 80px -40px rgba(45,134,89,0.55)",
+      },
+      backgroundImage: {
+        // Asanoha (hemp-leaf) — the most iconic Japanese pattern.
+        // Encoded as a tiny SVG so it stays sharp and inherits color
+        // through stroke. Use as `bg-asanoha` with a small `bg-size`.
+        asanoha:
+          "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60' fill='none' stroke='%231A1A1A' stroke-opacity='0.05' stroke-width='1'><path d='M30 0 L30 60 M0 30 L60 30 M0 0 L60 60 M60 0 L0 60 M0 0 L30 30 L0 60 M60 0 L30 30 L60 60'/></svg>\")",
+        // Seigaiha (waves) — flowing, used for water/transition strips.
+        seigaiha:
+          "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 30'><g fill='none' stroke='%231A1A1A' stroke-opacity='0.06' stroke-width='1'><circle cx='0' cy='15' r='15'/><circle cx='15' cy='15' r='15'/><circle cx='30' cy='15' r='15'/><circle cx='45' cy='15' r='15'/><circle cx='60' cy='15' r='15'/></g></svg>\")",
       },
       keyframes: {
         "fade-in": {

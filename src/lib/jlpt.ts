@@ -11,6 +11,7 @@ export interface JlptLevel {
   vocabularyExamples: { jp: string; kana: string; en: string }[];
   studyPlan: string[];
   relatedPaths: { href: string; label: string }[];
+  faqs: { q: string; a: string }[];
   status: "complete" | "partial" | "coming-soon";
 }
 
@@ -70,6 +71,24 @@ export const JLPT_LEVELS: Record<string, JlptLevel> = {
       { href: "/guides/jlpt-n5-vocabulary", label: "JLPT N5 vocabulary list" },
       { href: "/guides/japanese-particles-masterclass", label: "Particles" },
     ],
+    faqs: [
+      {
+        q: "How long does it take to pass JLPT N5?",
+        a: "Most adult learners reach N5 in 3 to 6 months of consistent study at 30 minutes a day. Total study time runs 150 to 300 hours, including hiragana, katakana, ~800 vocabulary words, and ~30 grammar patterns.",
+      },
+      {
+        q: "Is JLPT N5 worth taking?",
+        a: "If your career, visa, or school requires it, yes. For most learners, N5 is a useful milestone, not a goal. Many people skip the certification and use the N5 syllabus as a checklist instead.",
+      },
+      {
+        q: "How many kanji are on the JLPT N5?",
+        a: "Approximately 100 kanji. The official list is not published by the JLPT, but reference vocabulary lists consistently include around 100 jōyō kanji at this level.",
+      },
+      {
+        q: "Can I pass JLPT N5 with only flashcard apps?",
+        a: "You can pass the vocabulary and kanji sections, but the listening and reading sections require exposure beyond flashcards. Pair an SRS app like Inku with NHK Easy and a beginner podcast for a balanced prep.",
+      },
+    ],
     status: "complete",
   },
   n4: {
@@ -125,6 +144,24 @@ export const JLPT_LEVELS: Record<string, JlptLevel> = {
       { href: "/guides/japanese-particles-masterclass", label: "Particles deep-dive" },
       { href: "/jlpt/n5", label: "N5 prerequisites" },
     ],
+    faqs: [
+      {
+        q: "How long does N4 take after N5?",
+        a: "Plan another 6 to 12 months at 30 to 45 minutes a day. Total cumulative time from zero to N4 is around 300 to 600 hours.",
+      },
+      {
+        q: "How many kanji are on JLPT N4?",
+        a: "About 300 kanji total, including the ~100 from N5. The N4 syllabus also expects fluent reading of common compound words written in those kanji.",
+      },
+      {
+        q: "Should I skip N5 and go straight for N4?",
+        a: "Only if you've already mastered N5 material. The JLPT does not require you to pass N5 first, but the levels build on each other; weak N5 grammar is the most common reason candidates fail N4.",
+      },
+      {
+        q: "Is N4 enough to live in Japan?",
+        a: "For survival, mostly yes. For real conversation and reading, no. Most people aim for N3 as the 'comfortable in Japan' threshold.",
+      },
+    ],
     status: "partial",
   },
   n3: {
@@ -171,6 +208,20 @@ export const JLPT_LEVELS: Record<string, JlptLevel> = {
       { href: "/jlpt/n4", label: "N4 prerequisites" },
       { href: "/guides/how-to-learn-japanese", label: "Full learning roadmap" },
     ],
+    faqs: [
+      {
+        q: "How long does it take to reach JLPT N3?",
+        a: "Total cumulative study time runs 600 to 1,200 hours from zero. Most adult learners reach N3 in 18 to 24 months of consistent study, including the time spent on N5 and N4.",
+      },
+      {
+        q: "Is N3 enough to read Japanese novels?",
+        a: "Light novels and YA fiction become accessible at N3 with effort. Adult novels and news still need a dictionary. N2 is the threshold where dictionary use becomes occasional rather than constant.",
+      },
+      {
+        q: "Why is there no Inku N3 deck yet?",
+        a: "We're focused on shipping a deep N5 deck and expanding N4 first. N3 is on the roadmap but not yet available. Use the official N3 vocabulary list and a generic SRS app in the meantime.",
+      },
+    ],
     status: "coming-soon",
   },
   n2: {
@@ -207,6 +258,20 @@ export const JLPT_LEVELS: Record<string, JlptLevel> = {
       "Daily immersive input (news, novels, podcasts).",
     ],
     relatedPaths: [{ href: "/jlpt/n3", label: "N3 prerequisites" }],
+    faqs: [
+      {
+        q: "How long does it take to reach JLPT N2?",
+        a: "Most adult learners reach N2 after 3 to 4 years of consistent study, with cumulative study time around 1,500 to 2,500 hours including N5 through N4.",
+      },
+      {
+        q: "Is N2 required to work in Japan?",
+        a: "Many Japanese companies require N2 for non-engineering roles. Engineering and tech roles often accept N3 or even no JLPT, but N2 opens significantly more opportunities.",
+      },
+      {
+        q: "How does N2 differ from N3?",
+        a: "N2 doubles the vocabulary (6,000 vs 3,750), adds ~350 kanji, and introduces formal/business Japanese. The reading section uses native-speed news and academic excerpts, not graded material.",
+      },
+    ],
     status: "coming-soon",
   },
   n1: {
@@ -242,6 +307,20 @@ export const JLPT_LEVELS: Record<string, JlptLevel> = {
       "Regular exposure to formal and literary Japanese.",
     ],
     relatedPaths: [{ href: "/jlpt/n2", label: "N2 prerequisites" }],
+    faqs: [
+      {
+        q: "How long does it take to reach JLPT N1?",
+        a: "Most adult learners reach N1 after 4 to 7 years of serious study, with cumulative study time of 3,000 to 5,000+ hours. Native exposure (living in Japan, working in Japanese) accelerates this significantly.",
+      },
+      {
+        q: "Is N1 considered native-level Japanese?",
+        a: "Near-native for reading and listening, but not for production. Most N1 holders still write less naturally than natives and can be tripped up by rapid casual speech, slang, and dialects. N1 is professional-grade comprehension.",
+      },
+      {
+        q: "What's tested on the N1 grammar section?",
+        a: "Advanced grammar patterns including formal written Japanese, idiomatic expressions, classical-derived constructions (~ざるを得ない, ~を余儀なくされる), and nuanced shades of certainty, regret, and hearsay.",
+      },
+    ],
     status: "coming-soon",
   },
 };

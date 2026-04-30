@@ -11,6 +11,7 @@ import {
 } from "@/lib/schema";
 import { pageMetadata } from "@/lib/metadata";
 import { SITE } from "@/lib/site";
+import { AUTHORS } from "@/lib/authors";
 
 const TITLE = "About Inku";
 const SUBTITLE =
@@ -48,14 +49,18 @@ export default function AboutPage() {
             authorName: "Bao Hua",
             authorSlug: "bao-hua",
             type: "Article",
-            wordCount: 1200,
+            about: ["Inku", "Japanese language", "iPhone app", "Spaced repetition"],
           }),
           personSchema({
-            name: "Bao Hua",
+            name: AUTHORS["bao-hua"].name,
             slug: "bao-hua",
-            jobTitle: "Founder of Inku",
-            description:
-              "Independent software maker based in Calgary, Alberta. Building Inku, a calm iPhone app for learning Japanese.",
+            jobTitle: AUTHORS["bao-hua"].jobTitle,
+            description: AUTHORS["bao-hua"].bioShort,
+            sameAs: AUTHORS["bao-hua"].links
+              .filter((l) => !l.url.startsWith("mailto:"))
+              .map((l) => l.url),
+            knowsAbout: AUTHORS["bao-hua"].knowsAbout,
+            knowsLanguage: AUTHORS["bao-hua"].knowsLanguage,
           }),
           breadcrumbSchema([
             { name: "Home", path: "/" },
@@ -186,6 +191,17 @@ export default function AboutPage() {
           you want to know more, the <Link href="/authors/bao-hua">author
           page</Link> has a short bio and links.
         </p>
+        <div className="not-prose my-8 rounded-lg border border-border/70 bg-cream-raised p-6">
+          <p className="label-eyebrow mb-3 text-matcha-deep">Credentials</p>
+          <ul className="grid gap-2 font-serif text-[1rem] leading-snug text-ink">
+            {AUTHORS["bao-hua"].credentials.map((c) => (
+              <li key={c} className="flex items-start gap-3">
+                <span className="mt-[0.55rem] h-1.5 w-1.5 flex-none rounded-full bg-matcha" />
+                <span>{c}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
         <p>
           I answer every email to{" "}
           <a href={`mailto:${SITE.supportEmail}`}>{SITE.supportEmail}</a>{" "}

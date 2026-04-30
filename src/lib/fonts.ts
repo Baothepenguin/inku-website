@@ -1,16 +1,30 @@
-import { Outfit } from "next/font/google";
+import { Outfit, Fraunces } from "next/font/google";
 import localFont from "next/font/local";
 
 /**
- * Outfit is the sole English face: display headings, body reading, UI
- * labels, buttons. Variable weight (100-900). Replaces the previous
- * Instrument Serif + Fraunces + Satoshi stack.
+ * Outfit is the body / UI face: paragraph text, eyebrows, buttons,
+ * labels, navigation. Variable weight (100-900).
  */
 export const outfit = Outfit({
   subsets: ["latin"],
   variable: "--font-outfit",
   display: "optional",
   preload: false,
+});
+
+/**
+ * Fraunces is the editorial display face: hero headlines, section H2s,
+ * pricing prices, pull-quotes. Variable weight + optical-size + soft
+ * axis. The optical-size axis automatically tightens at large sizes,
+ * which Outfit cannot do. This is the "calm, considered" voice of the
+ * brand and the single biggest typography move on the site.
+ */
+export const fraunces = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-display",
+  display: "optional",
+  preload: false,
+  axes: ["opsz", "SOFT"],
 });
 
 /**

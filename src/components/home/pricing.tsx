@@ -1,5 +1,6 @@
 import { DownloadCTA } from "@/components/download-cta";
 import { SumiBrush } from "@/components/sumi-brush";
+import { HankoStamp } from "@/components/hanko-stamp";
 import { SITE } from "@/lib/site";
 
 const INCLUDED = [
@@ -30,16 +31,21 @@ export function Pricing() {
         </div>
 
         <div className="mx-auto mt-14 grid max-w-5xl items-stretch gap-6 md:grid-cols-2">
-          <div className="relative overflow-hidden rounded-lg border-2 border-matcha bg-cream-raised p-8 shadow-card md:p-10">
+          <div className="relative overflow-hidden rounded-lg border border-matcha/60 bg-cream-raised p-8 shadow-card ring-1 ring-matcha/15 md:p-10">
             <SumiBrush
               variant="comma"
               className="pointer-events-none absolute -right-4 -top-4 h-24 w-24 rotate-12 opacity-[0.08]"
             />
+            {/* Red square seal at the corner — replaces the dual pill
+                stack. "推奨" reads as 'recommended' top-down, RTL. */}
+            <HankoStamp
+              text="推奨"
+              srOnly="Recommended plan"
+              className="absolute right-6 top-6"
+              rotate={-8}
+            />
             <div className="mb-2 flex flex-wrap items-center gap-3">
               <p className="label-eyebrow text-matcha">Best value</p>
-              <span className="rounded-full bg-matcha px-2.5 py-1 font-sans text-[0.68rem] font-semibold uppercase tracking-breath text-cream">
-                Free week
-              </span>
             </div>
             <h3 className="font-serif text-[1.85rem] text-ink md:text-3xl">Yearly</h3>
             <p className="mt-3 flex items-baseline font-serif text-[2.75rem] leading-none text-ink md:text-5xl">
@@ -86,7 +92,17 @@ export function Pricing() {
 
         <div className="mx-auto mt-14 max-w-5xl overflow-hidden rounded-lg border border-border bg-cream-raised shadow-paper">
           <div className="grid gap-0 md:grid-cols-[0.8fr_1.2fr]">
-            <div className="relative flex flex-col justify-between bg-ink p-8 text-cream md:p-10">
+            <div
+              className="relative flex flex-col justify-between bg-ink p-8 text-cream md:p-10"
+              style={{
+                // Asanoha hemp-leaf pattern at low opacity over the
+                // ink panel — turns a flat dark block into a textured
+                // washi surface without competing with the headline.
+                backgroundImage:
+                  "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60' fill='none' stroke='%23FAF8F2' stroke-opacity='0.06' stroke-width='1'><path d='M30 0 L30 60 M0 30 L60 30 M0 0 L60 60 M60 0 L0 60 M0 0 L30 30 L0 60 M60 0 L30 30 L60 60'/></svg>\")",
+                backgroundSize: "60px 60px",
+              }}
+            >
               <SumiBrush
                 variant="enso"
                 className="pointer-events-none absolute -bottom-16 -right-10 h-48 w-48 opacity-[0.12]"

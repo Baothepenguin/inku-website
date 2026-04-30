@@ -33,15 +33,24 @@ export function Hero() {
         <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,0.88fr)_minmax(520px,1.12fr)] lg:gap-6">
         <div className="mx-auto max-w-3xl text-center lg:mx-0 lg:max-w-[36rem] lg:text-left">
           <p className="label-eyebrow mb-6 text-matcha">
-            Japanese flashcards for iPhone
+            Japanese flashcard app for iPhone · Hiragana · Katakana · JLPT N5
           </p>
+          {/* Compound H1 — one heading, two visual lines. The poetic
+              line carries the brand voice; the keyword line carries
+              the search intent ("Japanese flashcard app", "iPhone",
+              "JLPT N5"). Search engines and screen readers see one
+              continuous H1; humans see typographic hierarchy. */}
           <h1 className="font-serif text-display-lg tracking-tight text-balance text-ink md:text-display-xl lg:text-[clamp(4.25rem,7vw,6.25rem)]">
-            Learn Japanese without the noise.
+            <span className="block">Learn Japanese without the noise.</span>
+            <span className="mt-3 block text-display-md font-normal italic text-ink-muted md:text-display-sm lg:text-[clamp(1.4rem,1.8vw+0.6rem,1.95rem)]">
+              A calm Japanese flashcard app for iPhone.
+            </span>
           </h1>
           <p className="mx-auto mt-7 max-w-xl font-body text-lg leading-relaxed text-ink-muted md:text-xl lg:mx-0 text-pretty">
-            Inku helps you learn hiragana, katakana, N5 words, N4 words, and
-            useful phrases in short daily sessions. Learn a few cards. Review
-            what is due. Keep going without ads, accounts, or a busy screen.
+            Inku is a Japanese flashcard app for iPhone that teaches hiragana,
+            katakana, JLPT N5 and N4 vocabulary, and useful phrases with
+            spaced repetition and bundled audio — no streaks yelling at you,
+            no account required, no ads.
           </p>
 
           <div className="mt-10 flex flex-col items-center lg:items-start">
@@ -59,23 +68,79 @@ export function Hero() {
         </div>
 
         <div className="relative mx-auto w-full max-w-[42rem] lg:max-w-none">
+          {/* Sumi ink-wash backdrop. An irregular, hand-drawn blob with
+              feathered edges and a soft inner gradient — replaces the
+              previous flat-circle disk so the hero reads as a brush
+              stroke, not a button. */}
+          <svg
+            aria-hidden
+            className="pointer-events-none absolute left-[53%] top-1/2 -z-0 h-[560px] w-[560px] -translate-x-1/2 -translate-y-1/2 md:h-[680px] md:w-[680px] lg:h-[760px] lg:w-[760px]"
+            viewBox="0 0 760 760"
+            preserveAspectRatio="xMidYMid meet"
+          >
+            <defs>
+              <radialGradient id="hero-ink-fill" cx="46%" cy="44%" r="62%">
+                <stop offset="0%" stopColor="#0E0E0E" stopOpacity="0.96" />
+                <stop offset="55%" stopColor="#1A1A1A" stopOpacity="0.92" />
+                <stop offset="100%" stopColor="#1A1A1A" stopOpacity="0.78" />
+              </radialGradient>
+              <filter id="hero-ink-feather" x="-15%" y="-15%" width="130%" height="130%">
+                <feGaussianBlur stdDeviation="4" />
+              </filter>
+              <filter id="hero-ink-grain" x="0" y="0" width="100%" height="100%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="3" />
+                <feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.18 0" />
+                <feComposite in2="SourceGraphic" operator="in" />
+              </filter>
+            </defs>
+            <g filter="url(#hero-ink-feather)">
+              <path
+                d="M380 70
+                   C 540 80, 640 170, 660 320
+                   C 680 470, 600 600, 460 640
+                   C 320 680, 180 620, 110 490
+                   C 60 380, 70 230, 160 140
+                   C 220 90, 300 60, 380 70 Z"
+                fill="url(#hero-ink-fill)"
+              />
+              {/* Tail wisp — gives the wash an asymmetric brush exit. */}
+              <path
+                d="M620 460
+                   C 680 470, 720 480, 720 520
+                   C 700 540, 660 530, 620 510 Z"
+                fill="#1A1A1A"
+                fillOpacity="0.55"
+              />
+            </g>
+            {/* Grain pass on top — faint paper noise so the wash isn't a vector solid. */}
+            <rect
+              x="0"
+              y="0"
+              width="760"
+              height="760"
+              fill="#000"
+              filter="url(#hero-ink-grain)"
+              style={{ mixBlendMode: "multiply" }}
+            />
+          </svg>
+          {/* Soft halo so the wash bleeds into the cream canvas. */}
           <div
             aria-hidden
-            className="pointer-events-none absolute left-[53%] top-1/2 -z-0 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-ink opacity-90 md:h-[620px] md:w-[620px] lg:h-[680px] lg:w-[680px]"
-            style={{
-              maskImage:
-                "radial-gradient(circle, black 62%, transparent 72%)",
-              filter: "blur(1px)",
-            }}
-          />
-          <div
-            aria-hidden
-            className="pointer-events-none absolute left-[53%] top-1/2 h-[640px] w-[640px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-70 md:h-[760px] md:w-[760px]"
+            className="pointer-events-none absolute left-[53%] top-1/2 h-[700px] w-[700px] -translate-x-1/2 -translate-y-1/2 opacity-60 md:h-[820px] md:w-[820px]"
             style={{
               background:
-                "radial-gradient(circle, rgba(26,26,26,0.18) 0%, rgba(26,26,26,0.05) 40%, transparent 65%)",
+                "radial-gradient(circle, rgba(26,26,26,0.14) 0%, rgba(26,26,26,0.04) 42%, transparent 68%)",
             }}
           />
+          {/* Giant Japanese accent glyph behind the wash — the brand has
+              been holding this back; the hero is the place to spend it. */}
+          <span
+            aria-hidden
+            className="jp pointer-events-none absolute right-[-2rem] top-[-2rem] hidden select-none text-[14rem] leading-none text-cream/30 mix-blend-overlay md:block lg:right-[-1rem] lg:top-[-3rem] lg:text-[18rem]"
+            style={{ writingMode: "vertical-rl" }}
+          >
+            墨
+          </span>
 
           <div className="relative flex items-end justify-center gap-0 lg:justify-end lg:gap-5 xl:gap-8">
             <IPhoneMockup

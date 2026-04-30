@@ -356,4 +356,239 @@ export const TOPICS: Record<string, TopicHub> = {
       },
     ],
   },
+  "pitch-accent": {
+    slug: "pitch-accent",
+    title: "Japanese Pitch Accent",
+    tagline:
+      "The high/low tone pattern most learners (and most apps) skip. Why it matters and when to study it.",
+    summary:
+      "Japanese pitch accent is the high-low tonal pattern attached to each word that distinguishes meaning (橋 hashi, bridge vs 箸 hashi, chopsticks). Japanese is not tonal like Mandarin, but pitch patterns are real and learnable.",
+    content: [
+      {
+        heading: "What pitch accent actually is",
+        paragraphs: [
+          "Every Japanese word has a pitch contour: each mora (sound unit) is either high or low, and the pattern is part of the word's identity. There are four named patterns in standard Tokyo Japanese: heiban (flat), atamadaka (head-high), nakadaka (middle-high), and odaka (tail-high).",
+          "Unlike Mandarin's four tones, you cannot 'change a word's tone for emphasis.' The pattern is fixed per word, the way English word stress is fixed (PROject vs proJECT).",
+        ],
+      },
+      {
+        heading: "Why most apps skip it",
+        paragraphs: [
+          "Pitch accent is invisible in normal Japanese writing. Hiragana, katakana, and kanji all carry zero pitch information. This makes it hard to teach inside a text-first flashcard or lesson app — you have to encode it in audio or with custom diacritics.",
+          "Most learners can be understood without correct pitch. Native speakers are forgiving. The cost-benefit calculation for app makers usually comes out in favor of skipping it, which is why it's chronically underserved.",
+        ],
+      },
+      {
+        heading: "When to start studying it",
+        paragraphs: [
+          "There are two schools of thought. Camp A: from day one, so you don't have to unlearn bad habits. Camp B: only after you have a few hundred words under your belt, so the patterns can build on top of vocabulary you already know.",
+          "Both work. Camp A produces more native-sounding learners faster. Camp B is more forgiving for adults who get overwhelmed by a fourth axis to track. If you choose Camp B, do not push pitch study past month 6.",
+        ],
+      },
+      {
+        heading: "How to study pitch accent",
+        paragraphs: [
+          "Use a pitch-accent dictionary (OJAD is the canonical free resource). Listen to native audio for every new word and explicitly mark which pattern it is. Drill minimal pairs (はし for bridge vs chopsticks; あめ for rain vs candy) until the contour is automatic.",
+          "Shadowing — listening to native audio and mimicking immediately — is the highest-leverage technique. Pure flashcards drill recognition; shadowing drills production.",
+        ],
+      },
+    ],
+    quickFacts: [
+      { label: "Number of patterns (Tokyo)", value: "4 (heiban, atamadaka, nakadaka, odaka)" },
+      { label: "Required for understanding?", value: "No, but improves clarity" },
+      { label: "Required for sounding native?", value: "Yes" },
+      { label: "Best free resource", value: "OJAD (ojad.ninjal.ac.jp)" },
+    ],
+    relatedLinks: [
+      { href: "/blog/japanese-pitch-accent", label: "Pitch accent: when to care" },
+      { href: "/japanese/pronunciation", label: "Japanese pronunciation overview" },
+    ],
+    faqs: [
+      {
+        q: "Is Japanese a tonal language?",
+        a: "No. Japanese has pitch accent (high/low), not tones (rising, falling, contour shapes like Mandarin). It's structurally simpler but it does carry meaning.",
+      },
+      {
+        q: "Will I be misunderstood if I get pitch wrong?",
+        a: "Usually no. Native speakers infer from context. The exception is short common words with minimal-pair pitch distinctions (hashi, ame, kami) where wrong pitch reads as a mistake even mid-sentence.",
+      },
+      {
+        q: "Do dialects use different pitch?",
+        a: "Yes. Tokyo standard pitch is the variety taught in textbooks, but Kansai (Osaka, Kyoto) inverts many patterns. Most learners stick with Tokyo unless they live in Kansai.",
+      },
+    ],
+  },
+  keigo: {
+    slug: "keigo",
+    title: "Keigo: Japanese Honorific Speech",
+    tagline:
+      "The polite, humble, and respectful registers that change Japanese sentences depending on who is speaking to whom.",
+    summary:
+      "Keigo (敬語) is the system of Japanese honorifics that changes sentence structure based on social hierarchy and formality. It has three primary registers: teineigo (polite), sonkeigo (respectful), and kenjōgo (humble).",
+    content: [
+      {
+        heading: "What keigo is",
+        paragraphs: [
+          "Keigo is not just 'polite Japanese.' It's a structural system: nouns, verbs, and even some pronouns shift form based on who is speaking, who is being spoken about, and the social distance between them. The same English sentence — 'I am here' — can come out as いる, います, おります, depending on register.",
+          "There are three primary keigo registers. Teineigo (-desu/-masu) is the polite default safe in almost every situation. Sonkeigo elevates the listener or subject ('they came' = いらっしゃった). Kenjōgo lowers the speaker ('I came' = まいりました). Most adult learners need passive recognition of all three; production starts with teineigo and grows from there.",
+        ],
+      },
+      {
+        heading: "When to use which register",
+        paragraphs: [
+          "Casual (タメ口) — close friends and family. Drop -desu/-masu, use plain forms.",
+          "Teineigo — strangers, classmates, anyone you're meeting for the first time, customer service. The safe default.",
+          "Sonkeigo — speaking about someone above you (boss, elder, customer) or addressing them directly with elevated language.",
+          "Kenjōgo — speaking about yourself or your in-group when the listener is above you (business calls, formal interviews, traditional service).",
+        ],
+      },
+      {
+        heading: "How to learn it",
+        paragraphs: [
+          "Start with teineigo. It is the form Japanese textbooks teach in the first three months and the form you'll use in 80% of real interactions.",
+          "Add sonkeigo and kenjōgo around month 9-12, when you have enough vocabulary that the keigo verb substitutions don't overwhelm you. Service-industry phrasebooks (the ones aimed at Japanese workers) are surprisingly good at teaching the patterns in context.",
+          "Watch service interactions in Japanese — convenience stores, hotels, train stations. The scripts are tightly keigo-loaded and you'll hear the same constructions hundreds of times.",
+        ],
+      },
+    ],
+    quickFacts: [
+      { label: "Registers", value: "Casual + 3 keigo (teineigo, sonkeigo, kenjōgo)" },
+      { label: "Safe default", value: "Teineigo (-desu/-masu)" },
+      { label: "When to learn", value: "Teineigo from day 1, keigo after month 9" },
+      { label: "Most exposure", value: "Customer service, business calls" },
+    ],
+    relatedLinks: [
+      { href: "/japanese/grammar", label: "Japanese grammar overview" },
+      { href: "/guides/how-to-learn-japanese", label: "Full learning roadmap" },
+    ],
+    faqs: [
+      {
+        q: "Do I need to learn keigo to live in Japan?",
+        a: "Recognition, yes. Production, only at the level your job requires. Tourists and casual residents survive on teineigo. Office workers need sonkeigo and kenjōgo for client interactions. Restaurant workers and hotel staff use them constantly.",
+      },
+      {
+        q: "Is keigo dying out in modern Japanese?",
+        a: "It's narrowing, especially among younger speakers in casual contexts. But it remains essential in business, formal service, and traditional settings. Knowing keigo passively is non-negotiable for working in a Japanese company.",
+      },
+      {
+        q: "How do natives feel about foreigners using keigo?",
+        a: "Generally appreciative. Mistakes are forgiven. Most natives are pleased that a foreigner tried at all and will not punish errors the way a native peer might.",
+      },
+    ],
+  },
+  verbs: {
+    slug: "verbs",
+    title: "Japanese Verbs",
+    tagline:
+      "The two main verb classes (ru-verbs, u-verbs) plus two irregulars. The whole system fits in a page.",
+    summary:
+      "Japanese verbs come in two regular classes — ichidan (ru-verbs) and godan (u-verbs) — plus two irregulars (する, 来る). All verbs end in u-row hiragana in the dictionary form. Conjugation is regular within each class.",
+    content: [
+      {
+        heading: "The two regular classes",
+        paragraphs: [
+          "Ichidan (ru-verbs): dictionary form ends in -iru or -eru and the stem stays put when conjugated. Examples: 食べる (taberu, to eat), 見る (miru, to see), 起きる (okiru, to wake up). To conjugate: drop the る, add the ending.",
+          "Godan (u-verbs): dictionary form ends in any u-row hiragana, and the stem changes vowel depending on the conjugation. Examples: 飲む (nomu, to drink), 書く (kaku, to write), 話す (hanasu, to speak). To conjugate: change the final mora to a different row, then add the ending.",
+          "Most -iru and -eru verbs are ichidan, but a handful of common ones are godan despite ending in -iru/-eru (帰る kaeru, 走る hashiru, 知る shiru). Memorize these as exceptions; the rest follow the rule.",
+        ],
+      },
+      {
+        heading: "The two irregulars",
+        paragraphs: [
+          "する (suru, to do) — the most common verb in Japanese, used both alone and in compound verbs (勉強する benkyō suru, to study). Conjugates uniquely: する → します → した → して.",
+          "来る (kuru, to come) — the second irregular. Conjugates: 来る → 来ます (kimasu) → 来た (kita) → 来て (kite). The kanji stays put while the reading shifts.",
+        ],
+      },
+      {
+        heading: "Tenses you need first",
+        paragraphs: [
+          "Japanese has essentially two tenses: present/future (the dictionary form) and past (the -ta form). Future is marked by context, not a separate conjugation. The polite versions are -masu (present/future) and -mashita (past).",
+          "Then learn the -te form. It's not a tense; it's a glue form used to connect verbs into sequences and to build many other constructions (-te imasu for ongoing actions, -te kudasai for requests, -te aru for resultative states). The -te form is the most useful single conjugation in Japanese.",
+        ],
+      },
+    ],
+    quickFacts: [
+      { label: "Verb classes", value: "2 regular (ichidan, godan) + 2 irregular (する, 来る)" },
+      { label: "Tenses", value: "Present/future and past" },
+      { label: "Most useful conjugation", value: "-te form (connects verbs)" },
+      { label: "N5 verb count", value: "~100 high-frequency verbs" },
+    ],
+    relatedLinks: [
+      { href: "/japanese/grammar", label: "Japanese grammar overview" },
+      { href: "/guides/japanese-particles-masterclass", label: "Particles" },
+      { href: "/jlpt/n5", label: "JLPT N5 prep" },
+    ],
+    faqs: [
+      {
+        q: "How do I tell if a verb is ichidan or godan?",
+        a: "If the dictionary form ends in -iru or -eru, it's most likely ichidan. The famous exceptions (帰る, 走る, 知る, 切る, 入る, 要る, etc.) are godan despite ending in -iru/-eru. There are about 25 of these; memorize them as a list.",
+      },
+      {
+        q: "What's the difference between -masu form and dictionary form?",
+        a: "-masu form is polite; dictionary form is plain. They mean the same thing. Use -masu form with strangers, coworkers, and anyone you're not close to. Use dictionary form with close friends and family.",
+      },
+      {
+        q: "Is Japanese grammar really simpler than English?",
+        a: "Yes for verbs. No subject-verb agreement, no person/number, no progressive vs simple distinction (covered by -te imasu), and only two real tenses. The complexity sits in particles and politeness levels, not conjugation.",
+      },
+    ],
+  },
+  numbers: {
+    slug: "numbers",
+    title: "Japanese Numbers",
+    tagline:
+      "How to count from 1 to a billion in Japanese. The two reading systems, the counters, and the big four irregularities.",
+    summary:
+      "Japanese has two number systems (the native wa-go for 1-10, the Sino-Japanese kan-go for everything) plus counters that change the reading depending on what you're counting. The full system fits in a single study session.",
+    content: [
+      {
+        heading: "The two systems",
+        paragraphs: [
+          "Wa-go (native Japanese): hitotsu, futatsu, mittsu, yottsu, itsutsu... — used for objects up to 10. Falls out of use beyond that.",
+          "Kan-go (Sino-Japanese): ichi, ni, san, shi, go, roku, shichi, hachi, kyū, jū — the system used for everything else. Counts up cleanly into the millions and billions.",
+          "Both systems coexist for 1-10. You'll hear both in real Japanese: hitotsu (one thing) vs ichi (the number 1). Beyond 10, kan-go takes over completely.",
+        ],
+      },
+      {
+        heading: "The four irregular readings",
+        paragraphs: [
+          "4 has two readings: yon (native) and shi (Sino-Japanese, also the word for death — usually avoided). Yon is the safer default.",
+          "7 has two readings: nana (native) and shichi. Nana is the safer default in counting.",
+          "9 has two readings: kyū (default) and ku (used in 9 o'clock, 9 months). Kyū is the safer default.",
+          "0 is rei (formal) or zero (English loan). Both are common.",
+        ],
+      },
+      {
+        heading: "Counters",
+        paragraphs: [
+          "Japanese requires counter words attached to numbers depending on what you're counting. People use -nin (一人 hitori, 二人 futari, 三人 sannin). Long thin objects use -hon (鉛筆一本 enpitsu ippon, one pencil). Flat objects use -mai. Small animals use -hiki. Large animals use -tō.",
+          "You don't have to memorize all 350+ counters. Learn 10 high-frequency ones (people, days, months, hours, minutes, ages, floors, generic things with -tsu) and you cover ~95% of daily speech. The generic counter -tsu (hitotsu, futatsu) works as a fallback when you forget the specific counter.",
+        ],
+      },
+    ],
+    quickFacts: [
+      { label: "Number systems", value: "2 (native + Sino-Japanese)" },
+      { label: "Counters in active use", value: "~350, but 10 cover daily life" },
+      { label: "Safe fallback counter", value: "-tsu (hitotsu, futatsu...)" },
+      { label: "Critical irregulars", value: "4, 7, 9 each have two readings" },
+    ],
+    relatedLinks: [
+      { href: "/japanese/grammar", label: "Grammar overview" },
+      { href: "/guides/jlpt-n5-vocabulary", label: "N5 vocabulary list" },
+    ],
+    faqs: [
+      {
+        q: "How do I say my age in Japanese?",
+        a: "Use the -sai (歳) counter: 25-sai is twenty-five years old. The exception is 20, which is hatachi (二十歳). Hatachi is a fixed reading you have to memorize.",
+      },
+      {
+        q: "How do I count days vs days-of-the-month?",
+        a: "Day-of-the-month: tsuitachi (1st), futsuka (2nd), mikka (3rd)... up to 10, then jūichi-nichi (11th), jūni-nichi (12th)... Numbers of days: ichinichi (1 day, irregular), futsuka (2 days), mikka (3 days)... Same readings, different meaning by context.",
+      },
+      {
+        q: "Are Japanese numbers used in math?",
+        a: "Mostly Sino-Japanese (ichi, ni, san) for arithmetic. Native readings (hitotsu, futatsu) appear in counting objects but not in equations. Computer programming and academic math use Sino-Japanese.",
+      },
+    ],
+  },
 };

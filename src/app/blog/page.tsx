@@ -3,7 +3,7 @@ import Link from "next/link";
 import { LongFormLayout } from "@/components/long-form-layout";
 import { DownloadCard } from "@/components/download-card";
 import { JsonLd } from "@/components/seo/json-ld";
-import { breadcrumbSchema } from "@/lib/schema";
+import { blogSchema, breadcrumbSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/metadata";
 import { BLOG_POSTS } from "@/lib/posts";
 
@@ -24,10 +24,23 @@ export default function BlogIndexPage() {
     <>
       <JsonLd
         id="blog-index"
-        data={breadcrumbSchema([
-          { name: "Home", path: "/" },
-          { name: "Blog", path: "/blog" },
-        ])}
+        data={[
+          blogSchema({
+            name: TITLE,
+            description: SUBTITLE,
+            slug: "/blog",
+            posts: posts.map((p) => ({
+              title: p.title,
+              slug: p.slug,
+              datePublished: p.date,
+              description: p.description,
+            })),
+          }),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Blog", path: "/blog" },
+          ]),
+        ]}
       />
       <LongFormLayout
         eyebrow="Blog"

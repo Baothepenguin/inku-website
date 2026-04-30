@@ -198,4 +198,153 @@ export const ALTERNATIVES: Record<string, AlternativeRecord> = {
       },
     ],
   },
+
+  wanikani: {
+    slug: "wanikani",
+    competitorName: "WaniKani",
+    tagline:
+      "A WaniKani alternative for the kana-and-vocabulary phase WaniKani assumes you've already done.",
+    summary:
+      "WaniKani is the gold-standard kanji SRS but assumes you already know hiragana, katakana, and basic vocabulary. Inku is the alternative for the prerequisite phase WaniKani skips.",
+    intro:
+      "WaniKani is brilliant once you can read kana and have a few hundred words. The first three months it doesn't help you with — kana, basic vocabulary, conversational phrases — Inku covers exactly. Most serious learners eventually use both, just at different stages.",
+    whySearching: [
+      "You bounced off WaniKani's first level because you didn't know kana yet",
+      "You want to start before you're ready for 2,000 kanji",
+      "You want vocabulary and phrases, not radicals and mnemonics",
+      "You want a calmer daily ritual than WaniKani's queue",
+      "You want pronunciation audio bundled with each card",
+    ],
+    whatLooksLike:
+      "A WaniKani alternative for the prerequisite phase should teach kana from scratch, build N5 vocabulary, and prepare you to actually use WaniKani when the time comes.",
+    howInkuDiffers: [
+      "Teaches hiragana and katakana from zero. WaniKani assumes both.",
+      "Curated N5 + N4 vocabulary deck with bundled audio. WaniKani teaches vocabulary as a kanji byproduct.",
+      "Phrase packs (casual, polite, travel, anime). WaniKani has none.",
+      "Native iPhone app with finite daily sessions. WaniKani is web-first.",
+      "$70.99/year unlocks everything. No level gating, no SRS dials.",
+    ],
+    faqs: [
+      {
+        q: "Should I use Inku before WaniKani or instead of WaniKani?",
+        a: "Before. Most learners use Inku for the first 3-6 months (kana through ~500 N5 words), then add WaniKani for the long kanji journey. They're sequential, not competing.",
+      },
+      {
+        q: "Will Inku ever cover 2,000 kanji like WaniKani?",
+        a: "Not in the same shape. We're expanding kanji coverage in N4 and N3 decks, but we're not trying to replicate WaniKani's 2,000-kanji arc. That's a different product with a different scope.",
+      },
+      {
+        q: "Is WaniKani worth the $89/year?",
+        a: "If you stick with it past level 10, yes. The lifetime ($299, often discounted) pays off after about 4 years. WaniKani's bigger problem is the dropout rate, not the price.",
+      },
+    ],
+  },
+
+  bunpo: {
+    slug: "bunpo",
+    competitorName: "Bunpo",
+    tagline:
+      "A Bunpo alternative for the vocabulary side Bunpo deliberately skips.",
+    summary:
+      "Bunpo is the grammar-drill specialist for JLPT levels. Inku is the vocabulary-and-kana alternative that complements grammar drills with actual word retention.",
+    intro:
+      "Bunpo is excellent at one specific thing: drilling JLPT grammar patterns. It doesn't try to be your vocabulary tool, your kana tool, or your audio tool. Inku is the alternative for those jobs. Use them together; don't pick.",
+    whySearching: [
+      "Bunpo doesn't teach kana, and you're starting from zero",
+      "Bunpo's vocabulary coverage is thinner than its grammar coverage",
+      "You want pronunciation audio bundled with each card",
+      "You want a Japanese-only app that includes phrases, not just grammar patterns",
+    ],
+    whatLooksLike:
+      "A Bunpo alternative for vocabulary and kana should ship with curated decks, bundled audio, and a calm daily flow that pairs with Bunpo's grammar drills.",
+    howInkuDiffers: [
+      "Hiragana and katakana taught from zero. Bunpo assumes both.",
+      "515 N5 cards and 391 N4 cards, all curated and audio-supported.",
+      "Four phrase packs (casual, polite, travel, anime). Bunpo focuses on isolated grammar.",
+      "FSRS scheduling tuned for vocabulary retention.",
+      "No XP, no progress badges, no streak gamification.",
+    ],
+    faqs: [
+      {
+        q: "Should I replace Bunpo with Inku?",
+        a: "No — pair them. Bunpo for grammar drilling, Inku for vocabulary, kana, and phrases. They're complementary, not overlapping.",
+      },
+      {
+        q: "Does Inku have Bunpo-style grammar drills?",
+        a: "No. Inku teaches grammar implicitly through example sentences in the phrase packs but doesn't drill JLPT patterns the way Bunpo does. If grammar drilling matters, keep Bunpo.",
+      },
+    ],
+  },
+
+  memrise: {
+    slug: "memrise",
+    competitorName: "Memrise",
+    tagline:
+      "A Memrise alternative for Japanese learners who want a focused app, not a 22-language platform.",
+    summary:
+      "Memrise teaches Japanese inside a multi-language platform with native speaker videos. Inku is the Japanese-only alternative with FSRS scheduling and bundled audio.",
+    intro:
+      "Memrise's native speaker videos are a real innovation, but the rest of the experience is generic — leaderboards, streaks, multi-language UI, light SRS. Inku is the Japanese-only alternative for learners who don't need 22 languages and do need modern spaced repetition.",
+    whySearching: [
+      "You're only learning Japanese and don't need 22 languages in one subscription",
+      "You want a real spaced-repetition scheduler, not Memrise's lighter system",
+      "Memrise's gamification (points, daily targets, leaderboards) is exhausting",
+      "You want a calmer iPhone app, not a generalist platform",
+    ],
+    whatLooksLike:
+      "A Memrise alternative for Japanese should be Japanese-first, calm, audio-rich, and built around modern spaced repetition.",
+    howInkuDiffers: [
+      "Japanese-only product, not a multi-language template.",
+      "FSRS spaced repetition. Memrise's scheduler is lighter.",
+      "Bundled per-card audio.",
+      "Curated N5 and N4 decks plus phrase packs.",
+      "No leaderboards, points, or daily targets.",
+    ],
+    faqs: [
+      {
+        q: "Does Inku have native speaker videos like Memrise?",
+        a: "No. Inku has bundled per-card pronunciation audio but does not include user-submitted video clips. If watching real Japanese speakers is your main learning method, keep Memrise.",
+      },
+      {
+        q: "Is Memrise's free tier still worth it for Japanese?",
+        a: "It's narrowed over time. The free Japanese course is light on grammar and the Pro paywall has expanded. If you're committed to Japanese long-term, a focused tool is more efficient.",
+      },
+    ],
+  },
+
+  drops: {
+    slug: "drops",
+    competitorName: "Drops",
+    tagline:
+      "A Drops alternative for Japanese learners who want longer sessions and stronger retention.",
+    summary:
+      "Drops is a beautiful 5-minute illustrated vocabulary app. Inku is the alternative for learners who want unlimited daily study, bundled audio, and proper FSRS scheduling.",
+    intro:
+      "Drops is genuinely lovely. The illustrations are custom, the UI is calm, and the 5-minute daily cap is a real design choice. The cap is also why some learners outgrow Drops — once you want to study 15 or 20 minutes a day, the free tier locks you out and the paid tier is shallower than its competitors.",
+    whySearching: [
+      "Drops' 5-minute daily cap is too short once you're serious",
+      "You want pronunciation audio with every card",
+      "You want a real spaced-repetition scheduler",
+      "You want kanji coverage, not just illustrations",
+    ],
+    whatLooksLike:
+      "A Drops alternative should preserve the calm UI but lift the time cap, add pronunciation audio, and use modern spaced repetition.",
+    howInkuDiffers: [
+      "No daily time cap. Study as long as your attention holds.",
+      "Bundled pronunciation audio for the main card library.",
+      "FSRS scheduling, not Drops' lighter custom system.",
+      "Japanese-specific kanji coverage in N5 and N4.",
+      "Curated phrase packs alongside vocabulary.",
+    ],
+    faqs: [
+      {
+        q: "Are Inku's illustrations as nice as Drops'?",
+        a: "Different aesthetic. Inku is typographic and uses Japanese characters as design accents. Drops is illustration-first. If illustrations are what kept you on Drops, you may miss them in Inku.",
+      },
+      {
+        q: "Will I outgrow Drops?",
+        a: "Most serious learners do. Drops' deliberate-shallowness is a feature for casual learners and a wall for committed ones.",
+      },
+    ],
+  },
 };
